@@ -9,7 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public PlayerSlot playerSlot;
 
-    //in future, these are pulled from animal upgrade script?? i guess? or maybe not,,, idk
+    //in future, these are pulled from animal upgrade script?? i guess? or maybe not, idk
     [SerializeField] private string playerName;
     [SerializeField] private int offenceScore;
     [SerializeField] private int speedScore;
@@ -17,6 +17,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private float scoreMultiplier;
     public int totalScore;
+
+    public int offenceScoreMultiplied;
+    public int defenceScoreMultiplied;
  
     void Start()
     {
@@ -31,16 +34,17 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         transform.SetAsLastSibling();
         rawImage.raycastTarget = false;
 
-        int totalScore = offenceScore + defenceScore + speedScore;
+        totalScore = offenceScore + defenceScore + speedScore;
+        
         PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore);
 
-        TeamScoreManager.instance.RemovePlayerFromFormation(this); //remove score from team score
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         //print("dragging");
-        transform.position = Input.mousePosition;   
+        transform.position = Input.mousePosition;
+
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -52,6 +56,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void SetPosition(PlayerSlot slot)
     {
+        TeamScoreManager.instance.RemovePlayerFromFormation(this); //remove score from team score
 
         playerSlot = slot;
         ApplyMultiplier();
@@ -81,6 +86,9 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         scoreMultiplier = (0.01f * baseScore) + 0.8f;
         float finalScore = baseScore * scoreMultiplier;
+
+        offenceScoreMultiplied = Mathf.RoundToInt(offenceScore * scoreMultiplier);
+        defenceScoreMultiplied = Mathf.RoundToInt(defenceScore * scoreMultiplier);
 
         totalScore =
         (playerSlot.positionType == PlayerSlot.PositionType.Forward ? Mathf.RoundToInt(finalScore) : offenceScore) +
