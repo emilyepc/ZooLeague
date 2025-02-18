@@ -20,6 +20,13 @@ public class MatchSimulation : MonoBehaviour
     private float playerConversionProbability;
     private float opponentConversionProbability;
 
+    [Header("Stats")]
+    public int playerGoalOpportunityStat;
+    public int playerConversionRateStat;
+
+    public int opponentGoalOpportunityStat;
+    public int opponentConversionRate;
+
     private bool matchOngoing;
 
     void Awake()
@@ -51,7 +58,6 @@ public class MatchSimulation : MonoBehaviour
             {
                 MatchScoreboard.instance.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
             }
-
         }
     }
 
@@ -64,7 +70,6 @@ public class MatchSimulation : MonoBehaviour
 
         playerGoals = 0;
         opponentGoals = 0;
-
     }
 
     public void GoalOpportunity()
@@ -75,8 +80,8 @@ public class MatchSimulation : MonoBehaviour
         playerGoalOpportunityProbability = (float)teamAScore / (teamAScore + teamBScore);
         opponentGoalOpportunityProbability = (float)teamBScore / (teamAScore + teamBScore);
 
-        //print(playerGoalOpportunityProbability);
-        //print(opponentGoalOpportunityProbability);
+        print("Player goal opportunity chance = " + playerGoalOpportunityProbability);
+        print("Opponent goal opportunity chance = " + opponentGoalOpportunityProbability);
 
         bool teamAChance = Random.value < playerGoalOpportunityProbability;
         bool teamBChance = Random.value < opponentGoalOpportunityProbability;
@@ -95,8 +100,6 @@ public class MatchSimulation : MonoBehaviour
             case (false, false):
                 break;
         }
-
-        // timer = 0
     }  
 
     public void Conversion(string team)
@@ -115,9 +118,9 @@ public class MatchSimulation : MonoBehaviour
                 print("PLAYER SCORES!");
                 playerGoals++;
             }
-
         }
-        if (team == "Opponent")
+
+        else if (team == "Opponent")
         {
             opponentConversionProbability = opponentTeamOne.opponentOffenceScore / (teamScoreManager.totalTeamDefenceScore + (opponentTeamOne.opponentOffenceScore));
             //print(playerConversionProbability);
@@ -131,8 +134,6 @@ public class MatchSimulation : MonoBehaviour
             }
         }
     }
-
-
 
     public void MatchOver()
     {
