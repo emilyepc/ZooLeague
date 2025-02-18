@@ -10,6 +10,23 @@ public class PlayerSlot : MonoBehaviour , IDropHandler
 
     private bool sorted;
 
+    public BenchSorter benchSorter;
+    
+    void Start()
+    {
+        benchSorter = FindObjectOfType<BenchSorter>();
+
+        if (transform.childCount > 0)
+        {
+            spotOccupied = true;
+        }
+        else
+        {
+            spotOccupied = false;
+        }
+    }
+
+
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
@@ -35,14 +52,8 @@ public class PlayerSlot : MonoBehaviour , IDropHandler
                 {
                     print("trying to sort");
                     sorted = true;
-                    oldSlot.transform.SetAsLastSibling(); //sends the empty slot to the end
-                }
-                else
-                {
-                    //send the 
-                }
-
-                
+                    benchSorter.Sort(); 
+                }            
             }
         }
         else
