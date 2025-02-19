@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pomeranian_0: 7388260420801559345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

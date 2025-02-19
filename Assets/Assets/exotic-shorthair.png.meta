@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      exotic-shorthair_0: 5182042878306884947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
