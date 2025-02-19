@@ -3,11 +3,13 @@ using TMPro;
 
 public class MatchScoreboard : MonoBehaviour
 {
+    public TMP_Text matchStatus;
     public TMP_Text scoreboard;
     public TMP_Text timer;
     public TMP_Text goalStatus;
 
     private float textClearTimer;
+    private bool textShowing;
 
     public static MatchScoreboard instance;
 
@@ -17,41 +19,44 @@ public class MatchScoreboard : MonoBehaviour
         timer = GameObject.Find("Timer Text").GetComponent<TMP_Text>();
 
         instance = this;
+        textShowing = false;
     }
 
     void Update()
     {
-        if (textClearTimer < 0)
+        if (textShowing)
         {
-            goalStatus.text = "";
+            if (textClearTimer > 0) textClearTimer -= Time.deltaTime;
+            else textShowing = false;
         }
-        else
-        {
-            textClearTimer -= Time.deltaTime;
-        }
+        else goalStatus.text = "";
     }
 
     public void UpdateLeaderboard(int playerScore, int opponentScore, float timeLeft)
     {
         scoreboard.text = playerScore.ToString() + " - " + opponentScore.ToString();
         timer.text = (60f - Mathf.Round(timeLeft)).ToString();
-
     }
 
     public void GoalOpportunity(string team)
     {
+        print("its coming here!");
+        textShowing = true; 
+        textClearTimer = 5f;
         goalStatus.text = "Goal opportunity for " + team + " team!!";
     }
 
     public void GoalScored(string team)
     {
         goalStatus.text = "Goal scored for " + team + " team!!";
-        textClearTimer = 4;
+        textShowing = true;
+        textClearTimer = 3f;
     }
 
     public void GoalMissed()
     {
         goalStatus.text = "Goal missed";
-        textClearTimer = 4;
+        textShowing = true;
+        textClearTimer = 3f;
     }
 }

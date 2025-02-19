@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class MatchSimulation : MonoBehaviour
 {
@@ -7,7 +9,9 @@ public class MatchSimulation : MonoBehaviour
 
     public int playerGoals;
     public int opponentGoals;
-
+    
+    public Slider gameTimerSlider;
+    
     private float gameLength = 60f;
     [HideInInspector] public float gameTimer;
     private float goalOpportunityInterval = 5f;
@@ -19,20 +23,20 @@ public class MatchSimulation : MonoBehaviour
 
     private float playerConversionProbability;
     private float opponentConversionProbability;
-
-    [Header("Stats")]
-    public int playerGoalOpportunityStat;
-    public int playerConversionRateStat;
-
-    public int opponentGoalOpportunityStat;
-    public int opponentConversionRate;
-
+    
     private bool matchOngoing;
     private float waitingToScoreTimer;
     private bool waitingToScore;
 
     private string conversionTeam;
+    
+    [Header("Stats")]
+    public int playerGoalOpportunityStat;
+    [FormerlySerializedAs("playerConversionRateStat")] public int playerConversionRate;
 
+    public int opponentGoalOpportunityStat;
+    public int opponentConversionRate;
+    
     void Awake()
     {
         matchOngoing = false;
@@ -43,15 +47,15 @@ public class MatchSimulation : MonoBehaviour
     {
         if (matchOngoing)
         {
+            gameTimerSlider = GameObject.Find("Game Timer Slider").GetComponent<Slider>();
+            
             timer += Time.deltaTime;
             if (timer >= goalOpportunityInterval)
             {
                 timer = 0;
                 GoalOpportunity();
-
             }
 
-            gameTimer += Time.deltaTime;
             if (gameTimer >= gameLength)
             {
                 gameTimer = 0;
@@ -60,6 +64,8 @@ public class MatchSimulation : MonoBehaviour
             }
             else
             {
+                gameTimer += Time.deltaTime;
+                gameTimerSlider.value = gameTimer;
                 MatchScoreboard.instance.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
             }
 
@@ -97,10 +103,7 @@ public class MatchSimulation : MonoBehaviour
 
         playerGoalOpportunityProbability = (float)teamAScore / (teamAScore + teamBScore);
         opponentGoalOpportunityProbability = (float)teamBScore / (teamAScore + teamBScore);
-
-        print("Player goal opportunity chance = " + playerGoalOpportunityProbability);
-        print("Opponent goal opportunity chance = " + opponentGoalOpportunityProbability);
-
+        
         bool teamAChance = Random.value < playerGoalOpportunityProbability;
         bool teamBChance = Random.value < opponentGoalOpportunityProbability;
 
@@ -109,17 +112,25 @@ public class MatchSimulation : MonoBehaviour
             case (true, false):
                 conversionTeam = "player"; //team a gets chance to convert
                 waitingToScore = true;
-                print("player conversion attempt");
+                waitingToScoreTimer = 2f;
+                MatchScoreboard.instance.GoalOpportunity("player");
+                print("player opportunity");
                 break;
             case (false, true):
                 conversionTeam = "opponent"; //team b gets chance to convert
                 waitingToScore = true;
-                print("opp conversion attempt");
+                waitingToScoreTimer = 2f;
+                MatchScoreboard.instance.GoalOpportunity("opponent");
+                print("opponent opportunity");
                 break;
             case (true, true):
-                conversionTeam = (playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent"); //team with higher probability gets chance to convert
+                MatchScoreboard.instance.GoalOpportunity(playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent");
+                conversionTeam = (playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent"); //team with higher probability gets chance to conver
+                if (conversionTeam == "player") MatchScoreboard.instance.GoalOpportunity("player");
+                else if (conversionTeam == "opponent") MatchScoreboard.instance.GoalOpportunity("opponent");
                 waitingToScore = true;
-                print("draw attempt");
+                waitingToScoreTimer = 2f;
+                print("draw opportunity");
                 //this should change, this is too high prob for the higher team methinks... 
                 break;
             case (false, false):
@@ -127,15 +138,15 @@ public class MatchSimulation : MonoBehaviour
         }
     }
 
-    public void Conversion(string team)
+    private void Conversion(string team)
     {
-        print("Conversion Opportunity For " + conversionTeam + " Team");
-        MatchScoreboard.instance.GoalOpportunity(conversionTeam);
-
         if (conversionTeam == "player")
         {
-            playerConversionProbability = teamScoreManager.totalTeamOffenceScore / (teamScoreManager.totalTeamOffenceScore + (opponentTeamOne.opponentDefenceScore));
-            //print(playerConversionProbability);
+            playerGoalOpportunityStat++;
+            
+            playerConversionProbability = teamScoreManager.totalTeamOffenceScore /
+                                          (teamScoreManager.totalTeamOffenceScore +
+                                           (opponentTeamOne.opponentDefenceScore));
 
             bool conversion = Random.value < playerGoalOpportunityProbability;
 
@@ -155,8 +166,9 @@ public class MatchSimulation : MonoBehaviour
 
         else if (conversionTeam == "opponent")
         {
+            opponentGoalOpportunityStat++;
+            
             opponentConversionProbability = opponentTeamOne.opponentOffenceScore / (teamScoreManager.totalTeamDefenceScore + (opponentTeamOne.opponentOffenceScore));
-            //print(playerConversionProbability);
 
             bool conversion = Random.value < opponentGoalOpportunityProbability;
 
@@ -173,10 +185,15 @@ public class MatchSimulation : MonoBehaviour
                 MatchScoreboard.instance.GoalMissed();
             }
         }
+        waitingToScore = false;
     }
 
     public void MatchOver()
     {
+        playerConversionRate = playerGoalOpportunityStat / playerGoals;
+        opponentConversionRate = opponentGoalOpportunityStat / opponentGoals;
+        
+        
         if (playerGoals > opponentGoals)
         {
             print("PLAYER TEAM WON!");

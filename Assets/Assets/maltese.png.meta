@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      maltese_0: -1654562443123898910
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      golden-retriever_0: 4897212091047414295
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
