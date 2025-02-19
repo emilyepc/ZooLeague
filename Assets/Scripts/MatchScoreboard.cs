@@ -5,6 +5,9 @@ public class MatchScoreboard : MonoBehaviour
 {
     public TMP_Text scoreboard;
     public TMP_Text timer;
+    public TMP_Text goalStatus;
+
+    private float textClearTimer;
 
     public static MatchScoreboard instance;
 
@@ -16,6 +19,18 @@ public class MatchScoreboard : MonoBehaviour
         instance = this;
     }
 
+    void Update()
+    {
+        if (textClearTimer < 0)
+        {
+            goalStatus.text = "";
+        }
+        else
+        {
+            textClearTimer -= Time.deltaTime;
+        }
+    }
+
     public void UpdateLeaderboard(int playerScore, int opponentScore, float timeLeft)
     {
         scoreboard.text = playerScore.ToString() + " - " + opponentScore.ToString();
@@ -23,4 +38,20 @@ public class MatchScoreboard : MonoBehaviour
 
     }
 
+    public void GoalOpportunity(string team)
+    {
+        goalStatus.text = "Goal opportunity for " + team + " team!!";
+    }
+
+    public void GoalScored(string team)
+    {
+        goalStatus.text = "Goal scored for " + team + " team!!";
+        textClearTimer = 4;
+    }
+
+    public void GoalMissed()
+    {
+        goalStatus.text = "Goal missed";
+        textClearTimer = 4;
+    }
 }

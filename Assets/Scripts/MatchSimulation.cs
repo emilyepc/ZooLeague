@@ -28,10 +28,15 @@ public class MatchSimulation : MonoBehaviour
     public int opponentConversionRate;
 
     private bool matchOngoing;
+    private float waitingToScoreTimer;
+    private bool waitingToScore;
+
+    private string conversionTeam;
 
     void Awake()
     {
         matchOngoing = false;
+        waitingToScoreTimer = 5;
     }
 
     void Update()
@@ -51,12 +56,24 @@ public class MatchSimulation : MonoBehaviour
             {
                 gameTimer = 0;
                 matchOngoing = false;
-                MatchOver();
-
+                MatchOver();        
             }
             else
             {
                 MatchScoreboard.instance.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
+            }
+
+            if (waitingToScore)
+            {
+                if (waitingToScoreTimer <= 0)
+                {
+                    waitingToScore = false; 
+                    Conversion(conversionTeam);
+                }
+                else
+                {
+                    waitingToScoreTimer -= Time.deltaTime;
+                }
             }
         }
     }
@@ -64,8 +81,9 @@ public class MatchSimulation : MonoBehaviour
     public void MatchStart()
     {
         matchOngoing = true;
-        print(teamScoreManager.totalTeamScore);
-        print(opponentTeamOne.totalTeamScore);
+        opponentTeamOne.MatchStart();
+        print("player team score: " + teamScoreManager.totalTeamScore);
+        print("opponent team score: " + opponentTeamOne.totalTeamScore);
 
 
         playerGoals = 0;
@@ -89,38 +107,53 @@ public class MatchSimulation : MonoBehaviour
         switch ((teamAChance, teamBChance))
         {
             case (true, false):
-                Conversion("Player"); //team a gets chance to convert
+                conversionTeam = "player"; //team a gets chance to convert
+                waitingToScore = true;
+                print("player conversion attempt");
                 break;
             case (false, true):
-                Conversion("Opponent"); //team b gets chance to convert
+                conversionTeam = "opponent"; //team b gets chance to convert
+                waitingToScore = true;
+                print("opp conversion attempt");
                 break;
             case (true, true):
-                Conversion(playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "Player" : "Opponent"); //team with higher probability gets chance to convert
+                conversionTeam = (playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent"); //team with higher probability gets chance to convert
+                waitingToScore = true;
+                print("draw attempt");
+                //this should change, this is too high prob for the higher team methinks... 
                 break;
             case (false, false):
                 break;
         }
-    }  
+    }
 
     public void Conversion(string team)
     {
-        print("Conversion Opportunity For " + team + " Team");
+        print("Conversion Opportunity For " + conversionTeam + " Team");
+        MatchScoreboard.instance.GoalOpportunity(conversionTeam);
 
-        if (team == "Player")
+        if (conversionTeam == "player")
         {
             playerConversionProbability = teamScoreManager.totalTeamOffenceScore / (teamScoreManager.totalTeamOffenceScore + (opponentTeamOne.opponentDefenceScore));
             //print(playerConversionProbability);
 
             bool conversion = Random.value < playerGoalOpportunityProbability;
 
-            if (conversion) 
+            if (conversion)
             {
+                MatchScoreboard.instance.GoalScored("player");
+
                 print("PLAYER SCORES!");
                 playerGoals++;
             }
+            else
+            {
+                print("goal missed");
+                MatchScoreboard.instance.GoalMissed();
+            }
         }
 
-        else if (team == "Opponent")
+        else if (conversionTeam == "opponent")
         {
             opponentConversionProbability = opponentTeamOne.opponentOffenceScore / (teamScoreManager.totalTeamDefenceScore + (opponentTeamOne.opponentOffenceScore));
             //print(playerConversionProbability);
@@ -129,8 +162,15 @@ public class MatchSimulation : MonoBehaviour
 
             if (conversion)
             {
+                MatchScoreboard.instance.GoalScored("opponent");
+
                 print("OPPONENT SCORES");
                 opponentGoals++;
+            }
+            else
+            {
+                print("goal missed");
+                MatchScoreboard.instance.GoalMissed();
             }
         }
     }
