@@ -1,0 +1,917 @@
+fileFormatVersion: 2
+guid: 4be00595e8d3a744db35f68f963aa47e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2054531443813043611
+    second: zllogo_0
+  - first:
+      213: -7323861341462243954
+    second: zllogo_1
+  - first:
+      213: -1217972441710149340
+    second: zllogo_2
+  - first:
+      213: -8174092203749360632
+    second: zllogo_3
+  - first:
+      213: 858713717298890448
+    second: zllogo_4
+  - first:
+      213: -7757007041106520298
+    second: zllogo_5
+  - first:
+      213: -8043221564364296099
+    second: zllogo_6
+  - first:
+      213: 2673138737138730597
+    second: zllogo_7
+  - first:
+      213: 2275600732800737664
+    second: zllogo_8
+  - first:
+      213: -8566146033073239633
+    second: zllogo_9
+  - first:
+      213: -7738143658744040224
+    second: zllogo_10
+  - first:
+      213: -8611873740066915297
+    second: zllogo_11
+  - first:
+      213: 2430224665784318077
+    second: zllogo_12
+  - first:
+      213: 7600829918994297135
+    second: zllogo_13
+  - first:
+      213: 5640551276402138480
+    second: zllogo_14
+  - first:
+      213: -2181690625869159560
+    second: zllogo_15
+  - first:
+      213: -1502695605494037594
+    second: zllogo_16
+  - first:
+      213: -867900426066626213
+    second: zllogo_17
+  - first:
+      213: 9184540700010103129
+    second: zllogo_18
+  - first:
+      213: -2088611589885074969
+    second: zllogo_19
+  - first:
+      213: -2152166909222170070
+    second: zllogo_20
+  - first:
+      213: 975773603761148926
+    second: zllogo_21
+  - first:
+      213: -2099908499437862495
+    second: zllogo_22
+  - first:
+      213: 5076895483026628820
+    second: zllogo_23
+  - first:
+      213: -446928434988181879
+    second: zllogo_24
+  - first:
+      213: -7463123225833847639
+    second: zllogo_25
+  - first:
+      213: -2047252297228547775
+    second: zllogo_26
+  - first:
+      213: 2839781817915636032
+    second: zllogo_27
+  - first:
+      213: -3692864610447539087
+    second: zllogo_28
+  - first:
+      213: -7794638360535986283
+    second: zllogo_29
+  - first:
+      213: 6880254495218870181
+    second: zllogo_30
+  - first:
+      213: 7297758429898490915
+    second: zllogo_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zllogo_0
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1990
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9dc8587679238c10800000000000000
+      internalID: 2054531443813043611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_1
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 1983
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e855de5d9ea6c5a90800000000000000
+      internalID: -7323861341462243954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_2
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 1994
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421c6a17484e81fe0800000000000000
+      internalID: -1217972441710149340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_3
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 1986
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80cba3ae27acf8e80800000000000000
+      internalID: -8174092203749360632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_4
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 1983
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d60b538393caeb00800000000000000
+      internalID: 858713717298890448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_5
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1976
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61754aac133995490800000000000000
+      internalID: -7757007041106520298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_6
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 1976
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50fd4e1a9cb06090800000000000000
+      internalID: -8043221564364296099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_7
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 1953
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5668d7eb485e81520800000000000000
+      internalID: 2673138737138730597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_8
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1958
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081e4315fce849f10800000000000000
+      internalID: 2275600732800737664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_9
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 1967
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa94c8c719fee1980800000000000000
+      internalID: -8566146033073239633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_10
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 1957
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4be9f37579c9490800000000000000
+      internalID: -7738143658744040224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_11
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 1949
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1cfbc8067a7c7880800000000000000
+      internalID: -8611873740066915297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_12
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 1926
+        width: 33
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7877782574e9b120800000000000000
+      internalID: 2430224665784318077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_13
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 3
+        width: 2575
+        height: 1953
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21f0d75a829b7960800000000000000
+      internalID: 7600829918994297135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_14
+      rect:
+        serializedVersion: 2
+        x: 2859
+        y: 1261
+        width: 23
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d535f3083474e40800000000000000
+      internalID: 5640551276402138480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_15
+      rect:
+        serializedVersion: 2
+        x: 2874
+        y: 1256
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 873e4435fe319b1e0800000000000000
+      internalID: -2181690625869159560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_16
+      rect:
+        serializedVersion: 2
+        x: 2867
+        y: 1223
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3ccf4fe4a552be0800000000000000
+      internalID: -1502695605494037594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_17
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 1249
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5973eb292994f3f0800000000000000
+      internalID: -867900426066626213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_18
+      rect:
+        serializedVersion: 2
+        x: 2863
+        y: 1237
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9514839da1b067f70800000000000000
+      internalID: 9184540700010103129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_19
+      rect:
+        serializedVersion: 2
+        x: 2860
+        y: 1209
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1e22f23d2c303e0800000000000000
+      internalID: -2088611589885074969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_20
+      rect:
+        serializedVersion: 2
+        x: 2802
+        y: 627
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2256764997f122e0800000000000000
+      internalID: -2152166909222170070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_21
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 625
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef3d2693ce4aa8d00800000000000000
+      internalID: 975773603761148926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_22
+      rect:
+        serializedVersion: 2
+        x: 2829
+        y: 626
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1ce267850abd2e0800000000000000
+      internalID: -2099908499437862495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_23
+      rect:
+        serializedVersion: 2
+        x: 2846
+        y: 627
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d066931b81c47640800000000000000
+      internalID: 5076895483026628820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_24
+      rect:
+        serializedVersion: 2
+        x: 2852
+        y: 628
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9861280d4f03cc9f0800000000000000
+      internalID: -446928434988181879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_25
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 630
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4c439a7f8ad6890800000000000000
+      internalID: -7463123225833847639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_26
+      rect:
+        serializedVersion: 2
+        x: 2804
+        y: 564
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149071ae1e2b693e0800000000000000
+      internalID: -2047252297228547775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_27
+      rect:
+        serializedVersion: 2
+        x: 2818
+        y: 564
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0497970848ee86720800000000000000
+      internalID: 2839781817915636032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_28
+      rect:
+        serializedVersion: 2
+        x: 2827
+        y: 563
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174c9a2d33f40ccc0800000000000000
+      internalID: -3692864610447539087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_29
+      rect:
+        serializedVersion: 2
+        x: 2845
+        y: 566
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59f8e9775b1e3d390800000000000000
+      internalID: -7794638360535986283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_30
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 566
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a72ecf92039b7f50800000000000000
+      internalID: 6880254495218870181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zllogo_31
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 0
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32446b670a8d64560800000000000000
+      internalID: 7297758429898490915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      savannah-cat_0: -3987347169146837638
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
