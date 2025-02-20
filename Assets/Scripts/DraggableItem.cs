@@ -32,6 +32,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         // Optionally, handle any additional logic when defenceScore changes
     }
 
+    public void AddToOffenceScore(int amount)
+    {
+        offenceScore += amount;
+        // Optionally, handle any additional logic when defenceScore changes
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         //print("begin drag");
