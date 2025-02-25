@@ -2,28 +2,46 @@ using UnityEngine;
 
 public class RotateMoment : MonoBehaviour
 {
-    public float Speed = 10f;
+    [SerializeField] private float speed = 10f;
 
-    private bool isRotating = false;
+    private bool isRotating;
     private float startMousePosition;
 
     private Collider interactionCollider;
 
     void Start()
     {
-        // Ensure the GameObject has a collider (2D or 3D)
         interactionCollider = GetComponent<Collider>();
-
-        if (interactionCollider == null)
-        {
-            Debug.LogError("No collider attached to the object. Add a Collider component to define the interaction area.");
-        }
+        isRotating = false;
     }
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            isRotating = true;
+            startMousePosition = Input.mousePosition.x;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            isRotating = false; 
+        }
+
+        if (isRotating)
+        {
+            float currentMousePosition = Input.mousePosition.x;
+            float mouseMovement = currentMousePosition - startMousePosition;
+            
+            transform.Rotate(Vector3.up, -mouseMovement * speed * Time.deltaTime);
+            startMousePosition = Input.mousePosition.x;
+        }
+        
+        
+        
+        /*
         if (Input.GetMouseButtonDown(0) && IsMouseOverCollider())
         {
+            print("rotating");
             isRotating = true;
             startMousePosition = Input.mousePosition.x;
         }
@@ -37,18 +55,20 @@ public class RotateMoment : MonoBehaviour
             float currentMousePosition = Input.mousePosition.x;
             float mouseMovement = currentMousePosition - startMousePosition;
 
-            transform.Rotate(Vector3.up, -mouseMovement * Speed * Time.deltaTime);
+            transform.Rotate(Vector3.up, -mouseMovement * speed * Time.deltaTime);
             startMousePosition = currentMousePosition;
-        }
+        }*/
     }
 
     private bool IsMouseOverCollider()
     {
-        // Perform a raycast from the mouse position into the world
+        // raycast from the mouse position
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+        
+        print("mouseovercollider");
 
-        // Check if the ray hits the collider
+        // output what the ray hits
         return interactionCollider != null && interactionCollider.Raycast(ray, out hit, Mathf.Infinity);
     }
 }
