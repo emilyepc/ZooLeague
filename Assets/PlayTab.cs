@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class PlayTab : MonoBehaviour
 {
-    public GameObject objectToEnable;  // Assign the object to enable in Inspector
-    public GameObject objectToDisable; // Assign the object to disable in Inspector
-    public Button toggleButton;        // Assign the button in Inspector
+    public GameObject objectToEnable;                  // Assign the object to enable in Inspector
+    public List<GameObject> objectsToDisable;          // List of objects to disable
+    public Button toggleButton;                        // Assign the button in Inspector
 
     private void Start()
     {
@@ -18,8 +19,22 @@ public class PlayTab : MonoBehaviour
 
     public void Toggle()
     {
-        if (objectToEnable != null) objectToEnable.SetActive(true);
-        if (objectToDisable != null) objectToDisable.SetActive(false);
+        if (objectToEnable != null)
+        {
+            objectToEnable.SetActive(true);
+        }
+
+        if (objectsToDisable != null)
+        {
+            foreach (GameObject obj in objectsToDisable)
+            {
+                if (obj != null)
+                {
+                    obj.SetActive(false);
+                }
+            }
+        }
     }
 }
+
 
