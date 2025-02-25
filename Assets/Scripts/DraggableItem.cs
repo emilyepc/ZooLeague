@@ -21,9 +21,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public int offenceScoreMultiplied;
     public int defenceScoreMultiplied;
  
-    void Start()
+    void Update()
     {
-        
+        Vector3 pos = transform.position;
+        pos.z = 100;
+        transform.position = pos;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -37,14 +39,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         totalScore = offenceScore + defenceScore + speedScore;
         
         PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore);
-
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         //print("dragging");
         transform.position = Input.mousePosition;
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -61,7 +61,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         playerSlot = slot;
         ApplyMultiplier();
 
-        if (parentAfterDrag.tag != "Bench")
+        if (parentAfterDrag.CompareTag("Bench"))
         {
             TeamScoreManager.instance.AddPlayerToFormation(this); //add new score
         }
