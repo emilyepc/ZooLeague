@@ -196,8 +196,7 @@ public class MatchSimulation : MonoBehaviour
         matchScoreboard.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
         
         string matchResult = playerGoals > opponentGoals ? "The winner is the player team!" :
-            opponentGoals > playerGoals ? "The winner is the opponent team!" :
-            "This game was a draw!";
+            opponentGoals > playerGoals ? "The winner is the opponent team!" : "This game was a draw!";
         
         matchScoreboard.UpdateTextTwo(matchResult, matchRewardsCollected);
     }

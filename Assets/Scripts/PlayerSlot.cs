@@ -30,7 +30,7 @@ public class PlayerSlot : MonoBehaviour , IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
-        DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
+        DraggablePlayer draggableItem = dropped.GetComponent<DraggablePlayer>();
 
         if (draggableItem == null) return;
 
@@ -50,7 +50,6 @@ public class PlayerSlot : MonoBehaviour , IDropHandler
             {
                 if (oldSlot.spotOccupied == false)
                 {
-                    print("trying to sort");
                     sorted = true;
                     benchSorter.Sort(); 
                 }            

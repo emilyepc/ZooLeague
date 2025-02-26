@@ -2,14 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems; 
 
-public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public RawImage rawImage;
     [HideInInspector] public Transform parentAfterDrag;
-
     public PlayerSlot playerSlot;
 
-    //in future, these are pulled from animal upgrade script
     [SerializeField] private string playerName;
     [SerializeField] private int offenceScore;
     [SerializeField] private int speedScore;
@@ -17,39 +15,37 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private float scoreMultiplier;
     public int totalScore;
-
     public int offenceScoreMultiplied;
     public int defenceScoreMultiplied;
  
     void Update()
     {
-        Vector3 pos = transform.position;
-        pos.z = 100;
-        transform.position = pos;
+        transform.position = new Vector3(transform.position.x, transform.position.y, 100);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //print("begin drag");
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         rawImage.raycastTarget = false;
 
-        totalScore = offenceScore + defenceScore + speedScore;
-        
+        CalculateTotalScore();
         PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore);
+    }
+
+    public void CalculateTotalScore()
+    {
+        totalScore = offenceScore + defenceScore + speedScore;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        //print("dragging");
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //print("end drag");
         transform.SetParent(parentAfterDrag);
         rawImage.raycastTarget = true;
     }
@@ -57,13 +53,8 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void SetPosition(PlayerSlot slot)
     {
         TeamScoreManager.instance.RemovePlayerFromFormation(this); //remove score from team score
-
         playerSlot = slot;
         ApplyMultiplier();
-
-        //if (parentAfterDrag.CompareTag("Bench"))
-        //{
-        //}
         TeamScoreManager.instance.AddPlayerToFormation(this); //add new score
 
     }
@@ -71,19 +62,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private void ApplyMultiplier()
     {
         float baseScore = 0;
-
-        switch (playerSlot.positionType)
-        {
-            case PlayerSlot.PositionType.Forward:
-                baseScore = offenceScore;
-                break;
-            case PlayerSlot.PositionType.Midfielder:
-                baseScore = speedScore;
-                break;
-            case PlayerSlot.PositionType.Defender:
-                baseScore = defenceScore;
-                break;
-        }
+        
+        if (playerSlot.positionType == PlayerSlot.PositionType.Forward) baseScore = offenceScore;
+        if (playerSlot.positionType == PlayerSlot.PositionType.Midfielder) baseScore = speedScore;
+        if (playerSlot.positionType == PlayerSlot.PositionType.Defender) baseScore = defenceScore;
 
         scoreMultiplier = (0.01f * baseScore) + 0.8f;
         float finalScore = baseScore * scoreMultiplier;
@@ -101,6 +83,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             playerSlot.positionType == PlayerSlot.PositionType.Defender ? Mathf.RoundToInt(finalScore) : defenceScore,
             playerSlot.positionType == PlayerSlot.PositionType.Midfielder ? Mathf.RoundToInt(finalScore) : speedScore,
             totalScore);
-        // conditional ?:    X = (condition) ? (value if true) : (value if false);
+        // conditional ? -->  X = (condition) ? (value if true) : (value if false);
     }
 }

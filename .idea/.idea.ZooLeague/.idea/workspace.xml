@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/New Render Texture.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Render Texture.renderTexture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Player team match scripting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Player team match scripting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DraggableItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DraggableItem.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchScoreboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchScoreboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchSimulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchSimulation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerSlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeamScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeamScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +117,8 @@
       <workItem from="1739997282150" duration="1649000" />
       <workItem from="1740497092123" duration="5126000" />
       <workItem from="1740511223478" duration="3143000" />
-      <workItem from="1740561323706" duration="6487000" />
+      <workItem from="1740561323706" duration="9434000" />
+      <workItem from="1740582123698" duration="3133000" />
     </task>
     <servers />
   </component>

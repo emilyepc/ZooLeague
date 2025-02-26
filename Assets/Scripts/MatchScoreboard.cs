@@ -27,13 +27,13 @@ public class MatchScoreboard : MonoBehaviour
     }
 
     
-    //line one method
+    //line 1
     public void UpdateMatchStatus(string status)
     {
         matchStatus.text = status;
     }
     
-    //line 2 methods
+    //line 2 
     public void UpdateTextTwo(string text, bool matchOver)
     {
         lineTwo.text = text;
