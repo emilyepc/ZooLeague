@@ -189,6 +189,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -909,7 +922,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zllogo_0: 2054531443813043611
+      zllogo_1: -7323861341462243954
+      zllogo_10: -7738143658744040224
+      zllogo_11: -8611873740066915297
+      zllogo_12: 2430224665784318077
+      zllogo_13: 7600829918994297135
+      zllogo_14: 5640551276402138480
+      zllogo_15: -2181690625869159560
+      zllogo_16: -1502695605494037594
+      zllogo_17: -867900426066626213
+      zllogo_18: 9184540700010103129
+      zllogo_19: -2088611589885074969
+      zllogo_2: -1217972441710149340
+      zllogo_20: -2152166909222170070
+      zllogo_21: 975773603761148926
+      zllogo_22: -2099908499437862495
+      zllogo_23: 5076895483026628820
+      zllogo_24: -446928434988181879
+      zllogo_25: -7463123225833847639
+      zllogo_26: -2047252297228547775
+      zllogo_27: 2839781817915636032
+      zllogo_28: -3692864610447539087
+      zllogo_29: -7794638360535986283
+      zllogo_3: -8174092203749360632
+      zllogo_30: 6880254495218870181
+      zllogo_31: 7297758429898490915
+      zllogo_4: 858713717298890448
+      zllogo_5: -7757007041106520298
+      zllogo_6: -8043221564364296099
+      zllogo_7: 2673138737138730597
+      zllogo_8: 2275600732800737664
+      zllogo_9: -8566146033073239633
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
