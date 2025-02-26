@@ -23,6 +23,18 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         transform.position = new Vector3(transform.position.x, transform.position.y, 100);
     }
 
+    public void AddToDefenceScore(int amount)
+    {
+        defenceScore += amount;
+        // Optionally, handle any additional logic when defenceScore changes
+    }
+
+    public void AddToOffenceScore(int amount)
+    {
+        offenceScore += amount;
+        // Optionally, handle any additional logic when defenceScore changes
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         parentAfterDrag = transform.parent;
