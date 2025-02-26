@@ -9,14 +9,10 @@ public class MatchScoreboard : MonoBehaviour
 
     private float textClearTimer;
     private bool textShowing;
-
-    public static MatchScoreboard instance;
-
+    
     public void Awake()
     {
         lineThree = GameObject.Find("Scoreboard Text").GetComponent<TMP_Text>();
-        
-        if (instance == null) instance = this;    
         textShowing = false;
     }
 
@@ -27,7 +23,7 @@ public class MatchScoreboard : MonoBehaviour
             if (textClearTimer > 0) textClearTimer -= Time.deltaTime;
             else textShowing = false;
         }
-        else lineTwo.text = "";
+        else lineTwo.text = "Teams are fighting for possession";
     }
 
     
@@ -40,7 +36,7 @@ public class MatchScoreboard : MonoBehaviour
     //line 2 methods
     public void UpdateTextTwo(string text, bool matchOver)
     {
-        lineThree.text = text;
+        lineTwo.text = text;
         
         if (!matchOver)
         {
