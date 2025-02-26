@@ -3,55 +3,80 @@ using TMPro;
 
 public class MatchScoreboard : MonoBehaviour
 {
-    public TMP_Text scoreboard;
-    public TMP_Text timer;
-    public TMP_Text goalStatus;
+    public TMP_Text matchStatus;
+    public TMP_Text lineTwo;
+    public TMP_Text lineThree;
 
     private float textClearTimer;
+    private bool textShowing;
 
     public static MatchScoreboard instance;
 
-    void Awake()
+    public void Awake()
     {
-        scoreboard = GameObject.Find("Scoreboard Text").GetComponent<TMP_Text>();
-        timer = GameObject.Find("Timer Text").GetComponent<TMP_Text>();
-
-        instance = this;
+        lineThree = GameObject.Find("Scoreboard Text").GetComponent<TMP_Text>();
+        
+        if (instance == null) instance = this;    
+        textShowing = false;
     }
 
     void Update()
     {
-        if (textClearTimer < 0)
+        if (textShowing)
         {
-            goalStatus.text = "";
+            if (textClearTimer > 0) textClearTimer -= Time.deltaTime;
+            else textShowing = false;
         }
-        else
-        {
-            textClearTimer -= Time.deltaTime;
-        }
+        else lineTwo.text = "";
     }
 
-    public void UpdateLeaderboard(int playerScore, int opponentScore, float timeLeft)
+    
+    //line one method
+    public void UpdateMatchStatus(string status)
     {
-        scoreboard.text = playerScore.ToString() + " - " + opponentScore.ToString();
-        timer.text = (60f - Mathf.Round(timeLeft)).ToString();
-
+        matchStatus.text = status;
     }
-
+    
+    //line 2 methods
+    public void UpdateTextTwo(string text, bool matchOver)
+    {
+        lineThree.text = text;
+        
+        if (!matchOver)
+        {
+            textShowing = true;
+            textClearTimer = 3f;
+        }
+    }
+    
     public void GoalOpportunity(string team)
     {
-        goalStatus.text = "Goal opportunity for " + team + " team!!";
+        textShowing = true; 
+        textClearTimer = 5f;
+        lineTwo.text = "Goal opportunity for " + team + " team!!";
     }
 
     public void GoalScored(string team)
     {
-        goalStatus.text = "Goal scored for " + team + " team!!";
-        textClearTimer = 4;
+        lineTwo.text = "Goal scored for " + team + " team!!";
+        textShowing = true;
+        textClearTimer = 3f;
     }
 
-    public void GoalMissed()
+    //line three
+    public void UpdateLeaderboard(int playerScore, int opponentScore, float timeLeft)
     {
-        goalStatus.text = "Goal missed";
-        textClearTimer = 4;
+        lineThree.text = playerScore.ToString() + " - " + opponentScore.ToString();
+    }
+    
+    public void UpdateLineThree(string line, bool matchOver)
+    {
+        lineThree.text = line;
+
+        if (!matchOver)
+        {
+            textShowing = true;
+            textClearTimer = 3f;
+        }
     }
 }

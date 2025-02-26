@@ -38,6 +38,8 @@ public class TeamScoreManager : MonoBehaviour
     {
         if (playersInFormationList.Contains(player))
         {
+            print("team formation change");
+            
             playersInFormationList.Remove(player);
             UpdateTeamTotalScore();
             UpdateTeamOffenceScore(); 

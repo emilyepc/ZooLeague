@@ -9,7 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public PlayerSlot playerSlot;
 
-    //in future, these are pulled from animal upgrade script?? i guess? or maybe not, idk
+    //in future, these are pulled from animal upgrade script
     [SerializeField] private string playerName;
     [SerializeField] private int offenceScore;
     [SerializeField] private int speedScore;
@@ -21,9 +21,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public int offenceScoreMultiplied;
     public int defenceScoreMultiplied;
  
-    void Start()
+    void Update()
     {
-        
+        Vector3 pos = transform.position;
+        pos.z = 100;
+        transform.position = pos;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -37,14 +39,12 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         totalScore = offenceScore + defenceScore + speedScore;
         
         PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore);
-
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         //print("dragging");
         transform.position = Input.mousePosition;
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -61,10 +61,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         playerSlot = slot;
         ApplyMultiplier();
 
-        if (parentAfterDrag.tag != "Bench")
-        {
-            TeamScoreManager.instance.AddPlayerToFormation(this); //add new score
-        }
+        //if (parentAfterDrag.CompareTag("Bench"))
+        //{
+        //}
+        TeamScoreManager.instance.AddPlayerToFormation(this); //add new score
+
     }
 
     private void ApplyMultiplier()

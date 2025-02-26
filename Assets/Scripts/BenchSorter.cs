@@ -7,7 +7,7 @@ public class BenchSorter : MonoBehaviour
 
     private void Start()
     {
-        // Find all PlayerSlot components tagged as "Bench"
+        // find all PlayerSlot components tagged as "Bench"
         PlayerSlot[] allSlots = FindObjectsOfType<PlayerSlot>();
         foreach (PlayerSlot slot in allSlots)
         {
@@ -24,7 +24,7 @@ public class BenchSorter : MonoBehaviour
         {
             if (!slot.spotOccupied)
             {
-                slot.transform.SetAsLastSibling(); // Move empty slots to the end
+                slot.transform.SetAsLastSibling(); //move empty slots to the end
             }
         }
     }
