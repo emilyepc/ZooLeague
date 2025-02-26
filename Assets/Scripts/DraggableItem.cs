@@ -9,7 +9,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public PlayerSlot playerSlot;
 
-    //in future, these are pulled from animal upgrade script?? i guess? or maybe not, idk
+    //in future, these are pulled from animal upgrade script
     [SerializeField] private string playerName;
     [SerializeField] private int offenceScore;
     [SerializeField] private int speedScore;
@@ -61,10 +61,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         playerSlot = slot;
         ApplyMultiplier();
 
-        if (parentAfterDrag.CompareTag("Bench"))
-        {
-            TeamScoreManager.instance.AddPlayerToFormation(this); //add new score
-        }
+        //if (parentAfterDrag.CompareTag("Bench"))
+        //{
+        //}
+        TeamScoreManager.instance.AddPlayerToFormation(this); //add new score
+
     }
 
     private void ApplyMultiplier()

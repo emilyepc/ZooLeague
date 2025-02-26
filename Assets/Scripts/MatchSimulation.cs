@@ -1,11 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class MatchSimulation : MonoBehaviour
 {
     public TeamScoreManager teamScoreManager;
     public OpponentTeamOne opponentTeamOne;
+    public MatchScoreboard matchScoreboard;
 
     public int playerGoals;
     public int opponentGoals;
@@ -28,6 +31,7 @@ public class MatchSimulation : MonoBehaviour
     [FormerlySerializedAs("matchOver")] public bool matchRewardsCollected;
     private float waitingToScoreTimer;
     private bool waitingToScore;
+    public bool goalOpportunity;
 
     private string conversionTeam;
     
@@ -46,19 +50,23 @@ public class MatchSimulation : MonoBehaviour
         matchRewardsCollected = true;
         waitingToScoreTimer = 5;
         claimRewardsButton.SetActive(false);
+        timer = 0f;
     }
 
     void Update()
     {
         if (matchOngoing)
         {
-            gameTimerSlider = GameObject.Find("Game Timer Slider").GetComponent<Slider>();
-            
+            //gameTimerSlider = GameObject.Find("Game Timer Slider").GetComponent<Slider>();
+            print("match ongoing");
+            timer += Time.deltaTime;
+
             timer += Time.deltaTime;
             if (timer >= goalOpportunityInterval)
             {
                 timer = 0;
                 GoalOpportunity();
+                print("goal opportunity");
             }
 
             if (gameTimer >= gameLength)
@@ -70,7 +78,7 @@ public class MatchSimulation : MonoBehaviour
             {
                 gameTimer += Time.deltaTime;
                 gameTimerSlider.value = gameTimer;
-                MatchScoreboard.instance.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
+                matchScoreboard.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
             }
 
             if (waitingToScore)
@@ -85,24 +93,28 @@ public class MatchSimulation : MonoBehaviour
                     waitingToScoreTimer -= Time.deltaTime;
                 }
             }
+            else
+            {
+                //if (!goalOpportunity) 
+            }
         }
         else if (!matchOngoing && matchRewardsCollected)
         {
-            MatchScoreboard.instance.UpdateMatchStatus("Team Statistics");
-            MatchScoreboard.instance.UpdateTextTwo("Goal Opportunities : " + playerGoalOpportunityStat, matchRewardsCollected);
-            MatchScoreboard.instance.UpdateLineThree("Conversion rate : " + playerConversionRate, matchRewardsCollected);
+            matchScoreboard.UpdateMatchStatus("Team Statistics");
+            matchScoreboard.UpdateTextTwo("Goal Opportunities : " + playerGoalOpportunityStat, matchRewardsCollected);
+            matchScoreboard.UpdateLineThree("Conversion rate : " + playerConversionRate, matchRewardsCollected);
         }
     }
 
     public void RewardsCollected()
     {
         matchRewardsCollected = true;
-        matchOngoing = false;   
     }
 
     public void MatchStart()
     {
         claimRewardsButton.SetActive(false);
+        matchRewardsCollected = false;
         
         matchOngoing = true;
         opponentTeamOne.MatchStart();
@@ -110,15 +122,20 @@ public class MatchSimulation : MonoBehaviour
         print("opponent team score: " + opponentTeamOne.totalTeamScore);
 
         matchOngoing = true;
+        goalOpportunity = false;
         
         playerGoals = 0;
         opponentGoals = 0;
         
-        MatchScoreboard.instance.UpdateMatchStatus("Match in progress");
+        matchScoreboard.UpdateTextTwo("Teams are fighting for possession", matchRewardsCollected);
+        matchScoreboard.UpdateMatchStatus("Match in progress");
     }
 
     public void GoalOpportunity()
     {
+        goalOpportunity = true;
+        print("in goal opportunity method");
+        
         int teamAScore = teamScoreManager.totalTeamScore;
         int teamBScore = opponentTeamOne.totalTeamScore;
 
@@ -134,27 +151,29 @@ public class MatchSimulation : MonoBehaviour
                 conversionTeam = "player"; //team a gets chance to convert
                 waitingToScore = true;
                 waitingToScoreTimer = 2f;
-                MatchScoreboard.instance.GoalOpportunity("player");
+                matchScoreboard.GoalOpportunity("player");
                 print("player opportunity");
                 break;
             case (false, true):
                 conversionTeam = "opponent"; //team b gets chance to convert
                 waitingToScore = true;
                 waitingToScoreTimer = 2f;
-                MatchScoreboard.instance.GoalOpportunity("opponent");
+                matchScoreboard.GoalOpportunity("opponent");
                 print("opponent opportunity");
                 break;
             case (true, true):
-                MatchScoreboard.instance.GoalOpportunity(playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent");
+                matchScoreboard.GoalOpportunity(playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent");
                 conversionTeam = (playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent"); //team with higher probability gets chance to convert
-                if (conversionTeam == "player") MatchScoreboard.instance.GoalOpportunity("player");
-                else if (conversionTeam == "opponent") MatchScoreboard.instance.GoalOpportunity("opponent");
+                if (conversionTeam == "player") matchScoreboard.GoalOpportunity("player");
+                else if (conversionTeam == "opponent") matchScoreboard.GoalOpportunity("opponent");
                 waitingToScore = true;
                 waitingToScoreTimer = 2f;
                 print("draw opportunity");
                 //this should change, this is too high prob for the higher team methinks... 
                 break;
             case (false, false):
+                goalOpportunity = false;
+                matchScoreboard.UpdateTextTwo("Teams are fighting for possession", matchRewardsCollected);
                 break;
         }
     }
@@ -173,7 +192,7 @@ public class MatchSimulation : MonoBehaviour
 
             if (conversion)
             {
-                MatchScoreboard.instance.GoalScored("player");
+                matchScoreboard.GoalScored("player");
 
                 print("PLAYER SCORES!");
                 playerGoals++;
@@ -181,7 +200,7 @@ public class MatchSimulation : MonoBehaviour
             else
             {
                 print("goal missed");
-                MatchScoreboard.instance.UpdateLineThree("Goal Missed", matchRewardsCollected);
+                matchScoreboard.UpdateLineThree("Goal Missed", matchRewardsCollected);
             }
         }
 
@@ -195,7 +214,7 @@ public class MatchSimulation : MonoBehaviour
 
             if (conversion)
             {
-                MatchScoreboard.instance.GoalScored("opponent");
+                matchScoreboard.GoalScored("opponent");
 
                 print("OPPONENT SCORES");
                 opponentGoals++;
@@ -203,10 +222,11 @@ public class MatchSimulation : MonoBehaviour
             else
             {
                 print("goal missed");
-                MatchScoreboard.instance.UpdateTextTwo("Goal missed!", matchRewardsCollected);
+                matchScoreboard.UpdateTextTwo("Goal missed!", matchRewardsCollected);
             }
         }
         waitingToScore = false;
+        timer = 0;
     }
 
     public void MatchOver()
@@ -214,8 +234,8 @@ public class MatchSimulation : MonoBehaviour
         if (playerGoals != 0) playerConversionRate = playerGoalOpportunityStat / playerGoals;
         if (opponentGoals != 0) opponentConversionRate = opponentGoalOpportunityStat / opponentGoals;
         
-        MatchScoreboard.instance.UpdateMatchStatus("Match Over");
-        MatchScoreboard.instance.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
+        matchScoreboard.UpdateMatchStatus("Match Over");
+        matchScoreboard.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
         
         matchOngoing = false;
         matchRewardsCollected = false;
@@ -225,18 +245,18 @@ public class MatchSimulation : MonoBehaviour
         if (playerGoals > opponentGoals)
         {
             print("PLAYER TEAM WON!");
-            MatchScoreboard.instance.UpdateTextTwo("The winner is the player team!", matchRewardsCollected);
+            matchScoreboard.UpdateTextTwo("The winner is the player team!", matchRewardsCollected);
 
         }
         else if (opponentGoals > playerGoals)
         {
             print("OPPONENT TEAM WON");
-            MatchScoreboard.instance.UpdateTextTwo("The winner is the opponent team!", matchRewardsCollected);
+            matchScoreboard.UpdateTextTwo("The winner is the opponent team!", matchRewardsCollected);
         }
         else
         {
             print("DRAW...");
-            MatchScoreboard.instance.UpdateTextTwo("This game was a draw!", matchRewardsCollected);
+            matchScoreboard.UpdateTextTwo("This game was a draw!", matchRewardsCollected);
         }
     }
 }

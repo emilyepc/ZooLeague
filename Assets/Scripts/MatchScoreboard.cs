@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.Serialization;
 
 public class MatchScoreboard : MonoBehaviour
 {
@@ -13,11 +12,11 @@ public class MatchScoreboard : MonoBehaviour
 
     public static MatchScoreboard instance;
 
-    void Awake()
+    public void Awake()
     {
         lineThree = GameObject.Find("Scoreboard Text").GetComponent<TMP_Text>();
-
-        instance = this;
+        
+        if (instance == null) instance = this;    
         textShowing = false;
     }
 
@@ -32,7 +31,7 @@ public class MatchScoreboard : MonoBehaviour
     }
 
     
-    //line 1 methods
+    //line one method
     public void UpdateMatchStatus(string status)
     {
         matchStatus.text = status;

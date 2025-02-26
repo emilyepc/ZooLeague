@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RotateMoment : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
+
+    [SerializeField] private RawImage modelImage;
 
     private bool isRotating;
     private float startMousePosition;
@@ -17,31 +20,8 @@ public class RotateMoment : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isMouseInPosition())
         {
-            isRotating = true;
-            startMousePosition = Input.mousePosition.x;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            isRotating = false; 
-        }
-
-        if (isRotating)
-        {
-            float currentMousePosition = Input.mousePosition.x;
-            float mouseMovement = currentMousePosition - startMousePosition;
-            
-            transform.Rotate(Vector3.up, -mouseMovement * speed * Time.deltaTime);
-            startMousePosition = Input.mousePosition.x;
-        }
-        
-        
-        
-        /*
-        if (Input.GetMouseButtonDown(0) && IsMouseOverCollider())
-        {
-            print("rotating");
             isRotating = true;
             startMousePosition = Input.mousePosition.x;
         }
@@ -56,19 +36,13 @@ public class RotateMoment : MonoBehaviour
             float mouseMovement = currentMousePosition - startMousePosition;
 
             transform.Rotate(Vector3.up, -mouseMovement * speed * Time.deltaTime);
-            startMousePosition = currentMousePosition;
-        }*/
+            startMousePosition = Input.mousePosition.x;
+        }
     }
 
-    private bool IsMouseOverCollider()
+    private bool isMouseInPosition()
     {
-        // raycast from the mouse position
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        
-        print("mouseovercollider");
-
-        // output what the ray hits
-        return interactionCollider != null && interactionCollider.Raycast(ray, out hit, Mathf.Infinity);
+        RectTransform rectTransform = modelImage.GetComponent<RectTransform>();
+        return RectTransformUtility.RectangleContainsScreenPoint(rectTransform, Input.mousePosition, null);
     }
 }
