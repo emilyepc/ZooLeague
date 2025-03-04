@@ -35,5 +35,4 @@ public class PlayerStatsInFormation : MonoBehaviour
         formText.text = form.ToString();
         formMaxText.text = maxForm.ToString();
     }
-
 }
