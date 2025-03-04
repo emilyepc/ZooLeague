@@ -53,6 +53,7 @@ public class TeamScoreManager : MonoBehaviour
 
         foreach (DraggablePlayer player in playersInFormationList)
         {
+            print(playersInFormationList);
             totalTeamScore += player.totalScore;
         }
 
@@ -81,13 +82,5 @@ public class TeamScoreManager : MonoBehaviour
         }
         
         teamDefenceScoreText.text = "Team Defence Score: " + totalTeamDefenceScore.ToString();
-    }
-
-    public void UpdateTeamForm(int amount)
-    {
-        foreach (DraggablePlayer player in playersInFormationList)
-        {
-            player.AddToFormScore(amount);
-        }
     }
 }

@@ -3,17 +3,17 @@ using UnityEngine;
 public class Add15 : MonoBehaviour
 {
     // Public field to assign the DraggableItem script via the Inspector
-    public DraggablePlayer draggablePlayer;
+    public DraggableItem draggableItem;
 
     public void OnPopupButtonPressed()
     {
-        if (draggablePlayer != null)
+        if (draggableItem != null)
         {
-            draggablePlayer.AddToOffenceScore(20);
+            draggableItem.AddToOffenceScore(20);
         }
         else
         {
-            Debug.LogError("draggablePlayer reference is not assigned.");
+            Debug.LogError("DraggableItem reference is not assigned.");
         }
     }
 }
