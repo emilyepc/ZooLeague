@@ -42,16 +42,16 @@ public class OpponentTeamOne : MonoBehaviour
 
             case "Dogs":
                 //1480
-                opponentOffenceScore = 5;
-                opponentDefenceScore = 4;
-                opponentSpeedScore = 3;
+                opponentOffenceScore = 400;
+                opponentDefenceScore = 580;
+                opponentSpeedScore = 500;
                 break;
 
             case "Cats":
                 //1780
-                opponentOffenceScore = 4;
-                opponentDefenceScore = 4;
-                opponentSpeedScore = 4;
+                opponentOffenceScore = 540;
+                opponentDefenceScore = 540;
+                opponentSpeedScore = 700;
                 break;
 
             case "Flamingos":
