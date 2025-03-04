@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77e3875a9d21d2468d7db40e87c87cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 50
   modelImage: {fileID: 1092434274}
 --- !u!1 &329311278
 GameObject:
