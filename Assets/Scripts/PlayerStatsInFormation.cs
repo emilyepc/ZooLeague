@@ -25,5 +25,4 @@ public class PlayerStatsInFormation : MonoBehaviour
         speedText.text = "Speed: " + speed;
         totalText.text = "Total Score: " + total;
     }
-
 }
