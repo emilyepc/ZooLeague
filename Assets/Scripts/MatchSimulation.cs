@@ -10,6 +10,7 @@ public class MatchSimulation : MonoBehaviour
     public TeamScoreManager teamScoreManager;
     public OpponentTeamOne opponentTeamOne;
     public MatchScoreboard matchScoreboard;
+    public DraggablePlayer draggablePlayer;
     public Slider gameTimerSlider;
     public GameObject claimRewardsButton;
     
@@ -119,18 +120,29 @@ public class MatchSimulation : MonoBehaviour
         bool teamAChance = Random.value < playerGoalOpportunityProbability;
         bool teamBChance = Random.value < opponentGoalOpportunityProbability;
         
+        print("player opportunity: " + playerGoalOpportunityProbability);
+        print("player chance: " + teamAChance);
+        
+        print("opponent opportunity: " + opponentGoalOpportunityProbability);
+        print("opponent chance: " + teamBChance);
+        
+        
+        
         //who will get the opportunity to score?
         if (teamAChance && teamBChance)
         {
-            conversionTeam = playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent";
+            //conversionTeam = playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent";
+            matchScoreboard.UpdateTextTwo("Teams are fighting for possession", matchRewardsCollected);
         }
         else if (teamAChance)
         {
             conversionTeam = "player";
+            matchScoreboard.GoalOpportunity(conversionTeam);
         }
         else if (teamBChance)
         {
             conversionTeam = "opponent";
+            matchScoreboard.GoalOpportunity(conversionTeam);
         }
         else
         {
@@ -140,7 +152,6 @@ public class MatchSimulation : MonoBehaviour
         
         waitingToScore = true;
         waitingToScoreTimer = 2f;
-        matchScoreboard.GoalOpportunity(conversionTeam);
     }
 
     private void Conversion(string team)
@@ -148,9 +159,11 @@ public class MatchSimulation : MonoBehaviour
         if (team == "player")
         {
             playerGoalOpportunityStat++;
-            playerConversionProbability = teamScoreManager.totalTeamOffenceScore / 
-                                          (teamScoreManager.totalTeamOffenceScore + opponentTeamOne.opponentDefenceScore);
+            playerConversionProbability = (float)teamScoreManager.totalTeamOffenceScore / (teamScoreManager.totalTeamOffenceScore + opponentTeamOne.opponentDefenceScore);
             
+            print("player conversion probability: " + playerConversionProbability);
+            Debug.Log("total player offence (" + teamScoreManager.totalTeamOffenceScore + ") divided by player offence score (" + teamScoreManager.totalTeamOffenceScore + ") plus opponent defence (" + opponentTeamOne.opponentDefenceScore);
+
             if (Random.value < playerConversionProbability)
             {
                 playerGoals++;
@@ -165,8 +178,11 @@ public class MatchSimulation : MonoBehaviour
         else if (team == "opponent")
         {
             opponentGoalOpportunityStat++;
-            opponentConversionProbability = opponentTeamOne.opponentOffenceScore / 
-                                            (teamScoreManager.totalTeamDefenceScore + opponentTeamOne.opponentOffenceScore);
+            opponentConversionProbability = (float)opponentTeamOne.opponentOffenceScore / (teamScoreManager.totalTeamDefenceScore + opponentTeamOne.opponentOffenceScore);
+            
+            print("opponent conversion probability: " + opponentConversionProbability);
+            Debug.Log("total opponent offence (" + opponentTeamOne.opponentOffenceScore + ") divided by opponent offence score (" + opponentTeamOne.opponentOffenceScore + ") plus player defence (" + teamScoreManager.totalTeamDefenceScore);
+
             
             if (Random.value < opponentConversionProbability)
             {
@@ -199,6 +215,8 @@ public class MatchSimulation : MonoBehaviour
             opponentGoals > playerGoals ? "The winner is the opponent team!" : "This game was a draw!";
         
         matchScoreboard.UpdateTextTwo(matchResult, matchRewardsCollected);
+        
+        teamScoreManager.UpdateTeamForm(-15);
     }
 
     public void RewardsCollected()

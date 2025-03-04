@@ -7,10 +7,12 @@ public class PlayerInRoster : MonoBehaviour
     public int defenceScore;
     public int speedScore;
     public int totalScore;
+    public int currentForm;
+    public int maxForm;
 
     public void OnClick()
     {
-        PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore);
+        PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore, currentForm, maxForm);
     }
     
 }

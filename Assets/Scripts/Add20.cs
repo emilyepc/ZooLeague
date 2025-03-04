@@ -1,15 +1,16 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Add20 : MonoBehaviour
 {
     // Public field to assign the DraggableItem script via the Inspector
-    public DraggableItem draggableItem;
+    public DraggablePlayer draggablePlayer;
 
     public void OnPopupButtonPressed()
     {
-        if (draggableItem != null)
+        if (draggablePlayer != null)
         {
-            draggableItem.AddToDefenceScore(20);
+            draggablePlayer.AddToDefenceScore(20);
         }
         else
         {

@@ -12,27 +12,19 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [SerializeField] private int offenceScore;
     [SerializeField] private int speedScore;
     [SerializeField] private int defenceScore;
+    [SerializeField] private int currentForm;
+    [SerializeField]  private int maxForm;
+    [SerializeField] [HideInInspector] private float formLimit;
 
     private float scoreMultiplier;
-    public int totalScore;
-    public int offenceScoreMultiplied;
-    public int defenceScoreMultiplied;
+    private int grossTotalScore;
+    [HideInInspector] public int totalScore;
+    [HideInInspector] public int offenceScoreMultiplied;
+    [HideInInspector] public int defenceScoreMultiplied;
  
     void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 100);
-    }
-
-    public void AddToDefenceScore(int amount)
-    {
-        defenceScore += amount;
-        // Optionally, handle any additional logic when defenceScore changes
-    }
-
-    public void AddToOffenceScore(int amount)
-    {
-        offenceScore += amount;
-        // Optionally, handle any additional logic when defenceScore changes
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -43,12 +35,18 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         rawImage.raycastTarget = false;
 
         CalculateTotalScore();
-        PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore);
+        PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore, currentForm, maxForm);
+        //form bar
     }
 
-    public void CalculateTotalScore()
+    private void CalculateTotalScore()
     {
         totalScore = offenceScore + defenceScore + speedScore;
+        
+        if (currentForm != 0 && maxForm != 0)
+            formLimit = (float)currentForm / maxForm;
+        
+        totalScore = Mathf.RoundToInt(totalScore * formLimit);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -85,16 +83,52 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         offenceScoreMultiplied = Mathf.RoundToInt(offenceScore * scoreMultiplier);
         defenceScoreMultiplied = Mathf.RoundToInt(defenceScore * scoreMultiplier);
 
-        totalScore =
+        grossTotalScore =
         (playerSlot.positionType == PlayerSlot.PositionType.Forward ? Mathf.RoundToInt(finalScore) : offenceScore) +
         (playerSlot.positionType == PlayerSlot.PositionType.Defender ? Mathf.RoundToInt(finalScore) : defenceScore) +
         (playerSlot.positionType == PlayerSlot.PositionType.Midfielder ? Mathf.RoundToInt(finalScore) : speedScore);
 
+        if (currentForm != 0 && maxForm != 0)
+            formLimit = (float)currentForm / maxForm;
+        
+        totalScore = Mathf.RoundToInt(grossTotalScore * formLimit);
+        
         PlayerStatsInFormation.instance.ShowStats(playerName,
             playerSlot.positionType == PlayerSlot.PositionType.Forward ? Mathf.RoundToInt(finalScore) : offenceScore,
             playerSlot.positionType == PlayerSlot.PositionType.Defender ? Mathf.RoundToInt(finalScore) : defenceScore,
             playerSlot.positionType == PlayerSlot.PositionType.Midfielder ? Mathf.RoundToInt(finalScore) : speedScore,
-            totalScore);
+            totalScore, currentForm, maxForm);
         // conditional ? -->  X = (condition) ? (value if true) : (value if false);
+    }
+    
+    public void AddToDefenceScore(int amount)
+    {
+        defenceScore += amount;
+    }
+
+    public void AddToOffenceScore(int amount)
+    {
+        offenceScore += amount;
+    }
+
+    public void AddToSpeedScore(int amount)
+    {
+        speedScore += amount;
+    }
+
+    public void AddToFormScore(int amount)
+    {
+        currentForm += amount;
+        
+        if (currentForm > maxForm)
+        {
+            currentForm = maxForm;
+        }
+    }
+
+    public void AddToFormMaxScore(int amount)
+    {
+        maxForm += amount;
+
     }
 }
