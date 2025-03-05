@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8d11a980aac83e84ebbda0c833e931bc
+guid: 5281c7680cede8f4d82f88e4480ce9a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3006494645857586881
-    second: Izzy_UIBackground_0
+      213: -6683716246149459744
+    second: haretexturecheck_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Izzy_UIBackground_0
+      name: haretexturecheck_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1918
-        height: 1080
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ce847983f639b920800000000000000
-      internalID: 3006494645857586881
+      spriteID: 0e011c86c7bae33a0800000000000000
+      internalID: -6683716246149459744
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Izzy_UIBackground_0: 3006494645857586881
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
