@@ -12,7 +12,7 @@ public class TeamScoreManager : MonoBehaviour
     public TMP_Text teamOffenceScoreText;
     public TMP_Text teamDefenceScoreText;
 
-    private List<DraggableItem> playersInFormationList = new List<DraggableItem>();
+    private List<DraggablePlayer> playersInFormationList = new List<DraggablePlayer>();
 
     public int totalTeamScore;
     public int totalTeamOffenceScore;
@@ -23,7 +23,7 @@ public class TeamScoreManager : MonoBehaviour
         instance = this; 
     }
 
-    public void AddPlayerToFormation(DraggableItem player)
+    public void AddPlayerToFormation(DraggablePlayer player)
     {
         if (!playersInFormationList.Contains(player))
         {
@@ -34,10 +34,12 @@ public class TeamScoreManager : MonoBehaviour
         }
     }
 
-    public void RemovePlayerFromFormation(DraggableItem player)
+    public void RemovePlayerFromFormation(DraggablePlayer player)
     {
         if (playersInFormationList.Contains(player))
         {
+            print("team formation change");
+            
             playersInFormationList.Remove(player);
             UpdateTeamTotalScore();
             UpdateTeamOffenceScore(); 
@@ -49,9 +51,8 @@ public class TeamScoreManager : MonoBehaviour
     {
         totalTeamScore = 0;
 
-        foreach (DraggableItem player in playersInFormationList)
+        foreach (DraggablePlayer player in playersInFormationList)
         {
-            print(playersInFormationList);
             totalTeamScore += player.totalScore;
         }
 
@@ -62,7 +63,7 @@ public class TeamScoreManager : MonoBehaviour
     {
         totalTeamOffenceScore = 0;
 
-        foreach (DraggableItem player in playersInFormationList)
+        foreach (DraggablePlayer player in playersInFormationList)
         {
             totalTeamOffenceScore += player.offenceScoreMultiplied;
         }
@@ -74,11 +75,19 @@ public class TeamScoreManager : MonoBehaviour
     {
         totalTeamDefenceScore = 0;
 
-        foreach (DraggableItem player in playersInFormationList)
+        foreach (DraggablePlayer player in playersInFormationList)
         {
             totalTeamDefenceScore += player.defenceScoreMultiplied;
         }
         
         teamDefenceScoreText.text = "Team Defence Score: " + totalTeamDefenceScore.ToString();
+    }
+
+    public void UpdateTeamForm(int amount)
+    {
+        foreach (DraggablePlayer player in playersInFormationList)
+        {
+            player.AddToFormScore(amount);
+        }
     }
 }

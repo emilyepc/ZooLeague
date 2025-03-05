@@ -2,66 +2,60 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems; 
 
-public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public RawImage rawImage;
     [HideInInspector] public Transform parentAfterDrag;
-
     public PlayerSlot playerSlot;
 
-    //in future, these are pulled from animal upgrade script?? i guess? or maybe not, idk
     [SerializeField] private string playerName;
     [SerializeField] private int offenceScore;
     [SerializeField] private int speedScore;
     [SerializeField] private int defenceScore;
+    [SerializeField] private int currentForm;
+    [SerializeField]  private int maxForm;
+    [SerializeField] [HideInInspector] private float formLimit;
 
     private float scoreMultiplier;
-    public int totalScore;
-
-    public int offenceScoreMultiplied;
-    public int defenceScoreMultiplied;
+    private int grossTotalScore;
+    [HideInInspector] public int totalScore;
+    [HideInInspector] public int offenceScoreMultiplied;
+    [HideInInspector] public int defenceScoreMultiplied;
  
-    void Start()
+    void Update()
     {
-        
-    }
-
-    public void AddToDefenceScore(int amount)
-    {
-        defenceScore += amount;
-        // Optionally, handle any additional logic when defenceScore changes
-    }
-
-    public void AddToOffenceScore(int amount)
-    {
-        offenceScore += amount;
-        // Optionally, handle any additional logic when defenceScore changes
+        transform.position = new Vector3(transform.position.x, transform.position.y, 100);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        //print("begin drag");
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         rawImage.raycastTarget = false;
 
+        CalculateTotalScore();
+        PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore, currentForm, maxForm);
+        //form bar
+    }
+
+    private void CalculateTotalScore()
+    {
         totalScore = offenceScore + defenceScore + speedScore;
         
-        PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore);
-
+        if (currentForm != 0 && maxForm != 0)
+            formLimit = (float)currentForm / maxForm;
+        
+        totalScore = Mathf.RoundToInt(totalScore * formLimit);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        //print("dragging");
         transform.position = Input.mousePosition;
-
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //print("end drag");
         transform.SetParent(parentAfterDrag);
         rawImage.raycastTarget = true;
     }
@@ -69,32 +63,19 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void SetPosition(PlayerSlot slot)
     {
         TeamScoreManager.instance.RemovePlayerFromFormation(this); //remove score from team score
-
         playerSlot = slot;
         ApplyMultiplier();
+        TeamScoreManager.instance.AddPlayerToFormation(this); //add new score
 
-        if (parentAfterDrag.tag != "Bench")
-        {
-            TeamScoreManager.instance.AddPlayerToFormation(this); //add new score
-        }
     }
 
     private void ApplyMultiplier()
     {
         float baseScore = 0;
-
-        switch (playerSlot.positionType)
-        {
-            case PlayerSlot.PositionType.Forward:
-                baseScore = offenceScore;
-                break;
-            case PlayerSlot.PositionType.Midfielder:
-                baseScore = speedScore;
-                break;
-            case PlayerSlot.PositionType.Defender:
-                baseScore = defenceScore;
-                break;
-        }
+        
+        if (playerSlot.positionType == PlayerSlot.PositionType.Forward) baseScore = offenceScore;
+        if (playerSlot.positionType == PlayerSlot.PositionType.Midfielder) baseScore = speedScore;
+        if (playerSlot.positionType == PlayerSlot.PositionType.Defender) baseScore = defenceScore;
 
         scoreMultiplier = (0.01f * baseScore) + 0.8f;
         float finalScore = baseScore * scoreMultiplier;
@@ -102,16 +83,52 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         offenceScoreMultiplied = Mathf.RoundToInt(offenceScore * scoreMultiplier);
         defenceScoreMultiplied = Mathf.RoundToInt(defenceScore * scoreMultiplier);
 
-        totalScore =
+        grossTotalScore =
         (playerSlot.positionType == PlayerSlot.PositionType.Forward ? Mathf.RoundToInt(finalScore) : offenceScore) +
         (playerSlot.positionType == PlayerSlot.PositionType.Defender ? Mathf.RoundToInt(finalScore) : defenceScore) +
         (playerSlot.positionType == PlayerSlot.PositionType.Midfielder ? Mathf.RoundToInt(finalScore) : speedScore);
 
+        if (currentForm != 0 && maxForm != 0)
+            formLimit = (float)currentForm / maxForm;
+        
+        totalScore = Mathf.RoundToInt(grossTotalScore * formLimit);
+        
         PlayerStatsInFormation.instance.ShowStats(playerName,
             playerSlot.positionType == PlayerSlot.PositionType.Forward ? Mathf.RoundToInt(finalScore) : offenceScore,
             playerSlot.positionType == PlayerSlot.PositionType.Defender ? Mathf.RoundToInt(finalScore) : defenceScore,
             playerSlot.positionType == PlayerSlot.PositionType.Midfielder ? Mathf.RoundToInt(finalScore) : speedScore,
-            totalScore);
-        // conditional ?:    X = (condition) ? (value if true) : (value if false);
+            totalScore, currentForm, maxForm);
+        // conditional ? -->  X = (condition) ? (value if true) : (value if false);
+    }
+    
+    public void AddToDefenceScore(int amount)
+    {
+        defenceScore += amount;
+    }
+
+    public void AddToOffenceScore(int amount)
+    {
+        offenceScore += amount;
+    }
+
+    public void AddToSpeedScore(int amount)
+    {
+        speedScore += amount;
+    }
+
+    public void AddToFormScore(int amount)
+    {
+        currentForm += amount;
+        
+        if (currentForm > maxForm)
+        {
+            currentForm = maxForm;
+        }
+    }
+
+    public void AddToFormMaxScore(int amount)
+    {
+        maxForm += amount;
+
     }
 }
