@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
 
@@ -28,9 +27,9 @@ public class TeamScoreManager : MonoBehaviour
         if (!playersInFormationList.Contains(player))
         {
             playersInFormationList.Add(player);
-            UpdateTeamTotalScore();
-            UpdateTeamOffenceScore();
-            UpdateTeamDefenceScore();
+            UpdateTeamTotalScore(0);
+            UpdateTeamOffenceScore(0);
+            UpdateTeamDefenceScore(0);
         }
     }
 
@@ -41,13 +40,13 @@ public class TeamScoreManager : MonoBehaviour
             print("team formation change");
             
             playersInFormationList.Remove(player);
-            UpdateTeamTotalScore();
-            UpdateTeamOffenceScore(); 
-            UpdateTeamDefenceScore();
+            UpdateTeamTotalScore(0);
+            UpdateTeamOffenceScore(0); 
+            UpdateTeamDefenceScore(0);
         }
     }
 
-    public void UpdateTeamTotalScore()
+    public void UpdateTeamTotalScore(int amt)
     {
         totalTeamScore = 0;
 
@@ -59,7 +58,7 @@ public class TeamScoreManager : MonoBehaviour
         teamTotalScoreText.text = "Team Score: " + totalTeamScore.ToString();
     }
 
-    public void UpdateTeamOffenceScore()
+    public void UpdateTeamOffenceScore(int amt)
     {
         totalTeamOffenceScore = 0;
 
@@ -71,7 +70,7 @@ public class TeamScoreManager : MonoBehaviour
         teamOffenceScoreText.text = "Team Offence Score: " + totalTeamOffenceScore.ToString();
     }
 
-    public void UpdateTeamDefenceScore()
+    public void UpdateTeamDefenceScore(int amt)
     {
         totalTeamDefenceScore = 0;
 
@@ -79,6 +78,8 @@ public class TeamScoreManager : MonoBehaviour
         {
             totalTeamDefenceScore += player.defenceScoreMultiplied;
         }
+        
+        totalTeamDefenceScore += amt;
         
         teamDefenceScoreText.text = "Team Defence Score: " + totalTeamDefenceScore.ToString();
     }
@@ -89,5 +90,10 @@ public class TeamScoreManager : MonoBehaviour
         {
             player.AddToFormScore(amount);
         }
+    }
+
+    public void UpdatePlayerForm(int amount)
+    {
+        
     }
 }

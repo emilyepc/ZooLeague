@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -20,6 +18,7 @@ public class MatchSimulation : MonoBehaviour
     public bool matchOngoing;
     public bool matchRewardsCollected;
     
+    public bool gamePaused;
     private float gameLength = 60f;
     private float gameTimer;
     private float goalOpportunityInterval = 5f;
@@ -60,36 +59,42 @@ public class MatchSimulation : MonoBehaviour
                 matchScoreboard.UpdateTextTwo($"Goal Opportunities : {playerGoalOpportunityStat}", matchRewardsCollected);
                 matchScoreboard.UpdateLineThree($"Conversion rate : {playerConversionRate}", matchRewardsCollected);
             }
-            return;
         }
         else if (matchOngoing)
         {
-            timer += Time.deltaTime;
-            gameTimer += Time.deltaTime;
-        
-            if (timer >= goalOpportunityInterval)
+            if (!gamePaused)
             {
-                timer = 0;
-                GoalOpportunity();
-            }
+                timer += Time.deltaTime;
+                gameTimer += Time.deltaTime;
 
-            if (gameTimer >= gameLength)
-            {
-                MatchOver();
-                gameTimer = 0;
-            }
-            
-            gameTimerSlider.value = gameTimer;
-            matchScoreboard.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
-        
-            if (waitingToScore)
-            {
-                waitingToScoreTimer -= Time.deltaTime;
-                if (waitingToScoreTimer <= 0)
+                if (timer >= goalOpportunityInterval)
                 {
-                    waitingToScore = false; 
-                    Conversion(conversionTeam);
+                    timer = 0;
+                    GoalOpportunity();
                 }
+
+                if (gameTimer >= gameLength)
+                {
+                    MatchOver();
+                    gameTimer = 0;
+                }
+
+                gameTimerSlider.value = gameTimer;
+                matchScoreboard.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
+
+                if (waitingToScore)
+                {
+                    waitingToScoreTimer -= Time.deltaTime;
+                    if (waitingToScoreTimer <= 0)
+                    {
+                        waitingToScore = false;
+                        Conversion(conversionTeam);
+                    }
+                }
+            }
+            else
+            {
+                
             }
         }
     }
@@ -99,6 +104,7 @@ public class MatchSimulation : MonoBehaviour
         claimRewardsButton.SetActive(false);
         matchRewardsCollected = false;
         matchOngoing = true;
+        gamePaused = false;
         
         playerGoals = 0;
         opponentGoals = 0;
@@ -108,7 +114,7 @@ public class MatchSimulation : MonoBehaviour
         matchScoreboard.UpdateMatchStatus("Match in progress");
     }
 
-    public void GoalOpportunity()
+    private void GoalOpportunity()
     {
         int teamAScore = teamScoreManager.totalTeamScore;
         int teamBScore = opponentTeamOne.totalTeamScore;
@@ -199,7 +205,7 @@ public class MatchSimulation : MonoBehaviour
         timer = 0;
     }
 
-    public void MatchOver()
+    private void MatchOver()
     {
         matchOngoing = false;
         matchRewardsCollected = false;
@@ -222,5 +228,10 @@ public class MatchSimulation : MonoBehaviour
     public void RewardsCollected()
     {
         matchRewardsCollected = true;
+    }
+
+    public void UnpauseGame()
+    {
+        gamePaused = false;
     }
 }
