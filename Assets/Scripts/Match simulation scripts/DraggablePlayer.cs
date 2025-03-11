@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems; 
+using UnityEngine.EventSystems;
 
 public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -13,15 +13,15 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [SerializeField] private int speedScore;
     [SerializeField] private int defenceScore;
     [SerializeField] private int currentForm;
-    [SerializeField]  private int maxForm;
-    [SerializeField] [HideInInspector] private float formLimit;
+    [SerializeField] private int maxForm;
+    [SerializeField][HideInInspector] private float formLimit;
 
     private float scoreMultiplier;
     private int grossTotalScore;
     [HideInInspector] public int totalScore;
     [HideInInspector] public int offenceScoreMultiplied;
     [HideInInspector] public int defenceScoreMultiplied;
- 
+
     void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 100);
@@ -42,10 +42,10 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private void CalculateTotalScore()
     {
         totalScore = offenceScore + defenceScore + speedScore;
-        
+
         if (currentForm != 0 && maxForm != 0)
             formLimit = (float)currentForm / maxForm;
-        
+
         totalScore = Mathf.RoundToInt(totalScore * formLimit);
     }
 
@@ -72,7 +72,7 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private void ApplyMultiplier()
     {
         float baseScore = 0;
-        
+
         if (playerSlot.positionType == PlayerSlot.PositionType.Forward) baseScore = offenceScore;
         if (playerSlot.positionType == PlayerSlot.PositionType.Midfielder) baseScore = speedScore;
         if (playerSlot.positionType == PlayerSlot.PositionType.Defender) baseScore = defenceScore;
@@ -90,9 +90,9 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
         if (currentForm != 0 && maxForm != 0)
             formLimit = (float)currentForm / maxForm;
-        
+
         totalScore = Mathf.RoundToInt(grossTotalScore * formLimit);
-        
+
         PlayerStatsInFormation.instance.ShowStats(playerName,
             playerSlot.positionType == PlayerSlot.PositionType.Forward ? Mathf.RoundToInt(finalScore) : offenceScore,
             playerSlot.positionType == PlayerSlot.PositionType.Defender ? Mathf.RoundToInt(finalScore) : defenceScore,
@@ -100,7 +100,7 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             totalScore, currentForm, maxForm);
         // conditional ? -->  X = (condition) ? (value if true) : (value if false);
     }
-    
+
     public void AddToDefenceScore(int amount)
     {
         defenceScore += amount;
@@ -124,7 +124,7 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     public void AddToFormScore(int amount)
     {
         currentForm += amount;
-        
+
         if (currentForm > maxForm)
         {
             currentForm = maxForm;
@@ -136,4 +136,15 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         maxForm += amount;
 
     }
+
+    public void PasteStats(Text playerNameText, Text offenceText, Text defenceText, Text speedText, Text formText)
+    {
+        if (playerNameText != null) playerNameText.text = "Name: " + playerName;
+        if (offenceText != null) offenceText.text = "Offence: " + offenceScore;
+        if (defenceText != null) defenceText.text = "Defence: " + defenceScore;
+        if (speedText != null) speedText.text = "Speed: " + speedScore;
+        if (formText != null) formText.text = "Form: " + currentForm + " / " + maxForm;
+
+    }
+
 }

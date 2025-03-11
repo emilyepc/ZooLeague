@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ShowStatsInRoster : MonoBehaviour
 {
-    public RosterStatUpdating rosterStatUpdating;
-    
+    public DraggablePlayer draggablePlayer;
+
     [SerializeField] private string playerName;
     [SerializeField] private int offenceScore;
     [SerializeField] private int speedScore;
@@ -13,8 +13,10 @@ public class ShowStatsInRoster : MonoBehaviour
 
     [SerializeField] private DraggablePlayer correspondingPlayer;
 
-    public void UpdateStatText()
+    void Update()
     {
-        rosterStatUpdating.ShowStats(playerName, offenceScore, defenceScore, speedScore, currentForm, maxForm);
+
+            draggablePlayer.PasteStats();
+        
     }
 }
