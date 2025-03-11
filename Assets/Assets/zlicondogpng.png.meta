@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 8038ab0575a588c498700d66b216f479
+guid: 0fdcc8f1b835a254baf62daa62bfe08c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4178944190478508216
-    second: zlenergy_0
+      213: 9002354693778196602
+    second: zlicondogpng_0
+  - first:
+      213: -7510039868155399470
+    second: zlicondogpng_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zlenergy_0
+      name: zlicondogpng_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 248
-        width: 583
-        height: 256
+        x: 176
+        y: 154
+        width: 648
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84f985656686106c0800000000000000
-      internalID: -4178944190478508216
+      spriteID: a7848b0c5e9ceec70800000000000000
+      internalID: 9002354693778196602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zlicondogpng_1
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 464
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d27391a78af6c790800000000000000
+      internalID: -7510039868155399470
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      zlenergy_0: -4178944190478508216
+      zlicondogpng_0: 9002354693778196602
+      zlicondogpng_1: -7510039868155399470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8038ab0575a588c498700d66b216f479
+guid: 8254e69d0242f2a41a28cb3f393313b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4178944190478508216
-    second: zlenergy_0
+      213: 8502010528470119857
+    second: zliconfox_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zlenergy_0
+      name: zliconfox_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 248
-        width: 583
-        height: 256
+        x: 0
+        y: 0
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84f985656686106c0800000000000000
-      internalID: -4178944190478508216
+      spriteID: 1b5b712b7853df570800000000000000
+      internalID: 8502010528470119857
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      zlenergy_0: -4178944190478508216
+      zliconfox_0: 8502010528470119857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

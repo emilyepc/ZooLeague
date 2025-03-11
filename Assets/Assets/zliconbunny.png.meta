@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8038ab0575a588c498700d66b216f479
+guid: f0c7686a7ceeb2b429e7c2a5683811bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4178944190478508216
-    second: zlenergy_0
+      213: -7519657616192360149
+    second: zliconbunny_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zlenergy_0
+      name: zliconbunny_0
       rect:
         serializedVersion: 2
-        x: 117
-        y: 248
-        width: 583
-        height: 256
+        x: 0
+        y: 0
+        width: 1000
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84f985656686106c0800000000000000
-      internalID: -4178944190478508216
+      spriteID: b213b4a2d3fc4a790800000000000000
+      internalID: -7519657616192360149
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      zlenergy_0: -4178944190478508216
+      zliconbunny_0: -7519657616192360149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

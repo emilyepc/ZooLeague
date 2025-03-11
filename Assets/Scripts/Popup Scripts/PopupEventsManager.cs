@@ -12,6 +12,9 @@ public class PopupEventsManager : MonoBehaviour
     public Button choiceOneButton;
     public Button choiceTwoButton;
     
+    public string effectText1;
+    public string effectText2;
+    
     public void InjuryPopup()
 {
     popupText.text = "A player has gotten a minor injury! What will you do?";
@@ -21,6 +24,9 @@ public class PopupEventsManager : MonoBehaviour
     
     choiceTwoButton.GetComponentInChildren<TMP_Text>().text = "Keep playing";
     choiceTwoEffectText.text = "Player form -10";
+
+    effectText1 = "Formation was changed!";
+    effectText2 = "Form decreased.";
 }
 
 public void YellowCardPopup()
@@ -33,13 +39,18 @@ public void YellowCardPopup()
     choiceTwoButton.GetComponentInChildren<TMP_Text>().text = "Encourage them";
     choiceTwoEffectText.text = "Team offence up, defence down";
     
+    effectText1 = "Team defence increased by 20, team form decreased.";
+    effectText2 = "Team offence increased by 20, team defence decreased.";
+    
     choiceOneButton.onClick.RemoveAllListeners();
-    choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateDefence());
-    choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamForm());
-
+    choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateDefence(effectText1, 20));
+    choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamForm(effectText1, -20));
+    
     choiceTwoButton.onClick.RemoveAllListeners();
-    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdateOffence(15));
-    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdateDefence());
+    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdateOffence(effectText2, 20));
+    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdateDefence(effectText2, -20));
+    
+    
 }
 
 public void RedCardPopup()
@@ -51,12 +62,15 @@ public void RedCardPopup()
 
     choiceTwoButton.GetComponentInChildren<TMP_Text>().text = "Keep playing";
     choiceTwoEffectText.text = "Player form -10";
-
+    
+    effectText1 = "";
+    effectText2 = "The player's form decreased by 10";
+    
     choiceOneButton.onClick.RemoveAllListeners();
     choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamFormation());
 
     choiceTwoButton.onClick.RemoveAllListeners();
-    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdatePlayerForm());
+    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdatePlayerForm(effectText2, -10));
 }
 
 public void FakeInjuryPopup()
@@ -67,13 +81,16 @@ public void FakeInjuryPopup()
     choiceOneEffectText.text = "Team score up, but chance to get a red card";
 
     choiceTwoButton.GetComponentInChildren<TMP_Text>().text = "Stop them";
-    choiceTwoEffectText.text = "Form down -5";
-
+    choiceTwoEffectText.text = "Form down -10";
+    
+    effectText1 = "Team score increased by 20.";
+    effectText2 = "Team overall form decreased by ten.";
+    
     choiceOneButton.onClick.RemoveAllListeners();
-    choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamScore());
-
+    choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamScore(effectText1, 20));
+    
     choiceTwoButton.onClick.RemoveAllListeners();
-    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamForm());
+    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamForm(effectText2, -10));
 }
 
 public void FatiguePopup()
@@ -86,10 +103,15 @@ public void FatiguePopup()
     choiceTwoButton.GetComponentInChildren<TMP_Text>().text = "Keep playing";
     choiceTwoEffectText.text = "No impact";
 
+    effectText1 = "";
+    effectText2 = "The game continues...";
+
     choiceOneButton.onClick.RemoveAllListeners();
     choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamFormation());
+    
+    choiceTwoButton.onClick.RemoveAllListeners();
+    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdateNothing(effectText2));
 }
-
     
     public void HalftimePopup()
     {
