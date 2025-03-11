@@ -10704,6 +10704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423406022}
   - component: {fileID: 1423406025}
+  - component: {fileID: 1423406026}
   - component: {fileID: 1423406024}
   - component: {fileID: 1423406023}
   m_Layer: 5
@@ -10776,7 +10777,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1701269969}
   m_HandleRect: {fileID: 1701269968}
   m_Direction: 2
-  m_Value: 0.54949623
+  m_Value: 0.0000001276969
   m_Size: 0.58095783
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10820,6 +10821,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423406021}
   m_CullTransparentMesh: 1
+--- !u!114 &1423406026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423406021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7883488d18017ed41a3debd849ea06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollbar: {fileID: 1423406023}
 --- !u!1 &1442480236
 GameObject:
   m_ObjectHideFlags: 0
@@ -12332,6 +12346,7 @@ GameObject:
   - component: {fileID: 1601487476}
   - component: {fileID: 1601487475}
   - component: {fileID: 1601487474}
+  - component: {fileID: 1601487477}
   m_Layer: 5
   m_Name: Scrollbar Horizontal
   m_TagString: Untagged
@@ -12446,6 +12461,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601487472}
   m_CullTransparentMesh: 1
+--- !u!114 &1601487477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601487472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7883488d18017ed41a3debd849ea06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollbar: {fileID: 1601487474}
 --- !u!1 &1605859126
 GameObject:
   m_ObjectHideFlags: 0
@@ -14552,7 +14580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 215.32681}
+  m_AnchoredPosition: {x: 0, y: 477.96896}
   m_SizeDelta: {x: 0, y: 1140.6227}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1843907310
