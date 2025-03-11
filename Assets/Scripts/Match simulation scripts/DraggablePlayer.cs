@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using TMPro;
 
 public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -137,14 +141,15 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 
     }
 
-    public void PasteStats(Text playerNameText, Text offenceText, Text defenceText, Text speedText, Text formText)
+
+
+    public void PasteStats(TMP_Text playerNameText, TMP_Text offenceText, TMP_Text defenceText, TMP_Text speedText, TMP_Text formText)
     {
         if (playerNameText != null) playerNameText.text = "Name: " + playerName;
-        if (offenceText != null) offenceText.text = "Offence: " + offenceScore;
-        if (defenceText != null) defenceText.text = "Defence: " + defenceScore;
-        if (speedText != null) speedText.text = "Speed: " + speedScore;
+        if (offenceText != null) offenceText.text = "Offence: " + offenceScore.ToString();
+        if (defenceText != null) defenceText.text = "Defence: " + defenceScore.ToString();
+        if (speedText != null) speedText.text = "Speed: " + speedScore.ToString();
         if (formText != null) formText.text = "Form: " + currentForm + " / " + maxForm;
-
     }
 
 }
