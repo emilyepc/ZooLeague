@@ -30,9 +30,9 @@ public class overallboost : MonoBehaviour
             correspondingPlayer = GameObject.Find("Florence The Fox");
             draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-        else if (rosterStatUpdating.playerNameText.text == "Freddie The Fog")
+        else if (rosterStatUpdating.playerNameText.text == "Freddie The Fox")
         {
-            correspondingPlayer = GameObject.Find("Freddie The Fog");
+            correspondingPlayer = GameObject.Find("Freddie The Fox");
             draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
         else if (rosterStatUpdating.playerNameText.text == "Darcy The Dog")
@@ -50,7 +50,6 @@ public class overallboost : MonoBehaviour
             correspondingPlayer = GameObject.Find("Harvey The Hare");
             draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-
     }
     
     public void OnButtonPressed()
