@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using TMPro;
 
@@ -24,45 +23,51 @@ public class PopupsButtonsFunction : MonoBehaviour
         continueButton.SetActive(true);
     }
 
-    public void UpdateDefence()
+    public void UpdateDefence(string effectText, int amt)
     {
-        teamScoreManager.UpdateTeamDefenceScore(-20);
+        teamScoreManager.UpdateTeamDefenceScore(amt);
         effectPanel.SetActive(true);
-        text.text = "Defence went down by 20";
+        text.text = effectText;
     }
 
-    public void UpdateSpeed()
+    public void UpdateSpeed(string effectText, int amt)
     {
-        teamScoreManager.UpdateTeamTotalScore(-20);
+        teamScoreManager.UpdateTeamTotalScore(amt);
         effectPanel.SetActive(true);
         text.text = "Speed went down by 20";
     }
 
-    public void UpdateOffence(int amt)
+    public void UpdateOffence(string effectText, int amt)
     {
         teamScoreManager.UpdateTeamOffenceScore(amt);        
         effectPanel.SetActive(true);
         text.text = "Offence went down by " + amt;
     }
 
-    public void UpdateTeamForm()
+    public void UpdateTeamForm(string effectText, int amt)
     {
         teamScoreManager.UpdateTeamForm(-15);
         effectPanel.SetActive(true);
         text.text = "Form went down by 15";
     }
 
-    public void UpdatePlayerForm()
+    public void UpdatePlayerForm(string effectText, int amt)
     {
         effectPanel.SetActive(true);
         text.text = "Defence went down by 20";
     }
 
-    public void UpdateTeamScore()
+    public void UpdateTeamScore(string effectText, int amt)
     {
-        print("UpdateTeamScore");
+        
         effectPanel.SetActive(true);        
         text.text = "Team score changed............";
+    }
+
+    public void UpdateNothing(string effectText)
+    {
+        effectPanel.SetActive(true);     
+        text.text = effectText;
     }
 
     public void RedCard()

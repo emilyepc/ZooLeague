@@ -6,16 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj.DotSettings" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/sarah tinkering.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sarah tinkering.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/TeamScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/TeamScoreManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupTriggerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupTriggerSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupsButtonsFunction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupsButtonsFunction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Izzy_UIBackground.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Izzy_UIBackground.jpg.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,7 @@
       <workItem from="1741166067709" duration="8244000" />
       <workItem from="1741183731761" duration="2812000" />
       <workItem from="1741372154731" duration="6839000" />
-      <workItem from="1741693904107" duration="2817000" />
+      <workItem from="1741693904107" duration="4958000" />
     </task>
     <servers />
   </component>
