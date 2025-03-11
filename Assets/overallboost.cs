@@ -1,68 +1,79 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class overallboost : MonoBehaviour
 {
-    public RosterStatUpdating rosterStatUpdating;
+    public TMP_Text text;
     public DraggablePlayer draggablePlayer;
+    
+    public TMP_Text playerNameText;
+    public TMP_Text offenceText;
+    public TMP_Text defenceText;
+    public TMP_Text speedText;
+    public TMP_Text formText;
 
-    void Update()
+    public void OnButtonPressed()
     {
         GameObject correspondingPlayer;
 
-        if (rosterStatUpdating.playerNameText.text == "Francis The Frog")
+        if (text.text == "Name: Francis The Frog")
         {
-            correspondingPlayer = GameObject.Find("Francis The Frog");   
-            draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
+            correspondingPlayer = GameObject.Find("B_Francis The Frog");   
+            if (correspondingPlayer != null) draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         } 
-        else if (rosterStatUpdating.playerNameText.text == "Danny The Dog")
+        else if (text.text == "Name: Danny The Dog")
         {
-            correspondingPlayer = GameObject.Find("Danny The Dog");
-            draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
+            correspondingPlayer = GameObject.Find("B_Danny The Dog");
+            if (correspondingPlayer != null) draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-        else if (rosterStatUpdating.playerNameText.text == "Felicity The Frog")
+        else if (text.text == "Name: Felicity The Frog")
         {
-            correspondingPlayer = GameObject.Find("Felicity The Frog");
-            draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
+            correspondingPlayer = GameObject.Find("B_Felicity The Frog");
+            if (correspondingPlayer != null) draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-        else if (rosterStatUpdating.playerNameText.text == "Florence The Fox")
+        else if (text.text == "Name: Florence The Fox")
         {
-            correspondingPlayer = GameObject.Find("Florence The Fox");
-            draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
+            correspondingPlayer = GameObject.Find("B_Florence The Fox");
+            if (correspondingPlayer != null) draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-        else if (rosterStatUpdating.playerNameText.text == "Freddie The Fox")
+        else if (text.text == "Name: Freddie The Fox")
         {
-            correspondingPlayer = GameObject.Find("Freddie The Fox");
-            draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
+            correspondingPlayer = GameObject.Find("B_Freddie The Fox");
+            if (correspondingPlayer != null) draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-        else if (rosterStatUpdating.playerNameText.text == "Darcy The Dog")
+        else if (text.text == "Name: Darcy The Dog")
         {
-            correspondingPlayer = GameObject.Find("Darcy The Dog");
-            draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
+            correspondingPlayer = GameObject.Find("B_Darcy The Dog");
+            if (correspondingPlayer != null) draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-        else if (rosterStatUpdating.playerNameText.text == "Honey The Hare")
+        else if (text.text == "Name: Honey The Hare")
         {
-            correspondingPlayer = GameObject.Find("Honey The Hare");
-            draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
+            correspondingPlayer = GameObject.Find("B_Honey The Hare");
+            if (correspondingPlayer != null) draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-        else if (rosterStatUpdating.playerNameText.text == "Harvey The Hare")
+        else if (text.text == "Name: Harvey The Hare")
         {
-            correspondingPlayer = GameObject.Find("Harvey The Hare");
-            draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
+            correspondingPlayer = GameObject.Find("B_Harvey The Hare");
+            if (correspondingPlayer != null) draggablePlayer = correspondingPlayer.GetComponent<DraggablePlayer>();
         }
-    }
-    
-    public void OnButtonPressed()
-    {
+        
+        
+        
         if (draggablePlayer != null)
         {
             draggablePlayer.AddToDefenceScore(1);
             draggablePlayer.AddToOffenceScore(1);
             draggablePlayer.AddToSpeedScore(1);
+            
+            print("applied to : " + text.text);
+            
+            draggablePlayer.PasteStats(playerNameText, offenceText, defenceText, speedText, formText);
         }
         else
         {
-            Debug.LogError("DraggableItem reference is not assigned.");
+            Debug.Log("DraggableItem reference is not assigned.");
         }
+        
     }
 }
