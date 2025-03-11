@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zlbackbutton_0: 6560375173202016565
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

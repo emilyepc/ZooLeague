@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zlorangebg_0: -6267455378485632480
+      zlorangebg_1: -340974974405678134
+      zlorangebg_2: 4599518814437626401
+      zlorangebg_3: 137434083774493901
+      zlorangebg_4: 5604326810557697564
+      zlorangebg_5: -6900233737286962523
+      zlorangebg_6: -4858820379688946630
+      zlorangebg_7: 2330026214125343448
+      zlorangebg_8: 3178160970611390470
+      zlorangebg_9: -1619437110080726974
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

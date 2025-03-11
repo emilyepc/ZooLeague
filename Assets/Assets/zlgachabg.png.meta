@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zlgachabg_0: 6595673972306701870
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
