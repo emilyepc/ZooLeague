@@ -34,27 +34,27 @@ public class PopupsButtonsFunction : MonoBehaviour
     {
         teamScoreManager.UpdateTeamTotalScore(amt);
         effectPanel.SetActive(true);
-        text.text = "Speed went down by 20";
+        text.text = effectText;
     }
 
     public void UpdateOffence(string effectText, int amt)
     {
         teamScoreManager.UpdateTeamOffenceScore(amt);        
         effectPanel.SetActive(true);
-        text.text = "Offence went down by " + amt;
+        text.text = effectText;
     }
 
     public void UpdateTeamForm(string effectText, int amt)
     {
-        teamScoreManager.UpdateTeamForm(-15);
+        teamScoreManager.UpdateTeamForm(amt);
         effectPanel.SetActive(true);
-        text.text = "Form went down by 15";
+        text.text = effectText;
     }
 
     public void UpdatePlayerForm(string effectText, int amt)
     {
         effectPanel.SetActive(true);
-        text.text = "Defence went down by 20";
+        text.text = effectText;
     }
 
     public void UpdateTeamScore(string effectText, int amt)

@@ -16,7 +16,7 @@ public class ActivateObjectOnButtonPress : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Button or GameObject not assigned.");
+            print("Button or GameObject not assigned.");
         }
     }
 
