@@ -1,16 +1,22 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class overallboost : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    // Public field to assign the DraggableItem script via the Inspector
+    public DraggablePlayer draggablePlayer;
 
-    // Update is called once per frame
-    void Update()
+    public void OnButtonPressed()
     {
-        
+        if (draggablePlayer != null)
+        {
+            draggablePlayer.AddToDefenceScore(1);
+            draggablePlayer.AddToOffenceScore(1);
+            draggablePlayer.AddToSpeedScore(1);
+        }
+        else
+        {
+            Debug.LogError("DraggableItem reference is not assigned.");
+        }
     }
 }

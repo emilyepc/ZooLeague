@@ -110,7 +110,12 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     {
         offenceScore += amount;
     }
-
+    public void AddOverallScore(int amount)
+    {
+        defenceScore += amount;
+        offenceScore += amount;
+        speedScore += amount;
+    }
     public void AddToSpeedScore(int amount)
     {
         speedScore += amount;
