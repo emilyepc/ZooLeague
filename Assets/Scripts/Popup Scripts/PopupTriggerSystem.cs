@@ -9,34 +9,31 @@ public class PopupTriggerSystem : MonoBehaviour
     public GameObject popupPanel;
     
     private float timer;
-    [SerializeField] float eventCheckInterval;
+    [SerializeField] private float eventCheckInterval;
 
     private void Start()
     {
-        TimerReset();
+        timer = 0f;
         popupPanel.SetActive(false);
+        eventCheckInterval = Random.Range(10f, 20f);
     }
 
     private void Update()
     {
         if (matchSimulation.matchOngoing && !matchSimulation.gamePaused)
         {
-            timer += Time.deltaTime;
             if (timer >= eventCheckInterval)
             {
                 timer = 0;
                 popupPanel.SetActive(true);
                 TriggerPopupEvent();
-                TimerReset();
+                eventCheckInterval = Random.Range(10f, 20f);
+                print(eventCheckInterval);
             }
+            print((int)timer);
+            timer += Time.deltaTime;
         }
     }
-
-    private void TimerReset()
-    {
-        timer = Random.Range(10f, eventCheckInterval);
-    }
-
     private void TriggerPopupEvent()
     {
         matchSimulation.gamePaused = true;
