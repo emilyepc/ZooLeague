@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: 93cae3b8203819a4098a2dc013f5ce09
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6996044504044622404
+    second: UIRosterSheet_0
+  - first:
+      213: -5639559931145735987
+    second: UIRosterSheet_1
+  - first:
+      213: 7627745286299863268
+    second: UIRosterSheet_2
+  - first:
+      213: -8078592441812641943
+    second: UIRosterSheet_3
+  - first:
+      213: -7237370452476486491
+    second: UIRosterSheet_4
+  - first:
+      213: -3878753051723472196
+    second: UIRosterSheet_5
+  - first:
+      213: 569425065868049637
+    second: UIRosterSheet_6
+  - first:
+      213: 1279540915352219148
+    second: UIRosterSheet_7
+  - first:
+      213: -5373256131421323961
+    second: UIRosterSheet_8
+  - first:
+      213: 8270301828209663628
+    second: UIRosterSheet_9
+  - first:
+      213: -5690537488495801353
+    second: UIRosterSheet_10
+  - first:
+      213: -5399706220626794652
+    second: UIRosterSheet_11
+  - first:
+      213: -4674818735395807929
+    second: UIRosterSheet_12
+  - first:
+      213: -7549203906668501234
+    second: UIRosterSheet_13
+  - first:
+      213: 3393780908764004326
+    second: UIRosterSheet_14
+  - first:
+      213: 4068377128736325622
+    second: UIRosterSheet_15
+  - first:
+      213: -5509296006199674785
+    second: UIRosterSheet_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UIRosterSheet_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1218
+        width: 1035
+        height: 830
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbda897179e09ee90800000000000000
+      internalID: -6996044504044622404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1333
+        width: 340
+        height: 605
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0388e4f124cb1b0800000000000000
+      internalID: -5639559931145735987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 206
+        width: 658
+        height: 951
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e84013ace13bd960800000000000000
+      internalID: 7627745286299863268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_3
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 1057
+        width: 208
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9671a94f9f213ef80800000000000000
+      internalID: -8078592441812641943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_4
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1059
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac1b303be1bf8b90800000000000000
+      internalID: -7237370452476486491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_5
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1059
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb26f8466a6eb2ac0800000000000000
+      internalID: -3878753051723472196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_6
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1059
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ecb449941107e700800000000000000
+      internalID: 569425065868049637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_7
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1059
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ea527eea7d1c110800000000000000
+      internalID: 1279540915352219148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_8
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 911
+        width: 84
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d3177640c5e65b0800000000000000
+      internalID: -5373256131421323961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_9
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 907
+        width: 282
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e53bfd1b306c270800000000000000
+      internalID: 8270301828209663628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_10
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 854
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb0a21dd462701b0800000000000000
+      internalID: -5690537488495801353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_11
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 853
+        width: 282
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467a21c1dc36015b0800000000000000
+      internalID: -5399706220626794652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 703
+        width: 154
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d546fd025bf1fb0800000000000000
+      internalID: -4674818735395807929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_13
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 793
+        width: 52
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0768065b07db3790800000000000000
+      internalID: -7549203906668501234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_14
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 792
+        width: 282
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef716861c1291f20800000000000000
+      internalID: 3393780908764004326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_15
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 713
+        width: 282
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fff6a28177c57830800000000000000
+      internalID: 4068377128736325622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIRosterSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 516
+        width: 175
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f587dfbc87c0b83b0800000000000000
+      internalID: -5509296006199674785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2bc7e5399a73471429d9e06b6b077aca
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UIRosterSheet_0: -6996044504044622404
+      UIRosterSheet_1: -5639559931145735987
+      UIRosterSheet_10: -5690537488495801353
+      UIRosterSheet_11: -5399706220626794652
+      UIRosterSheet_12: -4674818735395807929
+      UIRosterSheet_13: -7549203906668501234
+      UIRosterSheet_14: 3393780908764004326
+      UIRosterSheet_15: 4068377128736325622
+      UIRosterSheet_16: -5509296006199674785
+      UIRosterSheet_2: 7627745286299863268
+      UIRosterSheet_3: -8078592441812641943
+      UIRosterSheet_4: -7237370452476486491
+      UIRosterSheet_5: -3878753051723472196
+      UIRosterSheet_6: 569425065868049637
+      UIRosterSheet_7: 1279540915352219148
+      UIRosterSheet_8: -5373256131421323961
+      UIRosterSheet_9: 8270301828209663628
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
