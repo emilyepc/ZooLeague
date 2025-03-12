@@ -1,9 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using TMPro;
 
 public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -29,6 +26,15 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 100);
+        
+        if (offenceScore > 100) offenceScore = 100;
+        else if (offenceScore < 0) offenceScore = 0;
+        if (defenceScore > 100) defenceScore = 100;
+        else if (defenceScore < 0) defenceScore = 0;
+        if (speedScore > 100) speedScore = 100;
+        else if (speedScore < 0) speedScore = 0;
+        if (currentForm > maxForm) currentForm = maxForm;
+        else if (currentForm < 0) currentForm = 0;
     }
 
     public void OnBeginDrag(PointerEventData eventData)

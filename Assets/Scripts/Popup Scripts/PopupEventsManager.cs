@@ -25,8 +25,13 @@ public class PopupEventsManager : MonoBehaviour
     choiceTwoButton.GetComponentInChildren<TMP_Text>().text = "Keep playing";
     choiceTwoEffectText.text = "Player form -10";
 
-    effectText1 = "Formation was changed!";
-    effectText2 = "Form decreased.";
+    effectText1 = "";
+    effectText2 = "Form decreased by 10.";
+    
+    choiceOneButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamFormation());
+    
+    choiceTwoButton.onClick.RemoveAllListeners();
+    choiceTwoButton.onClick.AddListener(() => popupsButtonsFunction.UpdateTeamForm(effectText2, 10));
 }
 
 public void YellowCardPopup()

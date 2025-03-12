@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/sarah tinkering.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sarah tinkering.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/DraggablePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/DraggablePlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/OpponentTeamOne.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/OpponentTeamOne.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +22,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupsButtonsFunction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SliderReset1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -115,7 +121,7 @@
       <workItem from="1741693904107" duration="4958000" />
       <workItem from="1741709344848" duration="6807000" />
       <workItem from="1741726709135" duration="6064000" />
-      <workItem from="1741771918833" duration="432000" />
+      <workItem from="1741771918833" duration="3017000" />
     </task>
     <servers />
   </component>

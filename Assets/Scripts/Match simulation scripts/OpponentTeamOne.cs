@@ -27,45 +27,45 @@ public class OpponentTeamOne : MonoBehaviour
         switch (teamName)
         {
             case "Frogs":
-                //1060
-                opponentOffenceScore = 400;
-                opponentDefenceScore = 350;
-                opponentSpeedScore = 310;
+                // 540
+                opponentOffenceScore = 180;
+                opponentDefenceScore = 190;
+                opponentSpeedScore = 170;
                 break;
 
             case "Piggies":
-                //1240
-                opponentOffenceScore = 350;
-                opponentDefenceScore = 670;
-                opponentSpeedScore = 420;
+                // 860
+                opponentOffenceScore = 280;
+                opponentDefenceScore = 330;
+                opponentSpeedScore = 250;
                 break;
 
             case "Dogs":
-                //1480
-                opponentOffenceScore = 400;
-                opponentDefenceScore = 580;
-                opponentSpeedScore = 500;
+                // 1230
+                opponentOffenceScore = 450;
+                opponentDefenceScore = 400;
+                opponentSpeedScore = 380;
                 break;
 
             case "Cats":
-                //1780
-                opponentOffenceScore = 540;
-                opponentDefenceScore = 540;
-                opponentSpeedScore = 700;
+                // 1440
+                opponentOffenceScore = 500;
+                opponentDefenceScore = 480;
+                opponentSpeedScore = 460;
                 break;
 
             case "Flamingos":
-                //2100
-                opponentOffenceScore = 3;
-                opponentDefenceScore = 3;
-                opponentSpeedScore = 6;
+                // 1860
+                opponentOffenceScore = 620;
+                opponentDefenceScore = 580;
+                opponentSpeedScore = 660;
                 break;
 
             case "Tiger":
-                //2870
-                opponentOffenceScore = 6;
-                opponentDefenceScore = 5;
-                opponentSpeedScore = 4;
+                // 2100
+                opponentOffenceScore = 800;
+                opponentDefenceScore = 700;
+                opponentSpeedScore = 600;
                 break;
 
             default:
