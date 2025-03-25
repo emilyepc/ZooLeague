@@ -1,34 +1,56 @@
 using UnityEngine;
-using Unity.UI;
 using TMPro;
 
 public class currency : MonoBehaviour
 {
-    // Currency values
-    public int Coins = 0;
-    public int Energy = 0;
+   
+    public int coins = 0;
+    public int diamonds = 0;
 
-    // TextMeshPro UI elements to display the currencies
+  
+    public int coinBuyAmount = 0;
+    public int diamondBuyAmount = 0;
+
     public TMP_Text coinsText;
-    public TMP_Text energyText;
+    public TMP_Text diamondsText;
 
     void Start()
     {
-        UpdateUI();
+        UpdateCurrencyDisplay();
     }
 
-    // Updates the UI text fields with the current currency values
-    void UpdateUI()
+    void UpdateCurrencyDisplay()
     {
-        if (coinsText != null)
-        {
-            coinsText.text = "Coins: " + Coins;
-        }
+        coinsText.text = "Coins: " + coins.ToString();
+        diamondsText.text = "Diamonds: " + diamonds.ToString();
+    }
 
-        if (energyText != null)
+    public void BuyWithCoins()
+    {
+        if (coins >= coinBuyAmount)
         {
-            energyText.text = "Energy: " + Energy;
+            coins -= coinBuyAmount;
+            UpdateCurrencyDisplay();
+        }
+        else
+        {
+            Debug.Log("eh no");
+        }
+    }
+
+    public void BuyWithDiamonds()
+    {
+        if (diamonds >= diamondBuyAmount)
+        {
+            diamonds -= diamondBuyAmount;
+            UpdateCurrencyDisplay();
+        }
+        else
+        {
+            Debug.Log("eh no");
         }
     }
 }
+
+
 
