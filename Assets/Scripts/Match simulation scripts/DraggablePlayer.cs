@@ -15,7 +15,7 @@ public class DraggablePlayer : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [SerializeField] private int defenceScore;
     [SerializeField] private int currentForm;
     [SerializeField] private int maxForm;
-    [SerializeField][HideInInspector] private float formLimit;
+    private float formLimit;
 
     private float scoreMultiplier;
     private int grossTotalScore;

@@ -1,14 +1,16 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ActivateObjectOnButtonPress : MonoBehaviour
+public class MysteryBox : MonoBehaviour
 {
-    
+    public static MysteryBox Instance;
     public Button LootBox;
     public GameObject objectToActivate;
 
     void Start()
     {
+        Instance = this;
         
         if (LootBox != null && objectToActivate != null)
         {
@@ -20,8 +22,17 @@ public class ActivateObjectOnButtonPress : MonoBehaviour
         }
     }
 
-    void ActivateObject()
+    public void ActivateObject()
     {
+        LootBox.interactable = false;
         objectToActivate.SetActive(true);
+        StartCoroutine(DisableText());
+    }
+
+    IEnumerator DisableText()
+    {
+        yield return new WaitForSeconds(3f);
+        objectToActivate.SetActive(false);
+        LootBox.interactable = true;
     }
 }

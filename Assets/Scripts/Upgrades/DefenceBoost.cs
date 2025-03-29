@@ -1,9 +1,8 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class Add20 : MonoBehaviour
+public class DefenceBoost : MonoBehaviour
 {
-    // Public field to assign the DraggableItem script via the Inspector
     public DraggablePlayer draggablePlayer;
 
     public void OnPopupButtonPressed()

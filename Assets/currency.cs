@@ -4,12 +4,14 @@ using TMPro;
 
 public class currency : MonoBehaviour
 {
-    // Currency values
-    public int Coins = 0;
-    public int Energy = 0;
+    public Upgrader upgraderTarget;
+    
+    public int coins = 50;
+    public int gems = 50;
+    public int energy = 50;
 
-    // TextMeshPro UI elements to display the currencies
     public TMP_Text coinsText;
+    public TMP_Text gemsText;
     public TMP_Text energyText;
 
     void Start()
@@ -17,18 +19,77 @@ public class currency : MonoBehaviour
         UpdateUI();
     }
 
-    // Updates the UI text fields with the current currency values
     void UpdateUI()
     {
         if (coinsText != null)
         {
-            coinsText.text = "Coins: " + Coins;
+            coinsText.text = "Coins: " + coins;
         }
 
         if (energyText != null)
         {
-            energyText.text = "Energy: " + Energy;
+            energyText.text = "Energy: " + energy;
         }
+    }
+
+    private void UpdateCurrencyDisplay()
+    {
+        coinsText.text = coins.ToString();
+        gemsText.text = gems.ToString();
+        energyText.text = energy + " / 50";
+    }
+
+    public void Who(Upgrader upgrader)
+    {
+        upgraderTarget = upgrader;
+    }
+    
+    public void BuyWithCoins(int cost)
+    {
+        if (coins >= cost)
+        {
+            coins -= cost;
+            UpdateCurrencyDisplay();
+            upgraderTarget.ChooseBoost(cost);
+        }
+        else 
+            Debug.Log("Not enough coins");
+    }
+
+    public void BuyWithDiamonds(int cost)
+    {
+        if (gems >= cost)
+        {
+            gems -= cost;
+            UpdateCurrencyDisplay();
+            upgraderTarget.ChooseBoost(cost);
+        }
+        else 
+            Debug.Log("Not enough gems");
+    }
+
+    public void OpenGacha(int cost)
+    {
+        if (gems >= cost)
+        {
+            gems -= cost;
+            UpdateCurrencyDisplay();
+            MysteryBox.Instance.ActivateObject();
+        }
+        else 
+            Debug.Log("Not enough gems");
+    }
+
+    public void BuyWithEnergy(int cost)
+    {
+        if (energy >= cost)
+        {
+            energy -= cost;
+            UpdateCurrencyDisplay();
+            upgraderTarget.ChooseBoost(cost);
+        }
+        else 
+            print ("Not enough energy");
     }
 }
 

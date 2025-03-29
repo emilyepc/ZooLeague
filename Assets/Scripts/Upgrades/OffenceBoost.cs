@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Add15 : MonoBehaviour
+public class OffenceBoost : MonoBehaviour
 {
     // Public field to assign the DraggableItem script via the Inspector
     public DraggablePlayer draggablePlayer;
