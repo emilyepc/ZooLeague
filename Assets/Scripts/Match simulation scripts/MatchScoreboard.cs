@@ -34,15 +34,11 @@ public class MatchScoreboard : MonoBehaviour
     }
     
     //line 2 
-    public void UpdateTextTwo(string text, bool matchOver)
+    public void UpdateTextTwo(string text)
     {
         lineTwo.text = text;
-        
-        if (!matchOver)
-        {
-            textShowing = true;
-            textClearTimer = 3f;
-        }
+        textShowing = true;
+        textClearTimer = 3f;
     }
     
     public void GoalOpportunity(string team)

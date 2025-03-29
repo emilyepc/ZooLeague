@@ -16,20 +16,7 @@ public class currency : MonoBehaviour
 
     void Start()
     {
-        UpdateUI();
-    }
-
-    void UpdateUI()
-    {
-        if (coinsText != null)
-        {
-            coinsText.text = "Coins: " + coins;
-        }
-
-        if (energyText != null)
-        {
-            energyText.text = "Energy: " + energy;
-        }
+        UpdateCurrencyDisplay();
     }
 
     private void UpdateCurrencyDisplay()
