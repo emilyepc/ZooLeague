@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 35450c7eaf0834f479b9a222ef5124d3
+guid: 70951b708cedfbe4ba1829b5b938aedb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Hare_Material
-    second: {fileID: 2100000, guid: 2aeadcf999e43ac46923864491d070a6, type: 2}
+      name: Material.001
+    second: {fileID: 2100000, guid: 56d363467b6aadc4f8e67ee04c5e4d06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: e6767781b5ce24446b5eb8fa4a7b0087, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bodyy
+    second: {fileID: 2100000, guid: 82bebe397829cac4e8f8ddf271b36475, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: face
+    second: {fileID: 2100000, guid: a1b929ee86ffd8745ab4b98416829187, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tail
+    second: {fileID: 2100000, guid: bf9f28d0137d8674d904ffd0c91c84d1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
