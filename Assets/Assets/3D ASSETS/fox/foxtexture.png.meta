@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 417586f85f8212641ae0c8f66260f5a2
+guid: f951634fbaa7c3c4488916e24f83fb97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7668288177987888427
-    second: fox_unwrap_0
+      213: -1476951662495908826
+    second: foxtexture_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fox_unwrap_0
+      name: foxtexture_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b25ab44387b3b6a60800000000000000
-      internalID: 7668288177987888427
+      spriteID: 62c3286c940d08be0800000000000000
+      internalID: -1476951662495908826
       vertices: []
       indices: 
       edges: []
