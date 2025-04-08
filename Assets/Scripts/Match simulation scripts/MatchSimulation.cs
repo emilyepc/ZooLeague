@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -13,13 +11,14 @@ public class MatchSimulation : MonoBehaviour
     public DraggablePlayer draggablePlayer;
     public Slider gameTimerSlider;
     public GameObject claimRewardsButton;
+    public GameObject[] panels;
     
     [Header("Match State")]
     public int playerGoals;
     public int opponentGoals;
     public bool matchOngoing;
-    public bool matchRewardsCollected;
     
+    public bool gamePaused;
     private float gameLength = 60f;
     private float gameTimer;
     private float goalOpportunityInterval = 5f;
@@ -40,55 +39,53 @@ public class MatchSimulation : MonoBehaviour
     public int opponentGoalOpportunityStat;
     public int opponentConversionRate;
     
-    void Awake()
+    private void Awake()
     {
         matchOngoing = false;
-        matchRewardsCollected = true;
         waitingToScoreTimer = 5;
         claimRewardsButton.SetActive(false);
-        timer = 0f;
+        timer = 0;
+        Conversion(conversionTeam);
+
+        for (int i = 0; i < panels.Length; i++)
+        {
+            if (panels[i].name != "Home Panel") panels[i].SetActive(false);
+            else panels[i].SetActive(true);
+        }
     }
 
-    void Update()
+    private void Update()
     {
-        if (!matchOngoing) 
+        if (matchOngoing)
         {
-            if (matchRewardsCollected)
+            if (!gamePaused)
             {
-                //match not ongoing
-                matchScoreboard.UpdateMatchStatus("Team Statistics");
-                matchScoreboard.UpdateTextTwo($"Goal Opportunities : {playerGoalOpportunityStat}", matchRewardsCollected);
-                matchScoreboard.UpdateLineThree($"Conversion rate : {playerConversionRate}", matchRewardsCollected);
-            }
-            return;
-        }
-        else if (matchOngoing)
-        {
-            timer += Time.deltaTime;
-            gameTimer += Time.deltaTime;
-        
-            if (timer >= goalOpportunityInterval)
-            {
-                timer = 0;
-                GoalOpportunity();
-            }
+                timer += Time.deltaTime;
+                gameTimer += Time.deltaTime;
 
-            if (gameTimer >= gameLength)
-            {
-                MatchOver();
-                gameTimer = 0;
-            }
-            
-            gameTimerSlider.value = gameTimer;
-            matchScoreboard.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
-        
-            if (waitingToScore)
-            {
-                waitingToScoreTimer -= Time.deltaTime;
-                if (waitingToScoreTimer <= 0)
+                if (timer >= goalOpportunityInterval)
                 {
-                    waitingToScore = false; 
-                    Conversion(conversionTeam);
+                    timer = 0;
+                    GoalOpportunity();
+                }
+
+                if (gameTimer >= gameLength)
+                {
+                    MatchOver();
+                    gameTimer = 0;
+                }
+
+                gameTimerSlider.value = gameTimer;
+                matchScoreboard.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
+
+                if (waitingToScore)
+                {
+                    waitingToScoreTimer -= Time.deltaTime;
+                    if (waitingToScoreTimer <= 0)
+                    {
+                        waitingToScore = false;
+                        Conversion(conversionTeam);
+                    }
                 }
             }
         }
@@ -97,18 +94,18 @@ public class MatchSimulation : MonoBehaviour
     public void MatchStart()
     {
         claimRewardsButton.SetActive(false);
-        matchRewardsCollected = false;
         matchOngoing = true;
+        gamePaused = false;
         
         playerGoals = 0;
         opponentGoals = 0;
         
         opponentTeamOne.MatchStart();
-        matchScoreboard.UpdateTextTwo("Teams are fighting for possession", matchRewardsCollected);
+        matchScoreboard.UpdateTextTwo("Teams are fighting for possession");
         matchScoreboard.UpdateMatchStatus("Match in progress");
     }
 
-    public void GoalOpportunity()
+    private void GoalOpportunity()
     {
         int teamAScore = teamScoreManager.totalTeamScore;
         int teamBScore = opponentTeamOne.totalTeamScore;
@@ -132,7 +129,7 @@ public class MatchSimulation : MonoBehaviour
         if (teamAChance && teamBChance)
         {
             //conversionTeam = playerGoalOpportunityProbability >= opponentGoalOpportunityProbability ? "player" : "opponent";
-            matchScoreboard.UpdateTextTwo("Teams are fighting for possession", matchRewardsCollected);
+            matchScoreboard.UpdateTextTwo("Teams are fighting for possession");
         }
         else if (teamAChance)
         {
@@ -146,7 +143,7 @@ public class MatchSimulation : MonoBehaviour
         }
         else
         {
-            matchScoreboard.UpdateTextTwo("Teams are fighting for possession", matchRewardsCollected);
+            matchScoreboard.UpdateTextTwo("Teams are fighting for possession");
             return;
         }
         
@@ -171,7 +168,7 @@ public class MatchSimulation : MonoBehaviour
             }
             else
             {
-                matchScoreboard.UpdateTextTwo("Goal Missed", matchRewardsCollected);
+                matchScoreboard.UpdateTextTwo("Goal Missed");
             }
         }
         
@@ -191,7 +188,7 @@ public class MatchSimulation : MonoBehaviour
             }
             else
             {
-                matchScoreboard.UpdateTextTwo("Goal missed!", matchRewardsCollected);
+                matchScoreboard.UpdateTextTwo("Goal missed!");
             }
         }
         
@@ -199,10 +196,10 @@ public class MatchSimulation : MonoBehaviour
         timer = 0;
     }
 
-    public void MatchOver()
+    private void MatchOver()
     {
         matchOngoing = false;
-        matchRewardsCollected = false;
+        gamePaused = true;
         claimRewardsButton.SetActive(true);
         
         if (playerGoals != 0) playerConversionRate = playerGoalOpportunityStat / playerGoals;
@@ -214,13 +211,13 @@ public class MatchSimulation : MonoBehaviour
         string matchResult = playerGoals > opponentGoals ? "The winner is the player team!" :
             opponentGoals > playerGoals ? "The winner is the opponent team!" : "This game was a draw!";
         
-        matchScoreboard.UpdateTextTwo(matchResult, matchRewardsCollected);
+        matchScoreboard.UpdateTextTwo(matchResult);
         
         teamScoreManager.UpdateTeamForm(-15);
     }
 
-    public void RewardsCollected()
+    public void UnpauseGame()
     {
-        matchRewardsCollected = true;
+        gamePaused = false;
     }
 }

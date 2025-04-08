@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &587105407331343999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8991766781170328771}
+  - component: {fileID: 1790697080808366339}
+  m_Layer: 5
+  m_Name: MATCH SIMULATION
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8991766781170328771
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587105407331343999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3574439317853535190}
+  - {fileID: 3052017030845585010}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1790697080808366339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587105407331343999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1daabf9416a19f4b8e7eafdc7337abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamScoreManager: {fileID: 0}
+  opponentTeamOne: {fileID: 8058949437722619903}
+  matchScoreboard: {fileID: 0}
+  draggablePlayer: {fileID: 0}
+  gameTimerSlider: {fileID: 0}
+  claimRewardsButton: {fileID: 0}
+  playerGoals: 0
+  opponentGoals: 0
+  matchOngoing: 0
+  matchRewardsCollected: 0
+  gamePaused: 0
+  playerGoalOpportunityStat: 0
+  playerConversionRate: 0
+  opponentGoalOpportunityStat: 0
+  opponentConversionRate: 0
+--- !u!1 &2601475454355739834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3052017030845585010}
+  - component: {fileID: 5616928017260702469}
+  - component: {fileID: 6984750510681773628}
+  - component: {fileID: 9150307543449451427}
+  m_Layer: 5
+  m_Name: Popup Events
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3052017030845585010
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601475454355739834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8991766781170328771}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5616928017260702469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601475454355739834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e77d6af71b50f4da70211a7297814e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupsButtonsFunction: {fileID: 9150307543449451427}
+  popupText: {fileID: 0}
+  choiceOneEffectText: {fileID: 0}
+  choiceTwoEffectText: {fileID: 0}
+  choiceOneButton: {fileID: 0}
+  choiceTwoButton: {fileID: 0}
+  effectText1: 
+  effectText2: 
+--- !u!114 &6984750510681773628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601475454355739834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e6bcecd1c0f1444b439a51adb97608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popupEventsManager: {fileID: 5616928017260702469}
+  matchSimulation: {fileID: 1790697080808366339}
+  popupPanel: {fileID: 0}
+  eventCheckInterval: 20
+--- !u!114 &9150307543449451427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601475454355739834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a533b1da2f6184e98d8456c263a1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  matchSimulation: {fileID: 1790697080808366339}
+  effectPanel: {fileID: 0}
+  teamScoreManager: {fileID: 0}
+  text: {fileID: 0}
+  homePanel: {fileID: 0}
+  matchSelectPanel: {fileID: 0}
+  continueButton: {fileID: 0}
+--- !u!1 &6697979464522481972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3574439317853535190}
+  - component: {fileID: 8058949437722619903}
+  m_Layer: 5
+  m_Name: Opponent Script
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3574439317853535190
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697979464522481972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8991766781170328771}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8058949437722619903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6697979464522481972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce1396d033dbe643be63dbb230826b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalTeamScore: 2500
+  opponentOffenceScore: 350
+  opponentDefenceScore: 350
+  opponentSpeedScore: 400

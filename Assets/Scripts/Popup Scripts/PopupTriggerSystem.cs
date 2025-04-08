@@ -1,30 +1,41 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PopupTriggerSystem : MonoBehaviour
 {
     public PopupEventsManager popupEventsManager;
+    public MatchSimulation matchSimulation;
+    
+    public GameObject popupPanel;
     
     private float timer;
-    [SerializeField] float eventCheckInterval;
-    
+    [SerializeField] private float eventCheckInterval;
+
+    private void Start()
+    {
+        timer = 0f;
+        popupPanel.SetActive(false);
+        eventCheckInterval = Random.Range(10f, 20f);
+    }
+
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= eventCheckInterval)
+        if (matchSimulation.matchOngoing && !matchSimulation.gamePaused)
         {
-            timer = 0;
-            TriggerPopupEvent();
-            TimerReset();
+            if (timer >= eventCheckInterval)
+            {
+                timer = 0;
+                popupPanel.SetActive(true);
+                TriggerPopupEvent();
+                eventCheckInterval = Random.Range(10f, 20f);
+            }
+            timer += Time.deltaTime;
         }
     }
-
-    private void TimerReset()
-    {
-        
-    }
-
     private void TriggerPopupEvent()
     {
+        matchSimulation.gamePaused = true;
+        
         int popupChance = Random.Range(0, 4);
 
         if (popupChance == 0)
