@@ -44,8 +44,8 @@ public class MatchSimulation : MonoBehaviour
         matchOngoing = false;
         waitingToScoreTimer = 5;
         claimRewardsButton.SetActive(false);
-        timer = 0f;
-                        Conversion(conversionTeam);
+        timer = 0;
+        Conversion(conversionTeam);
 
         for (int i = 0; i < panels.Length; i++)
         {

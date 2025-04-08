@@ -3,9 +3,21 @@ using TMPro;
 
 public class MatchScoreboard : MonoBehaviour
 {
+    public MatchSimulation matchSimulation;
+    
     public TMP_Text matchStatus;
     public TMP_Text lineTwo;
     public TMP_Text lineThree;
+
+    public TMP_Text playerTotalScoreText;
+    public TMP_Text playerDefenceScoreText;
+    public TMP_Text playerSpeedScoreText;
+    public TMP_Text playerOffenceScoreText;
+    
+    public TMP_Text opposistionTotalScoreText;
+    public TMP_Text opposistionDefenceScoreText;
+    public TMP_Text opposistionSpeedScoreText;
+    public TMP_Text opposistionOffenceScoreText;
 
     private float textClearTimer;
     private bool textShowing;
@@ -70,5 +82,13 @@ public class MatchScoreboard : MonoBehaviour
             textShowing = true;
             textClearTimer = 3f;
         }
+    }
+
+    public void UpdatePlayerStatsText()
+    {
+        //playerTotalScoreText.text = ;
+        //playerDefenceScoreText;
+        //playerSpeedScoreText;
+        //playerOffenceScoreText;
     }
 }
