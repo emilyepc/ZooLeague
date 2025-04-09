@@ -3,9 +3,22 @@ using TMPro;
 
 public class MatchScoreboard : MonoBehaviour
 {
+    public TeamScoreManager teamScoreManager;
+    public OpponentTeamOne opponentTeamOne;
+    
     public TMP_Text matchStatus;
     public TMP_Text lineTwo;
     public TMP_Text lineThree;
+
+    public TMP_Text playerTotalScoreText;
+    public TMP_Text playerDefenceScoreText;
+    public TMP_Text playerSpeedScoreText;
+    public TMP_Text playerOffenceScoreText;
+    
+    public TMP_Text opposistionTotalScoreText;
+    public TMP_Text opposistionDefenceScoreText;
+    public TMP_Text opposistionSpeedScoreText;
+    public TMP_Text opposistionOffenceScoreText;
 
     private float textClearTimer;
     private bool textShowing;
@@ -34,15 +47,11 @@ public class MatchScoreboard : MonoBehaviour
     }
     
     //line 2 
-    public void UpdateTextTwo(string text, bool matchOver)
+    public void UpdateTextTwo(string text)
     {
         lineTwo.text = text;
-        
-        if (!matchOver)
-        {
-            textShowing = true;
-            textClearTimer = 3f;
-        }
+        textShowing = true;
+        textClearTimer = 3f;
     }
     
     public void GoalOpportunity(string team)
@@ -62,7 +71,7 @@ public class MatchScoreboard : MonoBehaviour
     //line three
     public void UpdateLeaderboard(int playerScore, int opponentScore, float timeLeft)
     {
-        lineThree.text = playerScore.ToString() + " - " + opponentScore.ToString();
+        lineThree.text = playerScore.ToString() + "   -   " + opponentScore.ToString();
     }
     
     public void UpdateLineThree(string line, bool matchOver)
@@ -74,5 +83,21 @@ public class MatchScoreboard : MonoBehaviour
             textShowing = true;
             textClearTimer = 3f;
         }
+    }
+
+    public void UpdatePlayerStatsText()
+    {
+        playerTotalScoreText.text = "Total: " + teamScoreManager.totalTeamScore.ToString();
+        playerDefenceScoreText.text = "D: " + teamScoreManager.totalTeamDefenceScore.ToString();
+        playerSpeedScoreText.text = "S: " + teamScoreManager.totalTeamSpeedScore.ToString();
+        playerOffenceScoreText.text = "O: " + teamScoreManager.totalTeamOffenceScore.ToString();
+    }
+
+    public void UpdateOpponentStatsText()
+    {
+        opposistionTotalScoreText.text = "Total: " + opponentTeamOne.totalTeamScore.ToString();
+        opposistionDefenceScoreText.text = "D: " + opponentTeamOne.opponentDefenceScore.ToString();
+        opposistionSpeedScoreText.text = "S: " + opponentTeamOne.opponentSpeedScore.ToString();
+        opposistionOffenceScoreText.text = "O: " + opponentTeamOne.opponentOffenceScore.ToString();
     }
 }

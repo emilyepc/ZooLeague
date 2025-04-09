@@ -28,9 +28,7 @@ public class PopupTriggerSystem : MonoBehaviour
                 popupPanel.SetActive(true);
                 TriggerPopupEvent();
                 eventCheckInterval = Random.Range(10f, 20f);
-                print(eventCheckInterval);
             }
-            print((int)timer);
             timer += Time.deltaTime;
         }
     }

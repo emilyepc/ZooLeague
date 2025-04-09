@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441dff5ff6bf1d646b141015f70985a4, type: 3}
+  m_Name: ImproveFacilitiesUpgrade
+  m_EditorClassIdentifier: 
+  upgradeName: Improve Facilities
+  upgradeType: 1
+  upgradeDescription: 'Boost fanbase and increase fan satisfaction '
+  upgradeEffect: +10 moral
+  upgradeEffectValue: 10
+  upgradeCost: 100
+  upgradeUses: 10
+  upgradeMaxUses: 10

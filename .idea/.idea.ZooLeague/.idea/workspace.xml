@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/sarah tinkering.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/sarah tinkering.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/DraggablePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/DraggablePlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/OpponentTeamOne.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/OpponentTeamOne.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchScoreboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchScoreboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/TeamScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/TeamScoreManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +20,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupsButtonsFunction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SOs/SponsorSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SliderReset1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/BoostUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/ClubManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/DefenceBoost.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Upgrades/OffenceBoost.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -122,6 +126,10 @@
       <workItem from="1741709344848" duration="6807000" />
       <workItem from="1741726709135" duration="6064000" />
       <workItem from="1741771918833" duration="3017000" />
+      <workItem from="1742981317369" duration="7588000" />
+      <workItem from="1743252692196" duration="6397000" />
+      <workItem from="1743427016760" duration="653000" />
+      <workItem from="1744139478772" duration="16475000" />
     </task>
     <servers />
   </component>
