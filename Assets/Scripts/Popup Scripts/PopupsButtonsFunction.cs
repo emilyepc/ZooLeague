@@ -8,7 +8,9 @@ public class PopupsButtonsFunction : MonoBehaviour
     public TeamScoreManager teamScoreManager;
     public TMP_Text text;
     public GameObject homePanel;
+    public GameObject ManagerPanel;
     public GameObject matchSelectPanel;
+    public GameObject teamSelectPanel;
     public GameObject continueButton;
 
     private void Start()
@@ -19,7 +21,9 @@ public class PopupsButtonsFunction : MonoBehaviour
     public void UpdateTeamFormation()
     {
         homePanel.SetActive(false);
+        ManagerPanel.SetActive(false);
         matchSelectPanel.SetActive(false);
+        teamSelectPanel.SetActive(true);
         continueButton.SetActive(true);
     }
 

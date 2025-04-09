@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/zlcurrencybg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/zlcurrencybg.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/zlcurrencycoin 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/zlcurrencycoin 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/zlcurrencygem 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/zlcurrencygem 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/zlenergy 1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/zlenergy 1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/zlenergybg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/zlenergybg.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/UpgradesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/UpgradesUI.cs" afterDir="false" />
-    </list>
+    <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

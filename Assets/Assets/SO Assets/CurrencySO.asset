@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc70480085464f48bececbed2185ddd, type: 3}
   m_Name: CurrencySO
   m_EditorClassIdentifier: 
-  coins: 0
-  gems: 0
-  energy: 0
-  maxEnergy: 0
+  coins: 40
+  gems: 40
+  energy: 50
+  maxEnergy: 50
