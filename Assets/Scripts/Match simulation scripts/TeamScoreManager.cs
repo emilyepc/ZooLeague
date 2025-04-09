@@ -6,6 +6,7 @@ using TMPro;
 public class TeamScoreManager : MonoBehaviour
 {
     public static TeamScoreManager instance; 
+    public MatchScoreboard matchScoreboard;
 
     public TMP_Text teamTotalScoreText;
     public TMP_Text teamOffenceScoreText;
@@ -14,12 +15,13 @@ public class TeamScoreManager : MonoBehaviour
     private List<DraggablePlayer> playersInFormationList = new List<DraggablePlayer>();
 
     public int totalTeamScore;
+    public int totalTeamSpeedScore;
     public int totalTeamOffenceScore;
     public int totalTeamDefenceScore;
 
     private void Awake()
     {
-        instance = this; 
+        instance = this;
     }
 
     public void AddPlayerToFormation(DraggablePlayer player)
@@ -30,6 +32,7 @@ public class TeamScoreManager : MonoBehaviour
             UpdateTeamTotalScore(0);
             UpdateTeamOffenceScore(0);
             UpdateTeamDefenceScore(0);
+            UpdateTeamSpeedScore(0);
         }
     }
 
@@ -41,6 +44,7 @@ public class TeamScoreManager : MonoBehaviour
             UpdateTeamTotalScore(0);
             UpdateTeamOffenceScore(0); 
             UpdateTeamDefenceScore(0);
+            UpdateTeamSpeedScore(0);
         }
     }
 
@@ -52,8 +56,8 @@ public class TeamScoreManager : MonoBehaviour
         {
             totalTeamScore += player.totalScore;
         }
-
-        teamTotalScoreText.text = "Team Score: " + totalTeamScore.ToString();
+        
+        matchScoreboard.UpdatePlayerStatsText();
     }
 
     public void UpdateTeamOffenceScore(int amt)
@@ -64,8 +68,9 @@ public class TeamScoreManager : MonoBehaviour
         {
             totalTeamOffenceScore += player.offenceScoreMultiplied;
         }
-
-        teamOffenceScoreText.text = "Team Offence Score: " + totalTeamOffenceScore.ToString();
+        
+        totalTeamOffenceScore += amt;
+        matchScoreboard.UpdatePlayerStatsText();
     }
 
     public void UpdateTeamDefenceScore(int amt)
@@ -78,8 +83,20 @@ public class TeamScoreManager : MonoBehaviour
         }
         
         totalTeamDefenceScore += amt;
+        matchScoreboard.UpdatePlayerStatsText();
+    }
+
+    public void UpdateTeamSpeedScore(int amt)
+    {
+        totalTeamSpeedScore = 0;
+
+        foreach (DraggablePlayer player in playersInFormationList)
+        {
+            totalTeamSpeedScore += player.defenceScoreMultiplied;
+        }
         
-        teamDefenceScoreText.text = "Team Defence Score: " + totalTeamDefenceScore.ToString();
+        totalTeamSpeedScore += amt;
+        matchScoreboard.UpdatePlayerStatsText();
     }
 
     public void UpdateTeamForm(int amount)
@@ -88,6 +105,9 @@ public class TeamScoreManager : MonoBehaviour
         {
             player.AddToFormScore(amount);
         }
+        
+        
+        matchScoreboard.UpdatePlayerStatsText();
     }
 
     public void UpdatePlayerForm(int amount)

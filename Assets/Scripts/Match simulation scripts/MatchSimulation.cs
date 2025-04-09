@@ -103,6 +103,9 @@ public class MatchSimulation : MonoBehaviour
         opponentTeamOne.MatchStart();
         matchScoreboard.UpdateTextTwo("Teams are fighting for possession");
         matchScoreboard.UpdateMatchStatus("Match in progress");
+        
+        matchScoreboard.UpdatePlayerStatsText();
+        matchScoreboard.UpdateOpponentStatsText();
     }
 
     private void GoalOpportunity()

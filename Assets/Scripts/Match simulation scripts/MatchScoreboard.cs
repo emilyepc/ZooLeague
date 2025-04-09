@@ -3,7 +3,8 @@ using TMPro;
 
 public class MatchScoreboard : MonoBehaviour
 {
-    public MatchSimulation matchSimulation;
+    public TeamScoreManager teamScoreManager;
+    public OpponentTeamOne opponentTeamOne;
     
     public TMP_Text matchStatus;
     public TMP_Text lineTwo;
@@ -70,7 +71,7 @@ public class MatchScoreboard : MonoBehaviour
     //line three
     public void UpdateLeaderboard(int playerScore, int opponentScore, float timeLeft)
     {
-        lineThree.text = playerScore.ToString() + " - " + opponentScore.ToString();
+        lineThree.text = playerScore.ToString() + "   -   " + opponentScore.ToString();
     }
     
     public void UpdateLineThree(string line, bool matchOver)
@@ -86,9 +87,17 @@ public class MatchScoreboard : MonoBehaviour
 
     public void UpdatePlayerStatsText()
     {
-        //playerTotalScoreText.text = ;
-        //playerDefenceScoreText;
-        //playerSpeedScoreText;
-        //playerOffenceScoreText;
+        playerTotalScoreText.text = "Total: " + teamScoreManager.totalTeamScore.ToString();
+        playerDefenceScoreText.text = "D: " + teamScoreManager.totalTeamDefenceScore.ToString();
+        playerSpeedScoreText.text = "S: " + teamScoreManager.totalTeamSpeedScore.ToString();
+        playerOffenceScoreText.text = "O: " + teamScoreManager.totalTeamOffenceScore.ToString();
+    }
+
+    public void UpdateOpponentStatsText()
+    {
+        opposistionTotalScoreText.text = "Total: " + opponentTeamOne.totalTeamScore.ToString();
+        opposistionDefenceScoreText.text = "D: " + opponentTeamOne.opponentDefenceScore.ToString();
+        opposistionSpeedScoreText.text = "S: " + opponentTeamOne.opponentSpeedScore.ToString();
+        opposistionOffenceScoreText.text = "O: " + opponentTeamOne.opponentOffenceScore.ToString();
     }
 }
