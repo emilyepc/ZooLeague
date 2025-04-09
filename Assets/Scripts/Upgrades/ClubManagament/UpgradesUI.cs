@@ -6,6 +6,7 @@ public class UpgradesUI : MonoBehaviour
     public UpgradeSO upgradeSo;
     public SponsorSO crowdSo;
     public SponsorSO currentSponsorSo;
+    public currency currencySystem;
     
     public SponsorUI sponsorUI;
     public SponsorUI fanbaseUI;
@@ -53,6 +54,7 @@ public class UpgradesUI : MonoBehaviour
                 break;
             case UpgradeType.IncreaseCrowdMoral:
                 crowdSo.sponsorRelationship += upgradeSo.upgradeEffectValue;
+                if (crowdSo.sponsorPayment > 100 ) crowdSo.sponsorPayment = 100; 
                 upgradeFeedback.text = "Crowd moral upped by " + upgradeSo.upgradeEffectValue + "to" + crowdSo.sponsorRelationship;
                 StartCoroutine(ResetFeedbackText());
                 break;
@@ -63,13 +65,15 @@ public class UpgradesUI : MonoBehaviour
                 break;
             case UpgradeType.IncreaseSponsorRelationship:
                 currentSponsorSo.sponsorRelationship += upgradeSo.upgradeEffectValue;
+                if (currentSponsorSo.sponsorPayment > 100) currentSponsorSo.sponsorPayment = 100;
                 upgradeFeedback.text = "Sponsor Relationship upped by " + upgradeSo.upgradeEffectValue + "to" + currentSponsorSo.sponsorRelationship;
                 StartCoroutine(ResetFeedbackText());
                 break;
             default:
-                Debug.LogWarning("Upgrade effect not recognized!");
+                Debug.LogWarning("Upgrade effect not recognised!");
                 break;
         }
+        
         
         upgradeSo.UpgradeUsed();
         UpdateText();
@@ -79,7 +83,7 @@ public class UpgradesUI : MonoBehaviour
 
     IEnumerator ResetFeedbackText()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         upgradeFeedback.text = "";
     }
 }
