@@ -9615,23 +9615,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 70951b708cedfbe4ba1829b5b938aedb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.564818
+      value: 4.068883
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70951b708cedfbe4ba1829b5b938aedb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.564818
+      value: 4.068883
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70951b708cedfbe4ba1829b5b938aedb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.564818
+      value: 4.068883
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70951b708cedfbe4ba1829b5b938aedb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.99
+      value: -48.26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70951b708cedfbe4ba1829b5b938aedb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.65
+      value: -4.91
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70951b708cedfbe4ba1829b5b938aedb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10911,6 +10911,7 @@ MonoBehaviour:
   upgradeSo: {fileID: 11400000, guid: 7ed489e86116905448827dbdb16a6c4a, type: 2}
   crowdSo: {fileID: 11400000, guid: a5e716e245490694c9667f6008747f50, type: 2}
   currentSponsorSo: {fileID: 11400000, guid: 2d3404cbd8f8cc2428431cc5140d2b40, type: 2}
+  currencySystem: {fileID: 0}
   sponsorUI: {fileID: 1418071413}
   fanbaseUI: {fileID: 1246782148}
   upgradeName: {fileID: 1341425800}
@@ -13870,6 +13871,7 @@ MonoBehaviour:
   upgradeSo: {fileID: 11400000, guid: 4e4939564a774a141b25b7628e7fd6ee, type: 2}
   crowdSo: {fileID: 11400000, guid: a5e716e245490694c9667f6008747f50, type: 2}
   currentSponsorSo: {fileID: 11400000, guid: 2d3404cbd8f8cc2428431cc5140d2b40, type: 2}
+  currencySystem: {fileID: 0}
   sponsorUI: {fileID: 1418071413}
   fanbaseUI: {fileID: 1246782148}
   upgradeName: {fileID: 1959909068}
@@ -14164,6 +14166,7 @@ MonoBehaviour:
   upgradeSo: {fileID: 11400000, guid: 83fb69e59de37c842b56be7951030196, type: 2}
   crowdSo: {fileID: 11400000, guid: a5e716e245490694c9667f6008747f50, type: 2}
   currentSponsorSo: {fileID: 11400000, guid: 2d3404cbd8f8cc2428431cc5140d2b40, type: 2}
+  currencySystem: {fileID: 0}
   sponsorUI: {fileID: 1418071413}
   fanbaseUI: {fileID: 1246782148}
   upgradeName: {fileID: 381222500}

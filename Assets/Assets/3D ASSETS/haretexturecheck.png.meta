@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      haretexturecheck_0: -6683716246149459744
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
