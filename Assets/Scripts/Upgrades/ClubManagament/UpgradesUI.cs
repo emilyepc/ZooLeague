@@ -21,6 +21,16 @@ public class UpgradesUI : MonoBehaviour
     public void Start()
     {
         UpdateText();
+        ResetSos();
+    }
+
+    private void ResetSos()
+    {
+        crowdSo.sponsorRelationship = 10;
+        crowdSo.sponsorPayment = 15;
+        
+        currentSponsorSo.sponsorRelationship = 10;
+        currentSponsorSo.sponsorPayment = 15;
     }
 
     public void UpdateText()

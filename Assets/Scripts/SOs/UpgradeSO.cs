@@ -20,7 +20,7 @@ public class UpgradeSO : ScriptableObject
     public int upgradeCost;
     public int upgradeUses;
     public int upgradeMaxUses;
-
+    
     public void UpgradeUsed()
     {
         if (upgradeUses < upgradeMaxUses)

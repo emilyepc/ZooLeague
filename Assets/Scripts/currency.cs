@@ -5,11 +5,8 @@ using TMPro;
 public class currency : MonoBehaviour
 {
     public Upgrader upgraderTarget;
+    public CurrencySO currencySO;
     
-    public int coins = 50;
-    public int gems = 50;
-    public int energy = 50;
-
     public TMP_Text coinsText;
     public TMP_Text gemsText;
     public TMP_Text energyText;
@@ -17,13 +14,18 @@ public class currency : MonoBehaviour
     void Start()
     {
         UpdateCurrencyDisplay();
+
+        currencySO.coins = 40;
+        currencySO.gems = 40;
+        currencySO.energy = 50;
+        currencySO.maxEnergy = 50;
     }
 
     private void UpdateCurrencyDisplay()
     {
-        coinsText.text = coins.ToString();
-        gemsText.text = gems.ToString();
-        energyText.text = energy + " / 50";
+        coinsText.text = currencySO.coins.ToString();
+        gemsText.text = currencySO.gems.ToString();
+        energyText.text = currencySO.energy + " / 50";
     }
 
     public void Who(Upgrader upgrader)
@@ -33,9 +35,9 @@ public class currency : MonoBehaviour
     
     public void BuyWithCoins(int cost)
     {
-        if (coins >= cost)
+        if (currencySO.coins >= cost)
         {
-            coins -= cost;
+            currencySO.coins -= cost;
             UpdateCurrencyDisplay();
             upgraderTarget.ChooseBoost(cost);
         }
@@ -45,9 +47,9 @@ public class currency : MonoBehaviour
 
     public void BuyWithDiamonds(int cost)
     {
-        if (gems >= cost)
+        if (currencySO.gems >= cost)
         {
-            gems -= cost;
+            currencySO.gems -= cost;
             UpdateCurrencyDisplay();
             upgraderTarget.ChooseBoost(cost);
         }
@@ -57,9 +59,9 @@ public class currency : MonoBehaviour
 
     public void OpenGacha(int cost)
     {
-        if (gems >= cost)
+        if (currencySO.gems >= cost)
         {
-            gems -= cost;
+            currencySO.gems -= cost;
             UpdateCurrencyDisplay();
             MysteryBox.Instance.ActivateObject();
         }
@@ -69,9 +71,9 @@ public class currency : MonoBehaviour
 
     public void BuyWithEnergy(int cost)
     {
-        if (energy >= cost)
+        if (currencySO.energy >= cost)
         {
-            energy -= cost;
+            currencySO.energy -= cost;
             UpdateCurrencyDisplay();
             upgraderTarget.ChooseBoost(cost);
         }
