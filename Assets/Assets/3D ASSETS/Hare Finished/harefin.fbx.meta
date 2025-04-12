@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: c062474aafa03ac45b6bdd999eccb5ac
+guid: b3410be220c813e4d8c51b148dfcb40d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hare_Material
-    second: {fileID: 2100000, guid: 19a147def3fe3874c8d0a1fd7946b108, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hare_Material.001
-    second: {fileID: 2100000, guid: bc620c5c14a9f3a4dbe89d04a4325f6c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
