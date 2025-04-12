@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class RosterButtons : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public ManagerRoster managerRoster;
+    public PlayerSO playerSO;
+    public GameObject model3D;
+
+    public void ButtonPressed() 
     {
-        
+        managerRoster.ChangePlayer(playerSO, model3D);
+
+    
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
 }

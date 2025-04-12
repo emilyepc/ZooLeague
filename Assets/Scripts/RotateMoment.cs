@@ -45,4 +45,10 @@ public class RotateMoment : MonoBehaviour
         RectTransform rectTransform = modelImage.GetComponent<RectTransform>();
         return RectTransformUtility.RectangleContainsScreenPoint(rectTransform, Input.mousePosition, null);
     }
+
+
+    public void ResetRotation()
+    {
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 0f, transform.rotation.eulerAngles.z);
+    }
 }
