@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ae7b5411af48b6a44aa422699937971d
+guid: 72e99a24c4c56cc43917de116dc82d6b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 284073601237551812
-    second: hare_texture_0
+      213: 7139450267543145939
+    second: sliderthing_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hare_texture_0
+      name: sliderthing_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2048
-        height: 2048
+        x: 110
+        y: 56
+        width: 282
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ca84db6f6b31f300800000000000000
-      internalID: 284073601237551812
+      spriteID: 3dd0a70213c641360800000000000000
+      internalID: 7139450267543145939
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      hare_texture_0: 284073601237551812
+      sliderthing_0: 7139450267543145939
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

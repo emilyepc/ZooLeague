@@ -10,10 +10,5 @@ public class RosterButtons : MonoBehaviour
     public void ButtonPressed() 
     {
         managerRoster.ChangePlayer(playerSO, model3D);
-
-    
     }
-
-
-
 }

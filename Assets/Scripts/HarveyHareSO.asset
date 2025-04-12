@@ -16,6 +16,6 @@ MonoBehaviour:
   playerPosition: MIDFIELDER
   offenceP: 20
   defenceP: 20
-  speedP: 20
+  speedP: 50
   formP: 40
   maxformP: 40
