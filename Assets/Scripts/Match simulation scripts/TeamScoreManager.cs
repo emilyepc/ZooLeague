@@ -11,6 +11,7 @@ public class TeamScoreManager : MonoBehaviour
     public TMP_Text teamTotalScoreText;
     public TMP_Text teamOffenceScoreText;
     public TMP_Text teamDefenceScoreText;
+    public TMP_Text teamSpeedScoreText;
 
     private List<DraggablePlayer> playersInFormationList = new List<DraggablePlayer>();
 
@@ -56,8 +57,8 @@ public class TeamScoreManager : MonoBehaviour
         {
             totalTeamScore += player.totalScore;
         }
-        
-        matchScoreboard.UpdatePlayerStatsText();
+
+        teamTotalScoreText.text = "Overall Team Score: " + totalTeamScore;
     }
 
     public void UpdateTeamOffenceScore(int amt)
@@ -69,8 +70,8 @@ public class TeamScoreManager : MonoBehaviour
             totalTeamOffenceScore += player.offenceScoreMultiplied;
         }
         
-        totalTeamOffenceScore += amt;
-        matchScoreboard.UpdatePlayerStatsText();
+        //totalTeamOffenceScore += amt; //for popups
+        teamOffenceScoreText.text = totalTeamOffenceScore.ToString();
     }
 
     public void UpdateTeamDefenceScore(int amt)
@@ -82,8 +83,8 @@ public class TeamScoreManager : MonoBehaviour
             totalTeamDefenceScore += player.defenceScoreMultiplied;
         }
         
-        totalTeamDefenceScore += amt;
-        matchScoreboard.UpdatePlayerStatsText();
+        //totalTeamDefenceScore += amt; //for popups/ upgrades
+        teamDefenceScoreText.text = totalTeamDefenceScore.ToString();
     }
 
     public void UpdateTeamSpeedScore(int amt)
@@ -92,11 +93,11 @@ public class TeamScoreManager : MonoBehaviour
 
         foreach (DraggablePlayer player in playersInFormationList)
         {
-            totalTeamSpeedScore += player.defenceScoreMultiplied;
+            totalTeamSpeedScore += player.speedScoreMultiplied;
         }
         
-        totalTeamSpeedScore += amt;
-        matchScoreboard.UpdatePlayerStatsText();
+        //totalTeamSpeedScore += amt; //for popups/ upgrades
+        teamSpeedScoreText.text = totalTeamSpeedScore.ToString();
     }
 
     public void UpdateTeamForm(int amount)
@@ -110,8 +111,4 @@ public class TeamScoreManager : MonoBehaviour
         matchScoreboard.UpdatePlayerStatsText();
     }
 
-    public void UpdatePlayerForm(int amount)
-    {
-        
-    }
 }

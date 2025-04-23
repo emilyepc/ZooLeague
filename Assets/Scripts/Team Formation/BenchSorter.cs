@@ -28,4 +28,9 @@ public class BenchSorter : MonoBehaviour
             }
         }
     }
+
+    public void BenchPressed()
+    {
+        //
+    }
 }

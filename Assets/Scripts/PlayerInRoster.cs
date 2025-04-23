@@ -12,7 +12,6 @@ public class PlayerInRoster : MonoBehaviour
 
     public void OnClick()
     {
-        PlayerStatsInFormation.instance.ShowStats(playerName, offenceScore, defenceScore, speedScore, totalScore, currentForm, maxForm);
     }
     
 }

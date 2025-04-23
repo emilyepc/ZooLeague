@@ -2,9 +2,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class ManagerRoster : MonoBehaviour
+public class ManagerTeamFormation : MonoBehaviour
 {
-
     public Slider offenceSlider;
     public Slider defenceSlider;
     public Slider speedSlider;
@@ -34,4 +33,6 @@ public class ManagerRoster : MonoBehaviour
         lastModel.SetActive(true);
 
     }
+    
+    
 }
