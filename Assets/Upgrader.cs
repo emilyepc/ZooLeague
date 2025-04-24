@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Upgrader : MonoBehaviour
 {
     public DraggablePlayer player;
-    public enum BoostType { Offence, Defence, Speed, Form, TrioBoost } 
+    public enum BoostType { Offence, Defence, Speed, Form } 
     public BoostType boost;
 
     public TMP_Text gachaText;
@@ -16,18 +16,8 @@ public class Upgrader : MonoBehaviour
         else if (boost.ToString() == "Defence") player.AddToDefenceScore(value);
         else if (boost.ToString() == "Speed") player.AddToSpeedScore(value);
         else if (boost.ToString() == "Form") player.AddToFormScore(value);
-
-        else if (boost.ToString() == "TrioBooster")
-        {
-            player.AddToOffenceScore(value);
-            player.AddToDefenceScore(value);
-            player.AddToSpeedScore(value);
-
-            print("goofys yell feels like");
-        }
-
-
-
+        
+        
         print("Change made to " + player);
     }
 }
