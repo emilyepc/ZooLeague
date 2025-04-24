@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 442af33738e68dc4ba20e3ff7dffa151, type: 3}
-  m_Name: FlorenceFox
+  m_Name: FlorenceFoxSO
   m_EditorClassIdentifier: 
   playerName: Florence
   playerPosition: FORWARD
-  offenceP: 90
+  offenceP: 43
   defenceP: 20
-  speedP: 20
+  speedP: 25
   formP: 40
   maxformP: 40

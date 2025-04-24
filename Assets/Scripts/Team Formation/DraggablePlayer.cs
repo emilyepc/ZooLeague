@@ -124,55 +124,58 @@ public class DraggablePlayer : MonoBehaviour
             formLimit = (maxForm > 0) ? (float)currentForm / maxForm : 1f;
             totalScore = Mathf.RoundToInt(grossTotalScore * formLimit);
         }
+        
         //update the ui!
         PlayerStatsInFormation.instance.ShowStats(this, playerSo, rosterButtons.model3D);
     }
 
+    
+    // BELOW IS FOR UPGRADES IN THE SHOP AND POPUPS 
+    
     public void AddToDefenceScore(int amount)
     {
-        defenceScore += amount;
+        playerSo.defenceP += amount;
     }
 
     public void AddToOffenceScore(int amount)
     {
-        offenceScore += amount;
+        playerSo.offenceP += amount;
     }
     public void AddOverallScore(int amount)
     {
-        defenceScore += amount;
-        offenceScore += amount;
-        speedScore += amount;
+        playerSo.defenceP += amount;
+        playerSo.offenceP += amount;
+        playerSo.speedP += amount;
     }
     public void AddToSpeedScore(int amount)
     {
-        speedScore += amount;
+        playerSo.speedP += amount;
     }
 
     public void AddToFormScore(int amount)
     {
-        currentForm += amount;
+        playerSo.formP += amount;
 
-        if (currentForm > maxForm)
+        if (playerSo.formP > playerSo.maxformP)
         {
-            currentForm = maxForm;
+            playerSo.formP = playerSo.maxformP;
         }
     }
 
     public void AddToFormMaxScore(int amount)
     {
-        maxForm += amount;
-
+        playerSo.maxformP += amount;
     }
 
 
 
     public void PasteStats(TMP_Text playerNameText, TMP_Text offenceText, TMP_Text defenceText, TMP_Text speedText, TMP_Text formText)
     {
-        if (playerNameText != null) playerNameText.text = "Name: " + playerName;
-        if (offenceText != null) offenceText.text = "Offence: " + offenceScore.ToString();
-        if (defenceText != null) defenceText.text = "Defence: " + defenceScore.ToString();
-        if (speedText != null) speedText.text = "Speed: " + speedScore.ToString();
-        if (formText != null) formText.text = "Form: " + currentForm + " / " + maxForm;
+        if (playerNameText != null) playerNameText.text = "Name: " + playerSo.playerName;
+        if (offenceText != null) offenceText.text = "Offence: " + playerSo.offenceP;
+        if (defenceText != null) defenceText.text = "Defence: " + playerSo.defenceP;
+        if (speedText != null) speedText.text = "Speed: " + playerSo.speedP;
+        if (formText != null) formText.text = "Form: " + playerSo.formP + " / " + playerSo.maxformP;
     }
 
 }

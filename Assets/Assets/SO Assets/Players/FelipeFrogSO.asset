@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 442af33738e68dc4ba20e3ff7dffa151, type: 3}
-  m_Name: HarveyHareSO
+  m_Name: FelipeFrogSO
   m_EditorClassIdentifier: 
-  playerName: Harvey
+  playerName: Felipe
   playerPosition: MIDFIELDER
   offenceP: 20
-  defenceP: 25
-  speedP: 42
-  formP: 40
+  defenceP: 20
+  speedP: 45
+  formP: 35
   maxformP: 40
