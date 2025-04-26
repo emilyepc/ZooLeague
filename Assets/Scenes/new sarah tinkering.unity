@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 742529307}
   boost: 1
   gachaText: {fileID: 0}
 --- !u!114 &7839897
@@ -6979,7 +6979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 265245033}
   boost: 4
   gachaText: {fileID: 0}
 --- !u!114 &555791953
@@ -8320,7 +8320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2107324428}
   boost: 1
   gachaText: {fileID: 0}
 --- !u!114 &611068019
@@ -9711,7 +9711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1700038127}
   boost: 1
   gachaText: {fileID: 0}
 --- !u!114 &731195116
@@ -38723,7 +38723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1699907396}
   boost: 0
   gachaText: {fileID: 0}
 --- !u!114 &6499547354602482402
@@ -39517,7 +39517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1699907396}
   boost: 1
   gachaText: {fileID: 0}
 --- !u!1 &7166194195006144059
@@ -40008,7 +40008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 265245033}
   boost: 0
   gachaText: {fileID: 0}
 --- !u!224 &7502418490077192257
@@ -40560,7 +40560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 742529307}
   boost: 1
   gachaText: {fileID: 0}
 --- !u!114 &8021909581824513056
@@ -41123,7 +41123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1700038127}
   boost: 1
   gachaText: {fileID: 0}
 --- !u!224 &8322994822095226057
@@ -41290,7 +41290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2137746384}
   boost: 0
   gachaText: {fileID: 0}
 --- !u!222 &8436063544251189702
@@ -41497,7 +41497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2107324428}
   boost: 0
   gachaText: {fileID: 0}
 --- !u!114 &8578353732479029935
@@ -41963,7 +41963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 265245033}
   boost: 1
   gachaText: {fileID: 0}
 --- !u!222 &8846199264788469623
@@ -42098,7 +42098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 182081839}
   boost: 0
   gachaText: {fileID: 0}
 --- !u!1 &8928339845704329037
@@ -42363,7 +42363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da33eccd3f0b9f649b12e2b94701ba51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2107324428}
   boost: 1
   gachaText: {fileID: 0}
 --- !u!114 &9169935102392469084
