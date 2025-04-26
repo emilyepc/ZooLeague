@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Upgrader : MonoBehaviour
 {
     public DraggablePlayer player;
-    public enum BoostType { Offence, Defence, Speed, Form, Trio} 
+    public enum BoostType { Offence, Defence, Speed, Form, Trio};
     public BoostType boost;
 
     public TMP_Text gachaText;

@@ -17,5 +17,5 @@ MonoBehaviour:
   offenceP: 43
   defenceP: 20
   speedP: 25
-  formP: 40
+  formP: 0
   maxformP: 40
