@@ -156,15 +156,15 @@ public class DraggablePlayer : MonoBehaviour
     {
         playerSo.formP += amount;
 
-        if (playerSo.formP > playerSo.maxformP)
+        if (playerSo.formP > playerSo.maxFormP)
         {
-            playerSo.formP = playerSo.maxformP;
+            playerSo.formP = playerSo.maxFormP;
         }
     }
 
     public void AddToFormMaxScore(int amount)
     {
-        playerSo.maxformP += amount;
+        playerSo.maxFormP += amount;
     }
 
 
@@ -175,7 +175,7 @@ public class DraggablePlayer : MonoBehaviour
         if (offenceText != null) offenceText.text = "Offence: " + playerSo.offenceP;
         if (defenceText != null) defenceText.text = "Defence: " + playerSo.defenceP;
         if (speedText != null) speedText.text = "Speed: " + playerSo.speedP;
-        if (formText != null) formText.text = "Form: " + playerSo.formP + " / " + playerSo.maxformP;
+        if (formText != null) formText.text = "Form: " + playerSo.formP + " / " + playerSo.maxFormP;
     }
 
 }

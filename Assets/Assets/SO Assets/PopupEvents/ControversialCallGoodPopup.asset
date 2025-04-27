@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83235d04be4c89e438add3268dfc512a, type: 3}
+  m_Name: ControversialCallGoodPopup
+  m_EditorClassIdentifier: 
+  effectsOnePlayer: 0
+  popupText: The referee has made a controversial call. Will you challenge them?
+  choiceOneText: Challenge the call
+  choiceOneEffectText: Risk a yellow card for a team score boost
+  choiceOneAction:
+    popupEffects:
+    - actionType: 7
+      effectValue: 10
+    effectText: The call was reversed! The team score increases with a boost in moral
+  choiceTwoText: Let it go
+  choiceTwoEffectText: Small hit to team score
+  choiceTwoAction:
+    popupEffects:
+    - actionType: 7
+      effectValue: -10
+    effectText: The game continues, but your teams score decreased by 10 with a drop
+      in moral in the team

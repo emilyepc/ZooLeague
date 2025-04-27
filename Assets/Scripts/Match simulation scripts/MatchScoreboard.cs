@@ -3,7 +3,7 @@ using TMPro;
 
 public class MatchScoreboard : MonoBehaviour
 {
-    public TeamScoreManager teamScoreManager;
+    public TeamScoreManager teamScoreManger;
     public OpponentTeamOne opponentTeamOne;
     
     public TMP_Text matchStatus;
@@ -87,10 +87,10 @@ public class MatchScoreboard : MonoBehaviour
 
     public void UpdatePlayerStatsText()
     {
-        playerTotalScoreText.text = "Total: " + teamScoreManager.totalTeamScore.ToString();
-        playerDefenceScoreText.text = "D: " + teamScoreManager.totalTeamDefenceScore.ToString();
-        playerSpeedScoreText.text = "S: " + teamScoreManager.totalTeamSpeedScore.ToString();
-        playerOffenceScoreText.text = "O: " + teamScoreManager.totalTeamOffenceScore.ToString();
+        playerTotalScoreText.text = "Total: " + TeamScoreManager.instance.totalTeamScore.ToString();
+        playerDefenceScoreText.text = "D: " + TeamScoreManager.instance.totalTeamDefenceScore.ToString();
+        playerSpeedScoreText.text = "S: " + TeamScoreManager.instance.totalTeamSpeedScore.ToString();
+        playerOffenceScoreText.text = "O: " + TeamScoreManager.instance.totalTeamOffenceScore.ToString();
     }
 
     public void UpdateOpponentStatsText()

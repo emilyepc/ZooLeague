@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83235d04be4c89e438add3268dfc512a, type: 3}
+  m_Name: FakeInjuryPopup
+  m_EditorClassIdentifier: 
+  effectsOnePlayer: 1
+  popupText: '{0}  has supposedly been injured!'
+  choiceOneText: Take {0} off - they might be faking it!
+  choiceOneEffectText: Update team formation
+  choiceOneAction:
+    popupEffects:
+    - actionType: 1
+      effectValue: 0
+    effectText: You changed the team formation successfully!
+  choiceTwoText: Leave {0}  on
+  choiceTwoEffectText: Form may decrease if it's a real injury!
+  choiceTwoAction:
+    popupEffects:
+    - actionType: 6
+      effectValue: -5
+    effectText: '{0} wasn''t faking it! Their form decreases and they are injured!'

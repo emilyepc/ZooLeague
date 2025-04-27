@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -5,6 +7,8 @@ public class PopupTriggerSystem : MonoBehaviour
 {
     public PopupEventsManager popupEventsManager;
     public MatchSimulation matchSimulation;
+    
+    public PopupSO[] popups;
     
     public GameObject popupPanel;
     
@@ -32,21 +36,42 @@ public class PopupTriggerSystem : MonoBehaviour
             timer += Time.deltaTime;
         }
     }
+    
     private void TriggerPopupEvent()
     {
         matchSimulation.gamePaused = true;
-        
-        int popupChance = Random.Range(0, 4);
+        popupPanel.SetActive(true);
 
-        if (popupChance == 0)
-            popupEventsManager.InjuryPopup();
-        else if (popupChance == 1)
-            popupEventsManager.YellowCardPopup();
-        else if (popupChance == 2)
-            popupEventsManager.FakeInjuryPopup();
-        else if (popupChance == 3)
-            popupEventsManager.FatiguePopup();
-        else if (popupChance == 4)
-            popupEventsManager.RedCardPopup();
+        //has a specific player got low form?
+        PlayerSO tiredPlayer = (from draggable in TeamScoreManager.instance.playersInFormationList 
+            where draggable.playerSo.formP < 5 
+            select draggable.playerSo).FirstOrDefault();
+        
+        if (tiredPlayer != null)
+        {
+            popupEventsManager.player = tiredPlayer;
+            
+            foreach (var popup in popups)
+            {
+                if (popup.name == "FatiguePopup")
+                {
+                    popupEventsManager.SetupPopup(popup);
+                    return;
+                }
+            }
+        }
+        
+        List<DraggablePlayer> availablePlayers = TeamScoreManager.instance.playersInFormationList.Where(player => !player.playerSo.hasBeenInPopup).ToList();
+        
+        //choosing which player is effected
+        int randomIndexPlayer = Random.Range(0, availablePlayers.Count);
+        DraggablePlayer selectedDraggablePlayer = availablePlayers[randomIndexPlayer];
+        popupEventsManager.player = selectedDraggablePlayer.playerSo;
+        
+        //choosing which popup to do!
+        int randomIndexPopup = Random.Range(0, popups.Length);
+        
+        popupEventsManager.SetupPopup(popups[randomIndexPopup]);
+        selectedDraggablePlayer.playerSo.hasBeenInPopup = true;
     }
 }

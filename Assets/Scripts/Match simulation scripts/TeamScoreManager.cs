@@ -13,7 +13,7 @@ public class TeamScoreManager : MonoBehaviour
     public TMP_Text teamDefenceScoreText;
     public TMP_Text teamSpeedScoreText;
 
-    private List<DraggablePlayer> playersInFormationList = new List<DraggablePlayer>();
+    [HideInInspector] public List<DraggablePlayer> playersInFormationList = new List<DraggablePlayer>();
 
     public int totalTeamScore;
     public int totalTeamSpeedScore;
@@ -49,6 +49,14 @@ public class TeamScoreManager : MonoBehaviour
         }
     }
 
+    public void UpdateScoreboard()
+    {
+        UpdateTeamTotalScore(0);
+        UpdateTeamOffenceScore(0); 
+        UpdateTeamDefenceScore(0);
+        UpdateTeamSpeedScore(0);
+    }
+    
     public void UpdateTeamTotalScore(int amt)
     {
         totalTeamScore = 0;

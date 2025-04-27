@@ -46,7 +46,7 @@ public class RestUp : MonoBehaviour
     public void restdafukup()
     {
          isResting = true;
-         playerSO.formP += playerSO.maxformP;
+         playerSO.formP += playerSO.maxFormP;
 
     }
 

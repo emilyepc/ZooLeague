@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "PlayerSO", menuName = "Scriptable Objects/PlayerSO")]
 
@@ -11,5 +12,9 @@ public class PlayerSO : ScriptableObject
     public int defenceP;
     public int speedP;
     public int formP;
-    public int maxformP;
+    public int maxFormP;
+    
+    //vars for in-game
+    [HideInInspector] public bool hasYellowCard;
+    [HideInInspector] public bool hasBeenInPopup;
 }

@@ -8,7 +8,6 @@ public class MatchSimulation : MonoBehaviour
     public TeamScoreManager teamScoreManager;
     public OpponentTeamOne opponentTeamOne;
     public MatchScoreboard matchScoreboard;
-    public DraggablePlayer draggablePlayer;
     public Slider gameTimerSlider;
     public GameObject claimRewardsButton;
     public GameObject[] panels;
@@ -106,6 +105,7 @@ public class MatchSimulation : MonoBehaviour
         
         matchScoreboard.UpdatePlayerStatsText();
         matchScoreboard.UpdateOpponentStatsText();
+        ResetPlayerBools();
     }
 
     private void GoalOpportunity()
@@ -222,5 +222,14 @@ public class MatchSimulation : MonoBehaviour
     public void UnpauseGame()
     {
         gamePaused = false;
+    }
+
+    private void ResetPlayerBools()
+    {
+        foreach (var player in TeamScoreManager.instance.playersInFormationList)
+        {
+            player.playerSo.hasBeenInPopup = false;
+            player.playerSo.hasYellowCard = false;
+        }
     }
 }

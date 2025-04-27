@@ -75,9 +75,9 @@ public class PlayerStatsInFormation : MonoBehaviour
         }
         
         formSlider.value = playerSo.formP;
-        formSlider.maxValue = playerSo.maxformP;
+        formSlider.maxValue = playerSo.maxFormP;
         formText.text = playerSo.formP.ToString();
-        formMaxText.text = playerSo.maxformP.ToString();
+        formMaxText.text = playerSo.maxFormP.ToString();
         
         if (lastModel != null) lastModel.SetActive(false);
         lastModel = model3D;
