@@ -9,7 +9,5 @@ public class SponsorSO : ScriptableObject
 
     public bool currentSponsor;
     
-    public string sponsorDescription;
-    
     public int sponsorPayment;
 }

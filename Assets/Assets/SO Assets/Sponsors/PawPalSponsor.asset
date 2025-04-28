@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: PawPalSponsor
   m_EditorClassIdentifier: 
   sponsorName: PawPal
-  sponsorIcon: {fileID: 21300000, guid: f700e75a32959774b9cace6c8244456a, type: 3}
-  sponsorRelationship: 10
-  currentSponsor: 0
-  sponsorDescription: Pays 100 per match!
-  sponsorPayment: 15
+  sponsorIcon: {fileID: 758364523913591395, guid: f700e75a32959774b9cace6c8244456a, type: 3}
+  sponsorRelationship: 70
+  currentSponsor: 1
+  sponsorPayment: 10

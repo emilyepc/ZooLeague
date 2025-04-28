@@ -6,9 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Sponsors/PawPalSponsor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Sponsors/PawPalSponsor.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SOs/SponsorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SOs/SponsorSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/sparkle-png-33392.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/sparkle-png-33392.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RestUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RestUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new sarah tinkering.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new sarah tinkering.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchScoreboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchScoreboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/TeamScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/TeamScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupTriggerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupTriggerSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupsButtonsFunction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupsButtonsFunction.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SOs/PlayerSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SOs/PlayerSO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Team Formation/DraggablePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Team Formation/DraggablePlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Team Formation/PlayerStatsInFormation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Team Formation/PlayerStatsInFormation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Twofart.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Twofart.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +47,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -140,8 +153,7 @@
       <workItem from="1745407442167" duration="7803000" />
       <workItem from="1745522779653" duration="3585000" />
       <workItem from="1745753052990" duration="8713000" />
-      <workItem from="1745769032909" duration="6134000" />
-      <workItem from="1745833583846" duration="6545000" />
+      <workItem from="1745769032909" duration="5341000" />
     </task>
     <servers />
   </component>
