@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Sponsors/PawPalSponsor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Sponsors/PawPalSponsor.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SOs/SponsorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SOs/SponsorSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +138,7 @@
       <workItem from="1745522779653" duration="3585000" />
       <workItem from="1745753052990" duration="8713000" />
       <workItem from="1745769032909" duration="6134000" />
-      <workItem from="1745833583846" duration="6545000" />
+      <workItem from="1745833583846" duration="7173000" />
     </task>
     <servers />
   </component>
