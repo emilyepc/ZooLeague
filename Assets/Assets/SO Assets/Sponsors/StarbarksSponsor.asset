@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ece46b4be8ed046bf6c913798b97b2, type: 3}
   m_Name: StarbarksSponsor
   m_EditorClassIdentifier: 
-  sponsorName: PawPal
+  sponsorName: StarBarks
   sponsorIcon: {fileID: 21300000, guid: f700e75a32959774b9cace6c8244456a, type: 3}
   sponsorRelationship: 10
   currentSponsor: 0
-  sponsorDescription: 
-  sponsorPayment: 15
+  sponsorDescription: Pays 45 per match
+  sponsorPayment: 45
