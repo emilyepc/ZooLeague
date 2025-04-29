@@ -1,25 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Scrolla: MonoBehaviour
+[RequireComponent(typeof(Image))]
+public class scrolla : MonoBehaviour
 {
-    public float scrollSpeedX;
-    public float scrollSpeedY;
-    float offsetX;
-    float offsetY;
+    public float scrollSpeedX = 0.1f;
+    public float scrollSpeedY = 0.1f;
 
-    // Start is called before the first frame update
+    private Material runtimeMaterial;
+    private Vector2 offset;
+
     void Start()
     {
-
+        Image img = GetComponent<Image>();
+        // Make a copy of the material instance so the scrolling doesn't affect other UI elements
+        runtimeMaterial = Instantiate(img.material);
+        img.material = runtimeMaterial;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        offsetX = Time.time * scrollSpeedX;
-        offsetY = Time.time * scrollSpeedY;
-        gameObject.GetComponent<Renderer>().material.mainTextureOffset = new Vector2(offsetX, offsetY);
+        offset.x = Time.time * scrollSpeedX;
+        offset.y = Time.time * scrollSpeedY;
+
+        if (runtimeMaterial != null)
+        {
+            runtimeMaterial.mainTextureOffset = offset;
+        }
     }
 }
+
