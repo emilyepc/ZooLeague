@@ -10,6 +10,18 @@ public class SponsorSO : ScriptableObject
     public bool currentSponsor;
     
     public string sponsorDescription;
+
+    public int currentPayout;
     
-    public int sponsorPayment;
+    public int minPayout;
+    public int maxPayout;
+
+    public int gemPayout;
+
+    public int payoutAddon;
+
+    public void CalculatePayout()
+    {
+        currentPayout = (int)(minPayout + ((sponsorRelationship - 20) / 80f) * (maxPayout - minPayout));
+    }
 }

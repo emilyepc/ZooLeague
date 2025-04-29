@@ -95,9 +95,23 @@ public class SponsorUI : MonoBehaviour
     
     public void UpdateUI()
     {
+        currentSponsor.CalculatePayout();
         sponsorName.text = currentSponsor.sponsorName;
         sponsorImage.sprite = currentSponsor.sponsorIcon;
-        sponsorRevenue.text = "Revenue per game = " + currentSponsor.sponsorPayment + " coins";
+        sponsorRevenue.text = "Approx. revenue per game = " + currentSponsor.currentPayout + " coins";
         sponsorRelationship.value = currentSponsor.sponsorRelationship;
+    }
+
+    public void CheckSponsorRelationship()
+    {
+        if (currentSponsor.sponsorRelationship <= 15)
+        {
+            //relationship is getting low popup
+        }
+        else if (currentSponsor.sponsorRelationship <= 0)
+        {
+            //popup to say that the sponsor has left
+            
+        }
     }
 }

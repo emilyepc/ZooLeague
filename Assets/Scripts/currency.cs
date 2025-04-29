@@ -21,7 +21,7 @@ public class currency : MonoBehaviour
         currencySO.maxEnergy = 50;
     }
 
-    private void UpdateCurrencyDisplay()
+    public void UpdateCurrencyDisplay()
     {
         coinsText.text = currencySO.coins.ToString();
         gemsText.text = currencySO.gems.ToString();

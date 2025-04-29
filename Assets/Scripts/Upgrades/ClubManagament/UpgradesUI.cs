@@ -22,16 +22,6 @@ public class UpgradesUI : MonoBehaviour
     public void Start()
     {
         UpdateText();
-        ResetSos();
-    }
-
-    private void ResetSos()
-    {
-        crowdSo.sponsorRelationship = 10;
-        crowdSo.sponsorPayment = 15;
-        
-        currentSponsorSo.sponsorRelationship = 10;
-        currentSponsorSo.sponsorPayment = 15;
     }
 
     public void UpdateText()
@@ -47,25 +37,35 @@ public class UpgradesUI : MonoBehaviour
     {
         switch (upgradeSo.upgradeType)
         {
-            case UpgradeType.IncreaseCrowdRevenue:
-                crowdSo.sponsorPayment += upgradeSo.upgradeEffectValue;
-                upgradeFeedback.text = "Crowd Revenue upped by " + upgradeSo.upgradeEffectValue + "to" + crowdSo.sponsorPayment;
+            case UpgradeType.IncreaseCrowdMinRevenue:
+                crowdSo.minPayout += upgradeSo.upgradeEffectValue;
+                upgradeFeedback.text = "Crowd min payout increased by " + upgradeSo.upgradeEffectValue + "to" + crowdSo.minPayout;
+                StartCoroutine(ResetFeedbackText());
+                break;
+            case UpgradeType.IncreaseCrowdMaxRevenue:
+                crowdSo.maxPayout += upgradeSo.upgradeEffectValue;
+                upgradeFeedback.text = "Crowd max payout increased by " + upgradeSo.upgradeEffectValue + "to" + crowdSo.maxPayout;
                 StartCoroutine(ResetFeedbackText());
                 break;
             case UpgradeType.IncreaseCrowdMoral:
                 crowdSo.sponsorRelationship += upgradeSo.upgradeEffectValue;
-                if (crowdSo.sponsorPayment > 100 ) crowdSo.sponsorPayment = 100; 
+                if (crowdSo.sponsorRelationship > 100 ) crowdSo.sponsorRelationship = 100; 
                 upgradeFeedback.text = "Crowd moral upped by " + upgradeSo.upgradeEffectValue + "to" + crowdSo.sponsorRelationship;
                 StartCoroutine(ResetFeedbackText());
                 break;
-            case UpgradeType.IncreaseSponsorRevenue:
-                currentSponsorSo.sponsorPayment += upgradeSo.upgradeEffectValue;
-                upgradeFeedback.text = "Sponsor Revenue upped by " + upgradeSo.upgradeEffectValue + "to" + currentSponsorSo.sponsorPayment;
+            case UpgradeType.IncreaseSponsorMaxRevenue:
+                currentSponsorSo.maxPayout += upgradeSo.upgradeEffectValue;
+                upgradeFeedback.text = "Sponsor max payout upped by " + upgradeSo.upgradeEffectValue + "to" + currentSponsorSo.maxPayout;
+                StartCoroutine(ResetFeedbackText());
+                break;
+            case UpgradeType.IncreaseSponsorMinRevenue:
+                currentSponsorSo.minPayout += upgradeSo.upgradeEffectValue;
+                upgradeFeedback.text = "Sponsor min payout upped by " + upgradeSo.upgradeEffectValue + "to" + currentSponsorSo.minPayout;
                 StartCoroutine(ResetFeedbackText());
                 break;
             case UpgradeType.IncreaseSponsorRelationship:
                 currentSponsorSo.sponsorRelationship += upgradeSo.upgradeEffectValue;
-                if (currentSponsorSo.sponsorPayment > 100) currentSponsorSo.sponsorPayment = 100;
+                if (currentSponsorSo.sponsorRelationship > 100) currentSponsorSo.sponsorRelationship = 100;
                 upgradeFeedback.text = "Sponsor Relationship upped by " + upgradeSo.upgradeEffectValue + "to" + currentSponsorSo.sponsorRelationship;
                 StartCoroutine(ResetFeedbackText());
                 break;

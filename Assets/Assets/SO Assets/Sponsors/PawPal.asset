@@ -10,11 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66ece46b4be8ed046bf6c913798b97b2, type: 3}
-  m_Name: StarbarksSponsor
+  m_Name: PawPal
   m_EditorClassIdentifier: 
-  sponsorName: StarBarks
-  sponsorIcon: {fileID: 21300000, guid: f700e75a32959774b9cace6c8244456a, type: 3}
-  sponsorRelationship: 10
+  sponsorName: PawPal
+  sponsorIcon: {fileID: -254815232415751727, guid: 2cdf5619d242f5a499b96a7be7cda88c, type: 3}
+  sponsorRelationship: 20
   currentSponsor: 0
-  sponsorDescription: Pays 45 per match
-  sponsorPayment: 45
+  sponsorDescription: Pays 150-250 per match!
+  currentPayout: 0
+  minPayout: 150
+  maxPayout: 250
+  gemPayout: 4
+  payoutAddon: 0

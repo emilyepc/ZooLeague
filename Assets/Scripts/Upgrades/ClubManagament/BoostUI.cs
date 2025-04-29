@@ -44,9 +44,9 @@ public class BoostUI : MonoBehaviour
         switch (boostSo.buffType)
         {
             case BuffType.IncreaseCrowdRevenue:
-                crowdSo.sponsorPayment += boostSo.buffEffectValue;
+                crowdSo.payoutAddon += boostSo.buffEffectValue;
                 if (chanceOfNerf >= 10) ApplyNerf(boostSo.nerfType);
-                upgradeFeedback.text = "Crowd Revenue upped by " + boostSo.buffEffectValue + "to" + crowdSo.sponsorPayment;
+                upgradeFeedback.text = "Crowd extra revenue upped by " + boostSo.buffEffectValue + "to" + crowdSo.payoutAddon;
                 StartCoroutine(ResetFeedbackText());
                 break;
             case BuffType.IncreaseCrowdMoral:
@@ -56,9 +56,9 @@ public class BoostUI : MonoBehaviour
                 StartCoroutine(ResetFeedbackText());
                 break;
             case BuffType.IncreaseSponsorRevenue:
-                currentSponsorSo.sponsorPayment += boostSo.buffEffectValue;
+                currentSponsorSo.payoutAddon += boostSo.buffEffectValue;
                 if (chanceOfNerf >= 10) ApplyNerf(boostSo.nerfType);
-                upgradeFeedback.text = "Sponsor Revenue upped by " + boostSo.buffEffectValue + "to" + currentSponsorSo.sponsorPayment;
+                upgradeFeedback.text = "Sponsor extra revenue upped by " + boostSo.buffEffectValue + "to" + currentSponsorSo.payoutAddon;
                 StartCoroutine(ResetFeedbackText());
                 break;
             case BuffType.IncreaseSponsorRelationship:
@@ -83,8 +83,8 @@ public class BoostUI : MonoBehaviour
         switch (boostSo.nerfType)
         {
             case NerfType.DecreaseCrowdRevenue:
-                crowdSo.sponsorPayment -= boostSo.nerfEffectValue;
-                nerfFeedback.text = "Crowd Revenue nerfed by " + boostSo.buffEffectValue + "to" + crowdSo.sponsorPayment;
+                crowdSo.payoutAddon -= boostSo.nerfEffectValue;
+                nerfFeedback.text = "Crowd extra revenue nerfed by " + boostSo.buffEffectValue + "to" + crowdSo.payoutAddon;
                 StartCoroutine(ResetFeedbackText());
                 break;
             case NerfType.DecreaseCrowdMoral:
@@ -93,8 +93,8 @@ public class BoostUI : MonoBehaviour
                 StartCoroutine(ResetFeedbackText());
                 break;
             case NerfType.DecreaseSponsorRevenue:
-                currentSponsorSo.sponsorPayment -= boostSo.nerfEffectValue;
-                nerfFeedback.text = "Sponsor Revenue nerfed by " + boostSo.buffEffectValue + "to" + currentSponsorSo.sponsorPayment;
+                currentSponsorSo.payoutAddon -= boostSo.nerfEffectValue;
+                nerfFeedback.text = "Sponsor extra revenue nerfed by " + boostSo.buffEffectValue + "to" + currentSponsorSo.payoutAddon;
                 StartCoroutine(ResetFeedbackText());
                 break;
             case NerfType.DecreaseSponsorRelationship:

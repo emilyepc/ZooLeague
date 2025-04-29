@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -8,8 +9,13 @@ public class MatchSimulation : MonoBehaviour
     public TeamScoreManager teamScoreManager;
     public OpponentTeamOne opponentTeamOne;
     public MatchScoreboard matchScoreboard;
+    public CurrencySO currencySystem;
+    public SponsorUI sponsorManager;
+    public SponsorSO crowd;
     public Slider gameTimerSlider;
-    public GameObject claimRewardsButton;
+    public GameObject claimRewardsPanel;
+    public TMP_Text winnerText;
+    public TMP_Text rewardsText;
     public GameObject[] panels;
     
     [Header("Match State")]
@@ -22,6 +28,7 @@ public class MatchSimulation : MonoBehaviour
     private float gameTimer;
     private float goalOpportunityInterval = 5f;
     private float timer;
+    public int payout;
     
     private float playerGoalOpportunityProbability;
     private float opponentGoalOpportunityProbability;
@@ -42,7 +49,6 @@ public class MatchSimulation : MonoBehaviour
     {
         matchOngoing = false;
         waitingToScoreTimer = 5;
-        claimRewardsButton.SetActive(false);
         timer = 0;
         Conversion(conversionTeam);
 
@@ -92,7 +98,7 @@ public class MatchSimulation : MonoBehaviour
 
     public void MatchStart()
     {
-        claimRewardsButton.SetActive(false);
+        claimRewardsPanel.SetActive(false);
         matchOngoing = true;
         gamePaused = false;
         
@@ -203,7 +209,8 @@ public class MatchSimulation : MonoBehaviour
     {
         matchOngoing = false;
         gamePaused = true;
-        claimRewardsButton.SetActive(true);
+        
+        claimRewardsPanel.SetActive(true);
         
         if (playerGoals != 0) playerConversionRate = playerGoalOpportunityStat / playerGoals;
         if (opponentGoals != 0) opponentConversionRate = opponentGoalOpportunityStat / opponentGoals;
@@ -211,12 +218,12 @@ public class MatchSimulation : MonoBehaviour
         matchScoreboard.UpdateMatchStatus("Match Over");
         matchScoreboard.UpdateLeaderboard(playerGoals, opponentGoals, gameTimer);
         
-        string matchResult = playerGoals > opponentGoals ? "The winner is the player team!" :
+        winnerText.text = playerGoals > opponentGoals ? "The winner is the player team!" :
             opponentGoals > playerGoals ? "The winner is the opponent team!" : "This game was a draw!";
         
-        matchScoreboard.UpdateTextTwo(matchResult);
-        
         teamScoreManager.UpdateTeamForm(-15);
+        
+        DetermineReward();
     }
 
     public void UnpauseGame()
@@ -231,5 +238,33 @@ public class MatchSimulation : MonoBehaviour
             player.playerSo.hasBeenInPopup = false;
             player.playerSo.hasYellowCard = false;
         }
+    }
+
+    private void DetermineReward()
+    {
+        crowd.CalculatePayout();
+        payout = crowd.currentPayout;
+        
+
+        if (sponsorManager.currentSponsor)
+        {
+            sponsorManager.currentSponsor.CalculatePayout();
+            int sponsorPayout = sponsorManager.currentSponsor.currentPayout;
+        
+            payout += sponsorPayout;
+            rewardsText.text = "You made " + payout + " coins from this match \n and " + sponsorManager.currentSponsor.gemPayout + " gems!";
+
+        }
+        else
+        {
+            rewardsText.text = "You made " + payout + "from this match";
+        }
+    }
+    
+    public void CollectRewards()
+    {
+        currencySystem.coins += payout;
+        if (sponsorManager.currentSponsor) currencySystem.gems += sponsorManager.currentSponsor.gemPayout;
+        claimRewardsPanel.SetActive(false);
     }
 }

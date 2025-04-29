@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66ece46b4be8ed046bf6c913798b97b2, type: 3}
-  m_Name: CrowdSponsor
+  m_Name: PiggyBank
   m_EditorClassIdentifier: 
-  sponsorName: Crowd
-  sponsorIcon: {fileID: 0}
-  sponsorRelationship: 55
+  sponsorName: PiggyBank
+  sponsorIcon: {fileID: -1600089918101889608, guid: 3a25b399bc02629489ee027920fa2a44, type: 3}
+  sponsorRelationship: 20
   currentSponsor: 0
-  sponsorDescription: 
+  sponsorDescription: Pays 150-300 per match!
   currentPayout: 0
-  minPayout: 50
-  maxPayout: 200
-  gemPayout: 1
+  minPayout: 150
+  maxPayout: 300
+  gemPayout: 6
   payoutAddon: 0

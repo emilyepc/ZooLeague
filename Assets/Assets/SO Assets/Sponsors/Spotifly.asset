@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66ece46b4be8ed046bf6c913798b97b2, type: 3}
-  m_Name: CrowdSponsor
+  m_Name: Spotifly
   m_EditorClassIdentifier: 
-  sponsorName: Crowd
-  sponsorIcon: {fileID: 0}
-  sponsorRelationship: 55
+  sponsorName: Spotifly
+  sponsorIcon: {fileID: 5747315873406808376, guid: 9d5511450f42061489af0cd717595e7f, type: 3}
+  sponsorRelationship: 20
   currentSponsor: 0
-  sponsorDescription: 
+  sponsorDescription: Pays 70-200 per match!
   currentPayout: 0
-  minPayout: 50
+  minPayout: 70
   maxPayout: 200
-  gemPayout: 1
+  gemPayout: 4
   payoutAddon: 0

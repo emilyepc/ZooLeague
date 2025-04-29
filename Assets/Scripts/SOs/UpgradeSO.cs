@@ -3,9 +3,11 @@ using UnityEngine.Serialization;
 
 public enum UpgradeType
 {
-    IncreaseCrowdRevenue,
+    IncreaseCrowdMaxRevenue,
+    IncreaseCrowdMinRevenue,
     IncreaseCrowdMoral,
-    IncreaseSponsorRevenue,
+    IncreaseSponsorMaxRevenue,
+    IncreaseSponsorMinRevenue,
     IncreaseSponsorRelationship,
 }
 

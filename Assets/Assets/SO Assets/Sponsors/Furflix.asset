@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66ece46b4be8ed046bf6c913798b97b2, type: 3}
-  m_Name: CrowdSponsor
+  m_Name: Furflix
   m_EditorClassIdentifier: 
-  sponsorName: Crowd
-  sponsorIcon: {fileID: 0}
-  sponsorRelationship: 55
+  sponsorName: Furflix
+  sponsorIcon: {fileID: 4086990672499478656, guid: 8a5e2472f16970e4c8644e65a6ec001a, type: 3}
+  sponsorRelationship: 20
   currentSponsor: 0
-  sponsorDescription: 
+  sponsorDescription: Pays 100-250 per match
   currentPayout: 0
-  minPayout: 50
-  maxPayout: 200
-  gemPayout: 1
+  minPayout: 100
+  maxPayout: 250
+  gemPayout: 10
   payoutAddon: 0
