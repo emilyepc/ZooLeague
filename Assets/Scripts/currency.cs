@@ -11,6 +11,8 @@ public class currency : MonoBehaviour
     public TMP_Text gemsText;
     public TMP_Text energyText;
 
+    public bool canBuy;
+    
     void Start()
     {
         UpdateCurrencyDisplay();
@@ -40,9 +42,10 @@ public class currency : MonoBehaviour
             currencySO.coins -= cost;
             UpdateCurrencyDisplay();
             upgraderTarget.ChooseBoost(cost);
+            canBuy = true;
         }
         else 
-            Debug.Log("Not enough coins");
+            canBuy = false;
     }
 
     public void BuyWithDiamonds(int cost)
@@ -51,10 +54,10 @@ public class currency : MonoBehaviour
         {
             currencySO.gems -= cost;
             UpdateCurrencyDisplay();
-            upgraderTarget.ChooseBoost(cost);
+            if (upgraderTarget) upgraderTarget.ChooseBoost(cost);
+            canBuy = true;
         }
-        else 
-            Debug.Log("Not enough gems");
+        else canBuy = false;
     }
 
     public void OpenGacha(int cost)
@@ -65,8 +68,7 @@ public class currency : MonoBehaviour
             UpdateCurrencyDisplay();
             MysteryBox.Instance.ActivateObject();
         }
-        else 
-            Debug.Log("Not enough gems");
+        else Debug.Log("Not enough gems");
     }
 
     public void BuyWithEnergy(int cost)

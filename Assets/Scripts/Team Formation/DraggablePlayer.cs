@@ -7,7 +7,6 @@ public class DraggablePlayer : MonoBehaviour
     public MovePlayerIntoFormation movePlayerIntoFormation;
     public PlayerSO playerSo;
     public PlayerSlot currentSlot;
-    public BenchSorter bench;
     public GameObject benchSpot;
     
     [HideInInspector] public Transform parentAfterDrag;

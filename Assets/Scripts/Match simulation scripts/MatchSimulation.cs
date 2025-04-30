@@ -24,7 +24,7 @@ public class MatchSimulation : MonoBehaviour
     public bool matchOngoing;
     
     public bool gamePaused;
-    private float gameLength = 60f;
+    private float gameLength = 30f;
     private float gameTimer;
     private float goalOpportunityInterval = 5f;
     private float timer;

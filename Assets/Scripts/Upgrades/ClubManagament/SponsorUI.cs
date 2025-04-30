@@ -11,6 +11,8 @@ public class SponsorUI : MonoBehaviour
     [Header("??")]
     public List<SponsorSO> sponsors;
 
+    public currency currencySystem;
+
     public GameObject findingSponsorPanel;
     public GameObject hasSponsorPanel;
     
@@ -93,13 +95,27 @@ public class SponsorUI : MonoBehaviour
         OpenPanel();
     }
     
+    public void NewSponsorshipMoney()
+    {
+        if (currencySystem.canBuy)
+        {
+            currentSponsor = null;
+            RandomiseSponsors();
+            OpenPanel();
+            currencySystem.canBuy = false;
+        }
+    }
+    
     public void UpdateUI()
     {
-        currentSponsor.CalculatePayout();
-        sponsorName.text = currentSponsor.sponsorName;
-        sponsorImage.sprite = currentSponsor.sponsorIcon;
-        sponsorRevenue.text = "Approx. revenue per game = " + currentSponsor.currentPayout + " coins";
-        sponsorRelationship.value = currentSponsor.sponsorRelationship;
+        if (currentSponsor != null)
+        {
+            currentSponsor.CalculatePayout();
+            sponsorName.text = currentSponsor.sponsorName;
+            sponsorImage.sprite = currentSponsor.sponsorIcon;
+            sponsorRevenue.text = "Approx. revenue per game = " + currentSponsor.currentPayout + " coins";
+            sponsorRelationship.value = currentSponsor.sponsorRelationship;
+        }
     }
 
     public void CheckSponsorRelationship()

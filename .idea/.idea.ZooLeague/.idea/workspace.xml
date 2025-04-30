@@ -6,49 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/206003__habbis92__norwegian-football-matchsoccer-game-ambience.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/206003__habbis92__norwegian-football-matchsoccer-game-ambience.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/418106__crazymonke9__single-dog-bark-2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/418106__crazymonke9__single-dog-bark-2.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/536759__egomassive__frog.ogg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/536759__egomassive__frog.ogg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/555042__bittermelonheart__soccer-ball-kick.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/555042__bittermelonheart__soccer-ball-kick.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/632231__audacitier__biting-apple-2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/632231__audacitier__biting-apple-2.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/679355__kjartan_abel__pawsome-vibes-get-your-groove-on-with-meow-meow.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/679355__kjartan_abel__pawsome-vibes-get-your-groove-on-with-meow-meow.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/706487__elpatino__creature-growl-6.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/706487__elpatino__creature-growl-6.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/725456__lovescotch__information-field.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/725456__lovescotch__information-field.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/732519__lukey1028__senior-cat-meow.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/732519__lukey1028__senior-cat-meow.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/90743__pablo-f__referee-whistle.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/90743__pablo-f__referee-whistle.wav.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Sponsors/PawPalSponsor.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Sponsors/PawPalSponsor.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Sponsors/StarbarksSponsor.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Sponsors/StarbarksSponsor.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RestFunction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RestFunction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RestUp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RestUp.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/Connie Cat SO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/Connie Cat SO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/DannyDogSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/DannyDogSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/DarcyDogSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/DarcyDogSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FelipeFrogSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FelipeFrogSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FlorenceFoxSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FlorenceFoxSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FrancisFrogSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FrancisFrogSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FreddieFoxSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FreddieFoxSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/HarveyHareSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/HarveyHareSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/HoneyHareSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/HoneyHareSO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new sarah tinkering.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new sarah tinkering.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SOs/SponsorSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SOs/SponsorSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SOs/UpgradeSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SOs/UpgradeSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/BoostUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/BoostUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Team Formation/DraggablePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Team Formation/DraggablePlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/UpgradesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/UpgradesUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/currency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/currency.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Whistle Sound Effect!.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Whistle Sound Effect!.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/overallboost.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/overallboost.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scenemanager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scenemanager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scrolla.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scrolla.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +155,7 @@
       <workItem from="1745769032909" duration="6134000" />
       <workItem from="1745833583846" duration="7173000" />
       <workItem from="1745960204580" duration="7578000" />
+      <workItem from="1746001508492" duration="2816000" />
     </task>
     <servers />
   </component>

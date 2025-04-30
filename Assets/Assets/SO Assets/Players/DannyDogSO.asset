@@ -18,4 +18,6 @@ MonoBehaviour:
   defenceP: 20
   speedP: 25
   formP: 40
-  maxformP: 40
+  maxFormP: 40
+  hasYellowCard: 0
+  hasBeenInPopup: 0
