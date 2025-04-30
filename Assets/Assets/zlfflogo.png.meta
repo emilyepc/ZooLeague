@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zlfflogo_0: 4086990672499478656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

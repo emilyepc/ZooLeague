@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      zlpblogo_0: -1600089918101889608
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
