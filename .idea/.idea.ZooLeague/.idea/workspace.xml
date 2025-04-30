@@ -6,21 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/Connie Cat SO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/Connie Cat SO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/DannyDogSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/DannyDogSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/DarcyDogSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/DarcyDogSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FelipeFrogSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FelipeFrogSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FlorenceFoxSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FlorenceFoxSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FrancisFrogSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FrancisFrogSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FreddieFoxSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/FreddieFoxSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/HarveyHareSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/HarveyHareSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/HoneyHareSO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/Players/HoneyHareSO.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new sarah tinkering.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new sarah tinkering.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Match simulation scripts/MatchSimulation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Team Formation/DraggablePlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Team Formation/DraggablePlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/SponsorUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/currency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/currency.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +140,7 @@
       <workItem from="1745769032909" duration="6134000" />
       <workItem from="1745833583846" duration="7173000" />
       <workItem from="1745960204580" duration="7578000" />
-      <workItem from="1746001508492" duration="2816000" />
+      <workItem from="1746001508492" duration="4233000" />
     </task>
     <servers />
   </component>
