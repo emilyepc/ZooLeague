@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DogTextureOne_0: 8838875646978192486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
