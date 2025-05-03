@@ -6474,23 +6474,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 70b529cf603704d46ba0c0c3d0aa3ccd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.2222
+      value: 4.043052
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70b529cf603704d46ba0c0c3d0aa3ccd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.2222
+      value: 4.043052
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70b529cf603704d46ba0c0c3d0aa3ccd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.2222
+      value: 4.043052
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70b529cf603704d46ba0c0c3d0aa3ccd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.62
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70b529cf603704d46ba0c0c3d0aa3ccd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.55
+      value: -1.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70b529cf603704d46ba0c0c3d0aa3ccd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6530,7 +6530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 70b529cf603704d46ba0c0c3d0aa3ccd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12330,7 +12330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   managerRoster: {fileID: 7635050032600055670}
   playerSO: {fileID: 11400000, guid: 0282ff0ca9a0e1e48a5716a97f1d9460, type: 2}
-  model3D: {fileID: 1440505449}
+  model3D: {fileID: 1491278263}
   butten: {fileID: 7686185703796046489}
 --- !u!114 &703857760
 MonoBehaviour:
@@ -22524,7 +22524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   managerRoster: {fileID: 7635050032600055670}
   playerSO: {fileID: 11400000, guid: a7bce1ed9c7808c43898c10e9f03ad23, type: 2}
-  model3D: {fileID: 1440505449}
+  model3D: {fileID: 1491278263}
   butten: {fileID: 7686185703796046489}
 --- !u!114 &1406226820
 MonoBehaviour:
@@ -25207,7 +25207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 70951b708cedfbe4ba1829b5b938aedb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
