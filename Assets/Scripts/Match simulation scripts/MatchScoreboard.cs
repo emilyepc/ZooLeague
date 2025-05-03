@@ -74,17 +74,6 @@ public class MatchScoreboard : MonoBehaviour
         lineThree.text = playerScore.ToString() + "   -   " + opponentScore.ToString();
     }
     
-    public void UpdateLineThree(string line, bool matchOver)
-    {
-        lineThree.text = line;
-
-        if (!matchOver)
-        {
-            textShowing = true;
-            textClearTimer = 3f;
-        }
-    }
-
     public void UpdatePlayerStatsText()
     {
         playerTotalScoreText.text = "Total: " + TeamScoreManager.instance.totalTeamScore.ToString();

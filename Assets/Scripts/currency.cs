@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Unity.UI;
 using TMPro;
@@ -12,6 +13,7 @@ public class currency : MonoBehaviour
     public TMP_Text energyText;
 
     public bool canBuy;
+    public TMP_Text feedbackText;
     
     void Start()
     {
@@ -44,8 +46,13 @@ public class currency : MonoBehaviour
             upgraderTarget.ChooseBoost(cost);
             canBuy = true;
         }
-        else 
+        else
+        {
+            feedbackText.text = "Not enough coins!";
+            StartCoroutine(ClearText());
             canBuy = false;
+        }
+        
     }
 
     public void BuyWithDiamonds(int cost)
@@ -57,7 +64,12 @@ public class currency : MonoBehaviour
             if (upgraderTarget) upgraderTarget.ChooseBoost(cost);
             canBuy = true;
         }
-        else canBuy = false;
+        else
+        {
+            feedbackText.text = "Not enough gems!";
+            StartCoroutine(ClearText());
+            canBuy = false;
+        }
     }
 
     public void OpenGacha(int cost)
@@ -68,7 +80,11 @@ public class currency : MonoBehaviour
             UpdateCurrencyDisplay();
             MysteryBox.Instance.ActivateObject();
         }
-        else Debug.Log("Not enough gems");
+        else
+        {
+            feedbackText.text = "Not enough gems!";
+            StartCoroutine(ClearText());
+        }
     }
 
     public void BuyWithEnergy(int cost)
@@ -81,6 +97,12 @@ public class currency : MonoBehaviour
         }
         else 
             print ("Not enough energy");
+    }
+    
+    IEnumerator ClearText()
+    {
+        yield return new WaitForSeconds(3);
+        feedbackText.text = "";
     }
 }
 
