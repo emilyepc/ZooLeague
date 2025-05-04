@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Improve Facilities
   upgradeType: 1
-  upgradeDescription: 'Boost fanbase and increase fan satisfaction '
+  upgradeDescription: 'Upgrade stadium facilities to please the fanbase and increase
+    fan satisfaction '
   upgradeEffect: +10 moral
   upgradeEffectValue: 10
   upgradeCost: 100
-  upgradeUses: 10
-  upgradeMaxUses: 10
+  upgradeUses: 5
+  upgradeMaxUses: 5

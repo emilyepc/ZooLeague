@@ -83,4 +83,9 @@ public class PlayerStatsInFormation : MonoBehaviour
         lastModel = model3D;
         lastModel.SetActive(true);
     }
+
+    public void TurnOff3DModel()
+    {
+        if (lastModel != null) lastModel.SetActive(false);
+    }
 }

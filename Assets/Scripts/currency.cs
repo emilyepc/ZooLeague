@@ -54,6 +54,23 @@ public class currency : MonoBehaviour
         }
         
     }
+    
+    public void BuyUpgradeInManager(int cost)
+    {
+        if (currencySO.coins >= cost)
+        {
+            currencySO.coins -= cost;
+            UpdateCurrencyDisplay();
+            canBuy = true;
+        }
+        else
+        {
+            feedbackText.text = "Not enough coins!";
+            StartCoroutine(ClearText());
+            canBuy = false;
+        }
+        
+    }
 
     public void BuyWithDiamonds(int cost)
     {

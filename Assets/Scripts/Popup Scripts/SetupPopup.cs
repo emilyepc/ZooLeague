@@ -29,9 +29,10 @@ public class SetupPopup : MonoBehaviour
         effectPanel.SetActive(false);
     }
 
-    public void ShowConsequence(string text)
+    public void ShowConsequence(PopupActions action, string text)
     {
-        effectPanel.SetActive(true);
         consequenceText.text = text;
+        
+        if (action.openCompletePanel) effectPanel.SetActive(true);
     }
 }

@@ -6,13 +6,20 @@ public class MysteryBox : MonoBehaviour
 {
     public static MysteryBox Instance;
     public Button LootBox;
-    public GameObject objectToActivate;
+    public GameObject rosterObjectToUnlock;
+    public GameObject teamPageObjectToUnlock;
+    public GameObject feedbackObject;
+    public GameObject nextButton;
 
     void Start()
     {
         Instance = this;
         
-        if (LootBox != null && objectToActivate != null)
+        rosterObjectToUnlock.SetActive(false);
+        teamPageObjectToUnlock.SetActive(false);
+        feedbackObject.SetActive(false);
+        
+        if (LootBox != null && rosterObjectToUnlock != null)
         {
             LootBox.onClick.AddListener(ActivateObject);
         }
@@ -25,9 +32,10 @@ public class MysteryBox : MonoBehaviour
     public void ActivateObject()
     {
         LootBox.interactable = false;
-        objectToActivate.SetActive(true);
-        //StartCoroutine(DisableText());
+        rosterObjectToUnlock.SetActive(true);
+        teamPageObjectToUnlock.SetActive(true);
+        feedbackObject.SetActive(true);
+        
+        if (nextButton != null) nextButton.SetActive(true);  
     }
-
- 
 }

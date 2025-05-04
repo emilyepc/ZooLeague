@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Stadium Capacity
   upgradeType: 0
-  upgradeDescription: Increase the capacity of your stadium from 1000 to 2000
-  upgradeEffect: +50 revenue per match
-  upgradeEffectValue: 20
+  upgradeDescription: Increase the capacity of your stadium to increase reveue
+  upgradeEffect: +50 to crowd max revenue
+  upgradeEffectValue: 50
   upgradeCost: 200
   upgradeUses: 5
   upgradeMaxUses: 5

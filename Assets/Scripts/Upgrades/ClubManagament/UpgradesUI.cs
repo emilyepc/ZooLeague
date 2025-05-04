@@ -1,6 +1,9 @@
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using Button = UnityEngine.UI.Button;
+
+
 public class UpgradesUI : MonoBehaviour
 {
     public UpgradeSO upgradeSo;
@@ -35,50 +38,61 @@ public class UpgradesUI : MonoBehaviour
 
     public void ApplyUpgrade()
     {
-        switch (upgradeSo.upgradeType)
+        if (currencySystem.canBuy && upgradeSo.upgradeUses < upgradeSo.upgradeMaxUses)
         {
-            case UpgradeType.IncreaseCrowdMinRevenue:
-                crowdSo.minPayout += upgradeSo.upgradeEffectValue;
-                upgradeFeedback.text = "Crowd min payout increased by " + upgradeSo.upgradeEffectValue + "to" + crowdSo.minPayout;
-                StartCoroutine(ResetFeedbackText());
-                break;
-            case UpgradeType.IncreaseCrowdMaxRevenue:
-                crowdSo.maxPayout += upgradeSo.upgradeEffectValue;
-                upgradeFeedback.text = "Crowd max payout increased by " + upgradeSo.upgradeEffectValue + "to" + crowdSo.maxPayout;
-                StartCoroutine(ResetFeedbackText());
-                break;
-            case UpgradeType.IncreaseCrowdMoral:
-                crowdSo.sponsorRelationship += upgradeSo.upgradeEffectValue;
-                if (crowdSo.sponsorRelationship > 100 ) crowdSo.sponsorRelationship = 100; 
-                upgradeFeedback.text = "Crowd moral upped by " + upgradeSo.upgradeEffectValue + "to" + crowdSo.sponsorRelationship;
-                StartCoroutine(ResetFeedbackText());
-                break;
-            case UpgradeType.IncreaseSponsorMaxRevenue:
-                currentSponsorSo.maxPayout += upgradeSo.upgradeEffectValue;
-                upgradeFeedback.text = "Sponsor max payout upped by " + upgradeSo.upgradeEffectValue + "to" + currentSponsorSo.maxPayout;
-                StartCoroutine(ResetFeedbackText());
-                break;
-            case UpgradeType.IncreaseSponsorMinRevenue:
-                currentSponsorSo.minPayout += upgradeSo.upgradeEffectValue;
-                upgradeFeedback.text = "Sponsor min payout upped by " + upgradeSo.upgradeEffectValue + "to" + currentSponsorSo.minPayout;
-                StartCoroutine(ResetFeedbackText());
-                break;
-            case UpgradeType.IncreaseSponsorRelationship:
-                currentSponsorSo.sponsorRelationship += upgradeSo.upgradeEffectValue;
-                if (currentSponsorSo.sponsorRelationship > 100) currentSponsorSo.sponsorRelationship = 100;
-                upgradeFeedback.text = "Sponsor Relationship upped by " + upgradeSo.upgradeEffectValue + "to" + currentSponsorSo.sponsorRelationship;
-                StartCoroutine(ResetFeedbackText());
-                break;
-            default:
-                Debug.LogWarning("Upgrade effect not recognised!");
-                break;
+            switch (upgradeSo.upgradeType)
+            {
+                case UpgradeType.IncreaseCrowdMinRevenue:
+                    crowdSo.minPayout += upgradeSo.upgradeEffectValue;
+                    upgradeFeedback.text = "Crowd min payout increased by " + upgradeSo.upgradeEffectValue + "to" +
+                                           crowdSo.minPayout;
+                    StartCoroutine(ResetFeedbackText());
+                    break;
+                case UpgradeType.IncreaseCrowdMaxRevenue:
+                    crowdSo.maxPayout += upgradeSo.upgradeEffectValue;
+                    upgradeFeedback.text = "Crowd max payout increased by " + upgradeSo.upgradeEffectValue + "to" +
+                                           crowdSo.maxPayout;
+                    StartCoroutine(ResetFeedbackText());
+                    break;
+                case UpgradeType.IncreaseCrowdMoral:
+                    crowdSo.sponsorRelationship += upgradeSo.upgradeEffectValue;
+                    if (crowdSo.sponsorRelationship > 100) crowdSo.sponsorRelationship = 100;
+                    upgradeFeedback.text = "Crowd moral upped by " + upgradeSo.upgradeEffectValue + "to" +
+                                           crowdSo.sponsorRelationship;
+                    StartCoroutine(ResetFeedbackText());
+                    break;
+                case UpgradeType.IncreaseSponsorMaxRevenue:
+                    currentSponsorSo.maxPayout += upgradeSo.upgradeEffectValue;
+                    upgradeFeedback.text = "Sponsor max payout upped by " + upgradeSo.upgradeEffectValue + "to" +
+                                           currentSponsorSo.maxPayout;
+                    StartCoroutine(ResetFeedbackText());
+                    break;
+                case UpgradeType.IncreaseSponsorMinRevenue:
+                    currentSponsorSo.minPayout += upgradeSo.upgradeEffectValue;
+                    upgradeFeedback.text = "Sponsor min payout upped by " + upgradeSo.upgradeEffectValue + "to" +
+                                           currentSponsorSo.minPayout;
+                    StartCoroutine(ResetFeedbackText());
+                    break;
+                case UpgradeType.IncreaseSponsorRelationship:
+                    currentSponsorSo.sponsorRelationship += upgradeSo.upgradeEffectValue;
+                    if (currentSponsorSo.sponsorRelationship > 100) currentSponsorSo.sponsorRelationship = 100;
+                    upgradeFeedback.text = "Sponsor Relationship upped by " + upgradeSo.upgradeEffectValue + "to" +
+                                           currentSponsorSo.sponsorRelationship;
+                    StartCoroutine(ResetFeedbackText());
+                    break;
+                default:
+                    Debug.LogWarning("Upgrade effect not recognised!");
+                    break;
+            }
+            
+            upgradeSo.UpgradeUsed();
+            UpdateText();
+            sponsorUI.UpdateUI();
+            fanbaseUI.UpdateUI();
+
+            if (upgradeSo.upgradeUses >= upgradeSo.upgradeMaxUses)
+                GetComponent<Button>().interactable = false;
         }
-        
-        
-        upgradeSo.UpgradeUsed();
-        UpdateText();
-        sponsorUI.UpdateUI();
-        fanbaseUI.UpdateUI();
     }
 
     IEnumerator ResetFeedbackText()

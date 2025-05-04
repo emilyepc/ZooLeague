@@ -81,7 +81,7 @@ public class PopupEventsManager : MonoBehaviour
             }
         }
 
-        currentUI.ShowConsequence(string.Format(action.effectText, player.playerName));
+        currentUI.ShowConsequence(action, string.Format(action.effectText, player.playerName));
         TeamScoreManager.instance.UpdateScoreboard();
     }
 

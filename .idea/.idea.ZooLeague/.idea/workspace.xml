@@ -6,9 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/Altfrog2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/Altfrog2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/fox/Material.001.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/fox/Material.001.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/fox/face.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/fox/face.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/ClubUpgrades/ImproveAmenitiesUpgrade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/ClubUpgrades/ImproveAmenitiesUpgrade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/ClubUpgrades/ImproveFacilitiesUpgrade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/ClubUpgrades/ImproveFacilitiesUpgrade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/ClubUpgrades/StadiumCapacityUpgrade.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/ClubUpgrades/StadiumCapacityUpgrade.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/SO Assets/CurrencySO.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SO Assets/CurrencySO.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/new sarah tinkering.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/new sarah tinkering.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ManagerRoster.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ManagerRoster.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/PopupEventsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/SetupPopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Popup Scripts/SetupPopup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Team Formation/PlayerStatsInFormation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Team Formation/PlayerStatsInFormation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/BoostUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/BoostUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/UpgradesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/ClubManagament/UpgradesUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Upgrades/MysteryBox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Upgrades/MysteryBox.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/currency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/currency.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +45,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -147,6 +157,7 @@
       <workItem from="1746001508492" duration="4233000" />
       <workItem from="1746266472335" duration="2705000" />
       <workItem from="1746355411924" duration="10000" />
+      <workItem from="1746384807065" duration="5884000" />
     </task>
     <servers />
   </component>
