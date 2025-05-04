@@ -26,13 +26,8 @@ public class MysteryBox : MonoBehaviour
     {
         LootBox.interactable = false;
         objectToActivate.SetActive(true);
-        StartCoroutine(DisableText());
+        //StartCoroutine(DisableText());
     }
 
-    IEnumerator DisableText()
-    {
-        yield return new WaitForSeconds(3f);
-        objectToActivate.SetActive(false);
-        LootBox.interactable = true;
-    }
+ 
 }
