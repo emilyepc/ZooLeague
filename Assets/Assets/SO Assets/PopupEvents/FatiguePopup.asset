@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83235d04be4c89e438add3268dfc512a, type: 3}
   m_Name: FatiguePopup
   m_EditorClassIdentifier: 
-  effectsOnePlayer: 1
+  category: 0
   popupText: '{0} is showing signs of being extremely fatigued! Their form is low...'
   choiceOneText: Keep {0} on
   choiceOneEffectText: Low form boost
@@ -20,8 +20,9 @@ MonoBehaviour:
     popupEffects:
     - actionType: 6
       effectValue: 2
-    effectText: '{0}  is pushing through with one last push of energy. However, they
+    effectText: '{0} is pushing through with one last push of energy. However, they
       aren''t contributing much to the team anymore...'
+    openCompletePanel: 1
   choiceTwoText: Sub {0} out
   choiceTwoEffectText: Change team formation
   choiceTwoAction:
@@ -29,3 +30,4 @@ MonoBehaviour:
     - actionType: 1
       effectValue: 0
     effectText: The team formation (and team stats) have successfully been updated.
+    openCompletePanel: 0

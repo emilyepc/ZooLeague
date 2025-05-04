@@ -12,20 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83235d04be4c89e438add3268dfc512a, type: 3}
   m_Name: RealInjuryPopup
   m_EditorClassIdentifier: 
-  effectsOnePlayer: 1
-  popupText: '{0}  has supposedly been injured!'
-  choiceOneText: Take {0} off - they might be faking it!
+  category: 0
+  popupText: '{0} has supposedly been injured! But they might be faking it...'
+  choiceOneText: Take {0} off!
   choiceOneEffectText: Update team formation
   choiceOneAction:
     popupEffects:
     - actionType: 1
       effectValue: 0
     effectText: You changed the team formation successfully!
-  choiceTwoText: Leave {0} on
+    openCompletePanel: 0
+  choiceTwoText: Leave {0}  on
   choiceTwoEffectText: Form may decrease if it's a real injury!
   choiceTwoAction:
     popupEffects:
-    - actionType: 7
-      effectValue: 5
-    effectText: '{0}  was faking it, team moral increases, leading to a boost to
-      the overall team score!.'
+    - actionType: 6
+      effectValue: -10
+    effectText: '{0} wasn''t faking it! Their form decreases and they are injured!'
+    openCompletePanel: 1

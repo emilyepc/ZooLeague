@@ -8,49 +8,46 @@ public class PopupEventsManager : MonoBehaviour
     public MatchSimulation matchSimulation;
     public TeamScoreManager teamScoreManager;
     [HideInInspector] public PlayerSO player;
-    
-    [Header("Panels")]
+
+    [Header("UI Panels")]
+    public SetupPopup playerPopupUI;
+    public SetupPopup teamPopupUI;
+
+    [Header("Navigation Panels")]
     public GameObject homePanel;
     public GameObject managerPanel;
     public GameObject matchSelectPanel;
     public GameObject teamSelectPanel;
     public GameObject continueButton;
-    
-    [Header("UI Elements")]
-    public TMP_Text popupText;
-    public TMP_Text choiceOneEffectText;
-    public TMP_Text choiceTwoEffectText;
-    public Button choiceOneButton;
-    public Button choiceTwoButton;
-    public GameObject effectPanel;
-    public TMP_Text consequenceText;
-    
+
+    private SetupPopup currentUI;
+
     private void Start()
     {
-        effectPanel.SetActive(false);
+        playerPopupUI.effectPanel.SetActive(false);
+        teamPopupUI.effectPanel.SetActive(false);
         continueButton.SetActive(false);
     }
-    
+
     public void SetupPopup(PopupSO popupEvent)
     {
-        popupText.text = string.Format(popupEvent.popupText, player.playerName);
-        
-        choiceOneButton.GetComponentInChildren<TMP_Text>().text = string.Format(popupEvent.choiceOneText, player.playerName);
-        choiceOneEffectText.text = string.Format(popupEvent.choiceOneEffectText, player.playerName);
-        
-        choiceTwoButton.GetComponentInChildren<TMP_Text>().text = string.Format(popupEvent.choiceTwoText, player.playerName);
-        choiceTwoEffectText.text = string.Format(popupEvent.choiceTwoEffectText, player.playerName);
+        // Choose the correct panel based on popup category
+        currentUI = popupEvent.category == Category.Player ? playerPopupUI : teamPopupUI;
 
-        choiceOneButton.onClick.RemoveAllListeners();
-        choiceOneButton.onClick.AddListener(() => ExecuteAction(popupEvent.choiceOneAction));
-        
-        choiceTwoButton.onClick.RemoveAllListeners();
-        choiceTwoButton.onClick.AddListener(() => ExecuteAction(popupEvent.choiceTwoAction));
+        currentUI.SetPopup(
+            popupEvent,
+            player,
+            ExecuteAction, // Choice One
+            ExecuteAction  // Choice Two
+        );
     }
 
     private void ExecuteAction(PopupActions action)
     {
-        effectPanel.SetActive(true);
+        if (action.openCompletePanel)
+        {
+            currentUI.effectPanel.SetActive(true);
+        }
 
         foreach (var effect in action.popupEffects)
         {
@@ -83,12 +80,12 @@ public class PopupEventsManager : MonoBehaviour
                     break;
             }
         }
-        
-        consequenceText.text = string.Format(action.effectText, player.playerName);
+
+        currentUI.ShowConsequence(string.Format(action.effectText, player.playerName));
         TeamScoreManager.instance.UpdateScoreboard();
     }
 
-    //BELOW IS THE UPGRADES EFFECTS <3
+    // Effect handling methods
 
     private void UpdateTeamFormation()
     {
@@ -98,7 +95,7 @@ public class PopupEventsManager : MonoBehaviour
         teamSelectPanel.SetActive(true);
         continueButton.SetActive(true);
     }
-    
+
     private void UpdateDefence(int amt)
     {
         player.defenceP += amt;
@@ -111,7 +108,7 @@ public class PopupEventsManager : MonoBehaviour
 
     private void UpdateOffence(int amt)
     {
-        player.offenceP += amt;    
+        player.offenceP += amt;
     }
 
     private void UpdateTeamForm(int amt)
@@ -126,16 +123,12 @@ public class PopupEventsManager : MonoBehaviour
 
     private void UpdateTeamScore(int amt)
     {
-        consequenceText.text = "Team score changed............";
+        Debug.Log("Team score changed by " + amt);
+        // Apply team score logic here if needed
     }
 
     private void UpdateNothing()
     {
-        
-    }
-
-    private void RedCard()
-    {
-        print("RedCard");
+        // No effect
     }
 }

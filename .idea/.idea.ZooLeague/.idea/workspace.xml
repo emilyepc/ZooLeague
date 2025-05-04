@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2a19-4d54-4dd1-9aae-9bf6d60c2efd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ZooLeague/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/AltDog1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/AltDog1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/AltDog2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/AltDog2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/AltFox1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/AltFox1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/Altfrog1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/Altfrog1.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/Altfrog2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/Altfrog2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/whiteharetexture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/Alternative textures/whiteharetexture.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/cat/CatTwo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/cat/CatTwo.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/cat/cattexture.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/cat/cattexture.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/fox/Material.001.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/fox/Material.001.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/fox/face.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/3D ASSETS/fox/face.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +145,8 @@
       <workItem from="1745833583846" duration="7173000" />
       <workItem from="1745960204580" duration="7578000" />
       <workItem from="1746001508492" duration="4233000" />
-      <workItem from="1746266480143" duration="20000" />
+      <workItem from="1746266472335" duration="2705000" />
+      <workItem from="1746355411924" duration="10000" />
     </task>
     <servers />
   </component>
@@ -159,6 +156,7 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>

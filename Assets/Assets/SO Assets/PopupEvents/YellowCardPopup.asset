@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83235d04be4c89e438add3268dfc512a, type: 3}
   m_Name: YellowCardPopup
   m_EditorClassIdentifier: 
-  effectsOnePlayer: 1
+  category: 0
   popupText: '{0} has received a yellow card for bad behaviour! If it continues {0}
     might get a red card...'
   choiceOneText: Tell {0} off
@@ -25,6 +25,7 @@ MonoBehaviour:
       effectValue: -5
     effectText: '{0} plays even more agressively, defence incerases but at the cost
       of a loss of offence.'
+    openCompletePanel: 1
   choiceTwoText: Calm them down
   choiceTwoEffectText: Offence up, speed down
   choiceTwoAction:
@@ -35,3 +36,4 @@ MonoBehaviour:
       effectValue: -5
     effectText: '{0} slows down and plays more thoughtfully, leading to a more offensive
       playstyle. But {0}''s speed decreases...'
+    openCompletePanel: 1

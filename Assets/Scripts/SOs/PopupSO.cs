@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 [CreateAssetMenu(fileName = "PopupSO", menuName = "Scriptable Objects/PopupSO")]
 public class PopupSO : ScriptableObject
 {
-    public bool effectsOnePlayer;
+    public Category category;
     public string popupText;
     
     [Header("Choice One")]
@@ -24,6 +24,7 @@ public class PopupActions
 {
     public List<PopupEffect> popupEffects = new List<PopupEffect>();
     public string effectText;
+    public bool openCompletePanel = true;
 }
 
 [System.Serializable]
@@ -44,3 +45,5 @@ public enum PopupActionType
     UpdatePlayerForm,
     UpdateTeamScore
 }
+public enum Category { Player, Team, Sponsor, Crowd}
+

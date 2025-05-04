@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Honey
   playerPosition: DEFENDER
-  offenceP: 25
+  offenceP: 30
   defenceP: 30
-  speedP: 28
+  speedP: 23
   formP: 40
   maxFormP: 40
   hasYellowCard: 0
