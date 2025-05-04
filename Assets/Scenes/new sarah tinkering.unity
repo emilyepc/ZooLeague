@@ -21988,7 +21988,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1700038122}
+      - m_Target: {fileID: 1174644627}
         m_TargetAssemblyTypeName: RosterButtons, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 1

@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using Unity.UI;
 using TMPro;
 
 public class currency : MonoBehaviour
